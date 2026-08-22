@@ -6,14 +6,19 @@
 > finding **D1**) reports that the registered magnitude bar and the power calculation are
 > expressed on different scales.
 >
-> The bar as registered sits **8.1 standard errors from zero** — `1.96 × √2 σ / √34 =
-> 0.2425σ` — which is an effect size of `d = 1.386`, against a study powered for
-> `d = 0.5`. That is a factor of 2.77.
+> The registered bar corresponds to an effect size of **d = 1.386** — `1.96/√2` — against a
+> study powered for **d = 0.5**. That is a factor of **2.77**, and both of those figures
+> reproduce on independent calculation.
 >
-> The consequence is the opposite of conservative: as written, this protocol is
-> **pre-committed to reporting a large true effect as a null**. A real effect of the size
-> the study was designed to detect would fail the registered bar and be published as a
-> refutation.
+> A third figure originally quoted here, "8.1 standard errors from zero", does **not**
+> reproduce: the same calculation gives 2.77. It has been withdrawn pending a re-derivation
+> from the protocol's own stated design, and the exact standard error depends on whether the
+> comparison is paired or two-sample, which should be read off the protocol rather than
+> assumed. The direction of the finding does not depend on it.
+>
+> The consequence is the opposite of conservative: at 2.77x the powered effect size, this
+> protocol can report an effect of exactly the magnitude it was designed to detect as a
+> **null**, and publish it as a refutation.
 >
 > This is a scale error, not a design flaw — the design is otherwise sound and the
 > sham-controlled, three-way-blinded structure is the strongest part of the corpus. But
