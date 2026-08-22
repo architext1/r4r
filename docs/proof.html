@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Loops Worth Running &middot; R4R</title>
+<meta name="description" content="Two ready-to-file OSF pre-registrations for Regulus&#x27;s cheapest falsifiable predictions — both written to be capable of failing.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap mast-in">
+    <span class="sigil">&#945; Leonis &middot; <b>REGULUS</b></span>
+    <nav class="mast-nav" aria-label="Primary">
+      <span class="sigil r4r">R4R</span>
+      <a href="index.html">Explainer</a>
+      <a href="primer.html">Primer</a>
+      <a href="geometries.html">Geometries</a>
+      <a href="gerald.html">Gerald</a>
+      <a href="proof.html" aria-current="page">Proof</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap">
+<div class="hero">
+  <p class="eyebrow">Two ready-to-file OSF pre-registrations</p>
+  <h1>The loops worth running</h1>
+  <p class="standfirst">Both of the framework&rsquo;s cheapest falsifiable predictions, written up so that they can fail.</p>
+</div>
+<section>
+<div class="doc col">
+
+<p>
+  A framework earns the word <em>theory</em> by naming the observation that would kill it.
+  Regulus names two, and both are cheap. Neither had been run, so they were written up as
+  formal pre-registrations &mdash; every procedure, parameter, sample size, blinding scheme
+  and stopping rule fixed <strong>before</strong> any data is collected, so the result cannot
+  be steered after the fact.
+</p>
+<p class="pull">
+  We state the prior explicitly: we expect the null to win.
+  <cite>Pre-registration 01 &middot; study description</cite>
+</p>
+<p>
+  That sentence is the most important one on this site. A pre-committed, sham-controlled,
+  blinded null is a real scientific result. A &ldquo;positive&rdquo; that turns out to be
+  arousal, expectation or measurement drift is not, and both designs are built specifically
+  to tell those apart.
+</p>
+
+</div>
+</section>
+<section>
+<div class="doc col">
+<h2>01 &mdash; Follicular clearance and scalp-EEG entropy</h2>
+<h1>OSF Pre-Registration</h1>
+<h2>Study Information</h2>
+<h3>Title</h3>
+<p>Does follicular sebum clearance reduce resting-state EEG entropy in autistic adults? A sham-controlled, three-way-blind within-subjects crossover with a between-subjects sham-only arm.</p>
+<h3>Description</h3>
+<p>Autistic brains show elevated resting-state EEG entropy, an effect commonly described as increased "neural noise" (Frontiers in Psychiatry 2025, PMC11832502: higher Rényi and Tsallis entropy in ASD across all channels, explicitly attributed to increased neural noise; Lempel–Ziv complexity runs <em>lower</em> in ASD, reconciled as repetitive sharp oscillations). The mainstream mechanistic account of that elevated entropy is cortical excitation/inhibition (E/I) imbalance.</p>
+<p>A speculative framework (the ASS-OS "Regulus"; "Crown of Thorns" model) proposes an alternative <em>source</em> for the same measured noise: that hair follicles act as body-wide photoreceptors (the follicle-expressed opsin OPN3 and cryptochromes CRY1/CRY2 are cited), that when follicles are obstructed by sebum they misread the body's own endogenous biophotons as incoming signal, and that this floods the cortex with noise. The framework's single cheapest falsifiable prediction is that mechanically/chemically <strong>clearing follicular sebum reduces scalp-EEG entropy</strong>, and it notes this experiment has never been run.</p>
+<p>This study runs it. Each autistic adult participant is their own control across a <em>real</em> follicular-clearance session and a procedurally identical <em>sham</em> session (order-counterbalanced, washout between), while a parallel between-subjects sham-only group establishes the entropy measure's own session-to-session drift (the noise floor) and guards against order/practice/expectation effects. The primary endpoint is the active-minus-sham change in whole-scalp-averaged Rényi entropy. All procedures, entropy parameters, the EEG pipeline, the sample size, the blinding scheme, the positive-control gate, and the stopping rule are fixed here before any data are collected.</p>
+<p><strong>We state the prior explicitly: we expect the null (H0) to win.</strong> A causal chain running from scalp sebum to <em>intracranial-origin</em> EEG entropy is physiologically extravagant, and the elevated cortical entropy already has a parsimonious E/I explanation that requires no biophotons. The value of this study is not that we expect it to confirm the framework — it is that the framework's central medical claim is cheap, has never been tested, and is designed here so that it <em>can</em> fail. A pre-committed, sham-controlled, blinded null is a real scientific result; a "positive" that is really arousal, expectation, or measurement drift is not, and this design is built to tell those apart.</p>
+<p>This is a mechanism-falsification study, not a treatment trial. It does not claim, test, or imply that follicular clearance treats autism or any autistic trait; the dependent variable is an EEG entropy measure, and the sole question is whether an active scalp-clearance procedure moves that measure more than an identical sham does.</p>
+<h3>Hypotheses</h3>
+<p><strong>H1 (directional, framework prediction — the effect we are powered to detect).</strong>
+Relative to a procedurally identical sham, active follicular sebum clearance produces a <strong>reduction</strong> in resting-state, eyes-closed, whole-scalp-averaged Rényi entropy in autistic adults, measured from immediately pre-intervention to a fixed post-intervention window. Formally, the primary contrast</p>
+<pre><code>Δ = ΔH_active − ΔH_sham,  where ΔH_arm = H_post(arm) − H_pre(arm)
+</code></pre>
+<p>is expected to be <strong>negative</strong> (active reduces entropy more than sham), and its magnitude is expected to <strong>exceed the test–retest drift</strong> of the entropy measure itself (the noise floor established from the sham-only group; see Sampling Plan and Analysis Plan). Direction and the magnitude bar are both registered in advance; "some change" is not the prediction.</p>
+<p><strong>H0 (null / standard-neurology account — the prior we expect to hold).</strong>
+Active follicular clearance produces no change in intracranial-origin EEG entropy beyond that produced by the sham procedure: Δ = 0 within the noise floor. Under H0, any within-arm ΔH reflects arousal, relaxation, expectation, scalp-signal-quality change, and session-to-session drift — all of which the sham reproduces — because the elevated cortical entropy arises from E/I imbalance and has no follicular-photonic source.</p>
+<p><strong>Explicit falsifier of the framework.</strong>
+If the active and sham arms move whole-scalp-averaged Rényi entropy statistically indistinguishably (the primary two-sided test does not reject Δ = 0, and/or |Δ| does not exceed the pre-registered noise floor), the biophoton-source claim for ASD EEG entropy is <strong>falsified</strong> at the effect size this study is powered to detect. The study is deliberately constructed to be able to return this outcome, and a null result will be published (see Other → Ethics; Analysis → Exploratory vs confirmatory).</p>
+<p><strong>Honest prior.</strong>
+Our prior is that <strong>H0 wins.</strong> We are pre-registering and running the test anyway because (a) the framework's own honesty — it names the experiment and flags that it has never been run — is an invitation to run it cleanly, and (b) a pre-committed blinded null is the outcome that turns a narratable framework into a falsified one. A directional secondary endpoint ("movement toward H(1/φ)") is registered below but is explicitly <em>not</em> the basis on which the framework stands or falls.</p>
+<hr>
+<h2>Design Plan</h2>
+<h3>Study type</h3>
+<p><strong>Experiment</strong> — a controlled intervention with random assignment of condition order. The manipulated variable (active vs sham follicular clearance) is administered by the researchers; the dependent variable (resting-state EEG entropy) is measured.</p>
+<h3>Blinding</h3>
+<p><strong>Three-way blinding.</strong></p>
+<ol>
+<li>
+<p><strong>Participant-blind.</strong> The active and sham procedures are matched on duration, practitioner, chair, body position, tactile contact, product texture, product scent, and the participant's belief that "a scalp procedure was performed." Only the sebolytic/exfoliative action differs. Participants are told at consent that they will receive two scalp procedures, one active and one inactive, and will not learn which was which until the study ends (single-blind-to-arm, fully disclosed and debriefed — see Ethics).</p>
+</li>
+<li>
+<p><strong>Technician-blind (EEG operator).</strong> The person who applies the scalp procedure is <em>not</em> the person who records or handles the EEG. Arm assignment for each session is delivered in a sealed, sequentially numbered, opaque randomization envelope opened by a third party (the procedure practitioner) who never touches the EEG hardware, the EEG data, or the analysis. The EEG technician records only an arm-agnostic session code.</p>
+</li>
+<li>
+<p><strong>Analyst-blind.</strong> All entropy computation is performed on de-identified recordings labelled only with an arm-agnostic session code (e.g. A/B). The active/sham key is held by an independent custodian and is <strong>not</strong> broken until (i) the analysis pipeline is frozen, (ii) the positive-control gate has been evaluated, and (iii) the primary-analysis script has been run to produce arm-blind outputs. Unblinding is a single logged event.</p>
+</li>
+</ol>
+<h3>Is there a control / comparison condition?</h3>
+<p><strong>Yes — two, by design.</strong></p>
+<ul>
+<li>
+<p><strong>Within-subjects sham control (primary comparison):</strong> each participant undergoes a real follicular-clearance session and a procedurally identical sham session. The sham holds constant practitioner attention, tactile stimulation, relaxation/arousal, product scent and texture, time-of-day scheduling, and the participant's expectation that "something was done," isolating the sebolytic/photoreceptor-unblocking action as the <em>only</em> difference between arms. The primary endpoint is the active-minus-sham contrast, so every non-specific effect that moves resting EEG is subtracted at the participant level.</p>
+</li>
+<li>
+<p><strong>Between-subjects sham-only arm (drift / order control):</strong> a separate group that receives <em>two</em> sham sessions on the same schedule. This group (i) establishes the entropy measure's session-to-session test–retest drift (the noise floor the active-minus-sham contrast must beat) and (ii) catches any pure order/practice effect of repeated EEG sessions independent of any active intervention.</p>
+</li>
+</ul>
+<h3>Study design</h3>
+<p>Mixed design.</p>
+<ul>
+<li><strong>Within-subjects factor: Arm</strong> (active, sham), administered to the crossover group in counterbalanced order with a washout between sessions. Each crossover participant contributes one <code>ΔH_active</code> and one <code>ΔH_sham</code>.</li>
+<li><strong>Between-subjects factor: Group</strong> (crossover vs sham-only). The sham-only group contributes two sham <code>ΔH</code> values on the identical schedule (yielding the drift estimate and the order-effect check).</li>
+<li><strong>Within-session structure:</strong> resting-state EEG is recorded immediately <strong>pre</strong>-intervention and again in a fixed <strong>post</strong>-intervention window, identical epoch length and montage pre and post, so the unit of the dependent variable is the <em>change</em> <code>ΔH = H_post − H_pre</code>.</li>
+<li><strong>Positive control within every session:</strong> an eyes-open vs eyes-closed resting-EEG block (a robust, well-documented alpha/entropy manipulation) is recorded each session and serves as a <em>gating criterion</em> for the pipeline's ability to resolve a known entropy shift (see Analysis Plan).</li>
+</ul>
+<p>Active intervention = the defined scalp cleansing/exfoliation protocol that removes sebum from the follicle <strong>without</strong> altering scalp temperature or hydration and <strong>without</strong> applying any photoactive or sensitising agent. Sham = identical in duration, contact, chair, practitioner, scent, and product texture, but with <strong>no</strong> sebolytic action and <strong>no</strong> exfoliation. Both arms use only verified non-photoactive formulations (a photoactive residue would itself stimulate follicular photoreceptors and confound the mechanism).</p>
+<h3>Randomization</h3>
+<ul>
+<li><strong>Arm-order assignment (crossover group):</strong> each participant is randomly assigned to active-first or sham-first via a computer-generated random allocation sequence (blocked to keep the two orders balanced across the completed sample), prepared by an independent party and delivered as sealed sequentially numbered opaque envelopes. The sequence is generated before enrolment and stored with the independent custodian.</li>
+<li><strong>Group assignment (crossover vs sham-only):</strong> participants are randomly allocated to the crossover group or the sham-only group by the same independent-party sequence at enrolment, stratified to fill the target group sizes.</li>
+<li><strong>Session-time and analysis order</strong> are fixed by protocol (not randomized) to control day-to-day variance; recordings are processed in a de-identified, arm-agnostic order.</li>
+</ul>
+<hr>
+<h2>Sampling Plan</h2>
+<h3>Existing data</h3>
+<p><strong>No.</strong> Registration is prior to any data collection. No EEG data for this study exist at the time of registration; recruitment and recording begin only after this pre-registration is posted.</p>
+<h3>Data collection procedures</h3>
+<p>Autistic adults are recruited through clinical/community autism registries, specialist clinics, and self-referral in response to advertised study materials (accessible, plain-language). Inclusion: adults (≥18) with a documented clinical autism diagnosis, able to give informed consent (capacity assessment where relevant), able to tolerate a resting EEG cap and two scalp procedures. Exclusion: active scalp dermatological condition; photosensitising medication or condition; known cryptochrome/opsin-relevant confound where applicable; inability to complete both sessions of the assigned arm structure; EEG contraindication.</p>
+<p>Each participant completes their assigned sessions (two for both groups) at a <strong>fixed time of day</strong>, with <strong>standardised pre-session abstinence</strong> (caffeine, and other pre-registered stimulants) and self-reported sleep on the prior night recorded as a covariate. Sessions are separated by a fixed <strong>washout</strong> interval (registered). At each session: (1) cap fitment to marked fiducials at identical electrode positions (measured cap; positions re-verified each session), (2) pre-intervention resting eyes-closed EEG + the eyes-open/eyes-closed positive-control block, (3) the assigned scalp procedure (active or sham) applied by the blinded practitioner, (4) post-intervention resting eyes-closed EEG + positive-control block in the fixed post window. Scalp temperature and hydration are measured pre and post as covariates and to verify the active protocol did not alter them.</p>
+<h3>Sample size</h3>
+<ul>
+<li><strong>Crossover group:</strong> recruit <strong>N = 40</strong> autistic adults (target <strong>34 completing both arms</strong>, allowing ~15% attrition across the crossover).</li>
+<li><strong>Sham-only group:</strong> recruit <strong>~20</strong> autistic adults (for the noise-floor / drift and order-effect estimates).</li>
+<li><strong>Total target enrolment: ~60.</strong></li>
+</ul>
+<h3>Sample-size rationale (power calculation)</h3>
+<p>The primary test is a within-subjects paired comparison of the active-minus-sham contrast against zero. We power to detect a <strong>medium</strong> effect, on the reasoning that a follicular-photonic effect large enough to be clinically or theoretically meaningful should not be subtle.</p>
+<ul>
+<li><strong>Design/test:</strong> two-tailed paired <em>t</em> (Wilcoxon signed-rank as the non-parametric fallback; see Analysis Plan).</li>
+<li><strong>Alpha:</strong> 0.05 (two-tailed). <strong>Power:</strong> 0.80.</li>
+<li><strong>Target effect:</strong> Cohen's <em>d</em> = 0.5 on the paired contrast → <strong>N ≈ 34 completing both arms</strong>. (For reference, at <em>d</em> = 0.6 → N ≈ 24; we power to the smaller, more conservative <em>d</em> = 0.5.)</li>
+<li><strong>Attrition:</strong> recruiting 40 to retain ≥34 across the two-session crossover assumes ≤15% dropout.</li>
+</ul>
+<p>The paired-<em>t</em> requirement for 80% power at two-tailed α = 0.05 is N = 34 for <em>d</em> = 0.5 (standard paired-design power tables; verify with the analysis software's power routine at protocol lock and record the exact call and output in the study file). If the confirmed analytic model is the mixed model (arm × order) rather than the simple paired test, the paired-<em>t</em> N is treated as the conservative floor and is not reduced.</p>
+<p><strong>The magnitude bar (noise floor), not just significance.</strong> Statistical significance of the paired contrast is necessary but not sufficient. The registered bar is that the active-minus-sham contrast must <strong>exceed a pre-registered drift ceiling</strong>, defined as <strong>1.96 × the within-participant SD of the sham-only group's session-to-session <code>ΔH</code></strong> (a one-sided ~95% ceiling on pure test–retest drift; the SD is estimated across the two sham sessions in the sham-only group). A contrast that is "significant" but smaller than the sham-only drift is reported as <strong>within measurement drift</strong> and does <strong>not</strong> count as support for H1. This bar is fixed before unblinding.</p>
+<h3>Stopping rule</h3>
+<p><strong>Fixed-N, no interim inferential peeks.</strong> Data collection stops when the target completing sample is reached: <strong>≥34 completing both arms</strong> in the crossover group <strong>and</strong> <strong>~20</strong> in the sham-only group. There are no interim analyses of the primary endpoint and no data-dependent stopping for efficacy or futility; recruitment continues only to backfill attrition up to the enrolment ceiling. If, after exhausting the recruitment window and ceiling, fewer than 34 crossover completers are obtained, the shortfall and its impact on achieved power are reported, and the primary analysis is run as pre-registered (no post-hoc power re-labelling of a null as a positive). Blinding is not broken until the completing sample is reached and the pipeline is frozen.</p>
+<hr>
+<h2>Variables</h2>
+<h3>Manipulated / independent variables</h3>
+<ul>
+<li><strong>Arm (within-subjects):</strong> <code>active</code> (defined follicular sebum-clearance protocol — sebum removed from the follicle; scalp temperature and hydration held constant; no photoactive/sensitising agent) vs <code>sham</code> (procedurally identical — same duration, practitioner, chair, contact, product scent and texture — with no sebolytic action and no exfoliation). This is the sole intended physical difference between arms.</li>
+<li><strong>Group (between-subjects):</strong> <code>crossover</code> (one active + one sham session) vs <code>sham-only</code> (two sham sessions).</li>
+<li><strong>Order (within crossover group):</strong> <code>active-first</code> vs <code>sham-first</code> (counterbalanced; entered as a factor to test/adjust for order and carryover).</li>
+</ul>
+<h3>Measured / dependent variables</h3>
+<ul>
+<li><strong>Primary DV:</strong> <code>ΔH_Rényi</code> per arm = whole-scalp-averaged Rényi entropy at the fixed post window minus at pre, from resting-state eyes-closed EEG. The primary <strong>contrast</strong> is <code>Δ = ΔH_Rényi(active) − ΔH_Rényi(sham)</code>.</li>
+<li><strong>Secondary DVs (FDR-corrected, exploratory-labelled):</strong> <code>ΔH_Tsallis</code> (whole-scalp-averaged Tsallis entropy — elevated in ASD in the anchor literature); <code>ΔLZ</code> (Lempel–Ziv complexity — note it runs <em>lower</em> in ASD, so both directions are tracked and reported); <code>ΔMSE</code> (multiscale sample entropy — the measure the framework's own document names); and the per-channel maps of Rényi entropy.</li>
+<li><strong>Secondary directional DV:</strong> movement of whole-scalp-averaged Rényi entropy <em>toward the pre-registered reference value</em> <code>H(1/φ)</code> (defined operationally below).</li>
+<li><strong>Positive-control DV (gating):</strong> the eyes-open-minus-eyes-closed difference in whole-scalp-averaged Rényi entropy within each session (must be resolvable — see Indices and Analysis Plan).</li>
+<li><strong>Covariates:</strong> scalp temperature (pre, post), scalp hydration (pre, post), electrode-position verification, time-of-day (fixed by protocol), self-reported prior-night sleep, adherence to pre-session abstinence.</li>
+</ul>
+<h3>Indices — operational definitions of every metric</h3>
+<p>Recording and preprocessing are identical across all sessions and arms; every parameter below is fixed here before any data are seen.</p>
+<ul>
+<li><strong>EEG acquisition.</strong> Resting-state eyes-closed EEG on a high-density montage (<strong>≥ 32 channels, 10–20 layout</strong>), identical electrode positions across sessions via a measured cap with marked fiducials, identical reference, identical amplifier settings and sampling rate. Pre and post recordings use the same <strong>5-minute</strong> artefact-rejected epoch length.</li>
+<li><strong>Preprocessing / artefact rejection (frozen pipeline).</strong> A single pre-registered pipeline — band-pass filter, line-noise removal, bad-channel handling, artefact rejection (e.g. ICA/threshold criteria), epoch selection rule, and re-referencing — is fixed in the analysis script before data collection. The epoch-selection rule (which clean epochs enter the entropy computation) and the artefact-rejection thresholds are mechanical, not analyst-chosen per recording.</li>
+<li><strong>Rényi entropy (primary).</strong> Computed <strong>per channel</strong> on the frozen epochs with a fixed order parameter α and a fixed probability-estimation method (registered exactly), then <strong>averaged across all channels</strong> to yield the whole-scalp value used for the primary endpoint. The exact α, the discretization/binning or density-estimation scheme, and the epoch aggregation are recorded in the pre-registered parameter block.</li>
+<li><strong>Tsallis entropy (secondary).</strong> Same per-channel-then-averaged procedure with a fixed entropic index q (registered).</li>
+<li><strong>Lempel–Ziv complexity (secondary).</strong> Fixed binarization rule and normalization, per-channel then averaged.</li>
+<li><strong>Multiscale sample entropy (secondary/tertiary).</strong> Fixed embedding dimension m, tolerance r (as a fraction of the signal SD), and the set of time scales, per-channel then averaged.</li>
+<li><strong><code>H(1/φ)</code> — the secondary reference target, defined concretely BEFORE collection.</strong> <code>1/φ = 0.6180339887…</code>. <code>H(1/φ)</code> is defined as the Rényi entropy (same α and estimator as the primary DV) of a <strong>pre-registered reference probability distribution</strong> whose retention/release split is fixed at the golden ratio: a two-outcome (Bernoulli) reference distribution with <code>p = 1/φ = 0.618034</code> and <code>1 − p = 0.381966</code>, giving <code>H(1/φ)</code> as the numeric Rényi entropy of that {0.618034, 0.381966} distribution at the registered α. This single number is computed and written into the study file at protocol lock, before any EEG data are seen. "Movement toward <code>H(1/φ)</code>" for a participant/arm is the signed reduction in <code>|H_post − H(1/φ)| − |H_pre − H(1/φ)|</code> (negative = moved closer). This endpoint is <strong>secondary and directional only</strong>; a free-floating target invites post-hoc curve-fitting, so it is fixed as a number here and never used as the primary.</li>
+<li><strong>Positive control (gating index).</strong> Within each session, the eyes-open-minus-eyes-closed difference in whole-scalp-averaged Rényi entropy, using the identical pipeline and parameters. This is a within-subject sanity check that the instrument+pipeline can resolve a <em>known</em> entropy manipulation.</li>
+</ul>
+<hr>
+<h2>Analysis Plan</h2>
+<h3>Statistical models</h3>
+<p><strong>Primary confirmatory analysis (single endpoint).</strong>
+Test the active-minus-sham contrast on whole-scalp-averaged Rényi entropy against zero, in the crossover completers.</p>
+<ul>
+<li>
+<p>Primary model: a <strong>linear mixed-effects model</strong> on <code>ΔH_Rényi</code> with fixed effects of <strong>Arm</strong> (active vs sham) and <strong>Order</strong> (active-first vs sham-first) and their interaction (Arm × Order carryover check), and a random intercept per participant:</p>
+<p>ΔH_Rényi ~ Arm * Order + (1 | Participant)</p>
+</li>
+</ul>
+<p>The <strong>Arm</strong> fixed effect here (equivalently the sign and significance of the active-minus-sham contrast) is evaluated alongside the powered paired test below and must agree with it. H1 predicts the active level lowers entropy relative to sham (a negative Arm contrast).
+- <strong>Powered confirmatory test of record: a two-tailed paired t-test</strong> of <code>ΔH_Rényi(active)</code> vs <code>ΔH_Rényi(sham)</code> — this is the test the power analysis (N = 34 for <em>d</em> = 0.5) is built on, so the confirmatory claim rests on the test the study is actually powered for. The mixed-effects model above is a <strong>pre-registered robustness check</strong> (its role is the Arm × Order carryover check and per-participant structure), not a separately-powered primary; it must agree in sign and significance with the paired test. If the paired differences violate normality (Shapiro–Wilk pre-registered threshold), use the <strong>Wilcoxon signed-rank</strong> test as the pre-specified non-parametric substitute. Disagreement between the paired test and the mixed model is reported transparently and resolved in favour of the more conservative result.
+- <strong>Noise-floor gate (magnitude bar):</strong> the estimated active-minus-sham contrast must <strong>exceed the pre-registered drift ceiling</strong> — <strong>1.96 × the within-participant SD</strong> of session-to-session <code>ΔH_Rényi</code> in the <strong>sham-only</strong> group (a one-sided ~95% drift ceiling). A contrast that is statistically significant but below this ceiling is reported as <strong>within measurement drift</strong> and does not support H1.</p>
+<p><strong>Secondary analyses (all FDR-corrected, explicitly exploratory).</strong>
+- Repeat the Arm-effect test for <code>ΔH_Tsallis</code>, <code>ΔLZ</code>, <code>ΔMSE</code>, and the per-channel Rényi maps. Correct across this secondary family with <strong>Benjamini–Hochberg FDR</strong> at q = 0.05. All are labelled exploratory regardless of outcome. LZ is interpreted with its known ASD direction (lower in ASD) in mind, and both directions are reported.
+- <strong>Directional secondary:</strong> test whether the active arm moves whole-scalp Rényi entropy toward the pre-registered <code>H(1/φ)</code> more than sham (one-sided, on the <code>|H − H(1/φ)|</code> reduction), reported as secondary/directional only.
+- <strong>Order/practice effect:</strong> in the sham-only group, test session-2-minus-session-1 <code>ΔH</code> for a pure order/practice effect on entropy.</p>
+<p><strong>Positive-control gate (pre-registered as a gating criterion — evaluated BEFORE the primary analysis, blind to arm).</strong>
+Confirm the pipeline resolves the eyes-open vs eyes-closed entropy manipulation at the group level (pre-registered: significant eyes-open-minus-eyes-closed difference in whole-scalp Rényi entropy in the expected direction, at the registered alpha). <strong>If the positive control fails, the study is underpowered at the <em>measurement</em> level, not the biology level, and the primary analysis is not interpreted as a biological test</strong> — any null would be uninterpretable, so a failed positive control is reported as a measurement-level negative result and the biological hypothesis is neither confirmed nor falsified. No positive control, no primary analysis.</p>
+<h3>Transformations</h3>
+<ul>
+<li>The dependent variable is a <strong>change score</strong> <code>ΔH = H_post − H_pre</code> per arm; the primary quantity is the <strong>between-arm difference of change scores</strong> <code>Δ = ΔH_active − ΔH_sham</code> (double difference), which removes stable per-participant baseline entropy.</li>
+<li>Entropy values are computed per channel and <strong>averaged across channels</strong> for whole-scalp endpoints (primary and secondary summaries) before modelling.</li>
+<li>Covariates (scalp temperature, hydration, sleep) enter as pre-registered nuisance covariates in a sensitivity version of the primary model; the confirmatory model is the covariate-light one specified above, with the covariate-adjusted model reported alongside.</li>
+<li>If the paired differences fail the pre-registered normality check, the Wilcoxon signed-rank test is used (no post-hoc choice of transformation to rescue a parametric test).</li>
+</ul>
+<h3>Inference criteria</h3>
+<ul>
+<li><strong>Primary alpha:</strong> 0.05, <strong>two-tailed</strong>, on the single primary endpoint (Arm effect / active-minus-sham paired contrast on whole-scalp Rényi entropy). Two-tailed despite H1 being directional, so that a <em>reversed</em> effect (active raises entropy relative to sham) is also detectable and reportable.</li>
+<li><strong>Magnitude bar:</strong> significant <strong>and</strong> contrast magnitude &gt; sham-only test–retest drift → support for H1. Significant but below drift → "within measurement drift," not support.</li>
+<li><strong>Multiple comparisons:</strong> exactly <strong>one</strong> primary endpoint is tested at α = 0.05, locked before unblinding. All other measures (Tsallis, LZ, MSE, per-channel maps, the <code>H(1/φ)</code> directional endpoint) are <strong>secondary, Benjamini–Hochberg FDR-corrected (q = 0.05), and labelled exploratory</strong>. No "some channel went significant" claim is made outside the FDR-corrected exploratory frame.</li>
+<li><strong>Positive-control gate</strong> must pass (as above) for the primary analysis to be interpreted biologically.</li>
+</ul>
+<h3>Data exclusion</h3>
+<ul>
+<li><strong>Participant-level:</strong> a participant is excluded from the crossover primary analysis if they do not complete both arms, if either session fails the pre-registered EEG data-quality criteria (excessive artefact leaving fewer than the registered minimum clean epochs; failed electrode-position verification), or if a documented protocol breach compromises blinding for that participant. Exclusions are counted and reported; the number needed to retain ≥34 completers drove the 40-recruitment target.</li>
+<li><strong>Epoch-level:</strong> epochs are included/excluded by the frozen artefact-rejection and epoch-selection rules only — never by inspection of the resulting entropy value.</li>
+<li><strong>Session-quality floor:</strong> a session yielding fewer than the pre-registered minimum clean epochs after artefact rejection is treated as missing for that arm (see Missing data).</li>
+<li>All exclusion rules are mechanical and fixed before data are seen; an exclusion decision is never conditioned on the entropy outcome or on arm.</li>
+</ul>
+<h3>Missing data</h3>
+<ul>
+<li>A crossover participant missing one arm's usable EEG (dropout or session-quality failure) is <strong>excluded from the primary paired/mixed analysis</strong> (which requires both arms). No imputation of the missing arm's entropy is performed for the confirmatory endpoint (imputing the dependent variable would fabricate the effect).</li>
+<li>In the mixed-effects model, participants with a missing arm contribute to any estimable random-effects structure only insofar as the model permits, but the confirmatory Arm contrast is computed on complete pairs; the complete-pair result is the registered primary.</li>
+<li>Missingness rates by arm and group are reported. Sensitivity analyses (e.g. the mixed model retaining partial data) are reported as secondary/exploratory, never as the primary result.</li>
+</ul>
+<h3>Exploratory vs confirmatory</h3>
+<ul>
+<li><strong>Confirmatory:</strong> the single primary endpoint — active-minus-sham contrast on whole-scalp-averaged Rényi entropy, two-tailed α = 0.05, with the noise-floor magnitude bar and the positive-control gate — tests H1 vs H0 and constitutes the framework's falsifier.</li>
+<li><strong>Exploratory (all FDR-corrected, so-labelled):</strong> Tsallis, Lempel–Ziv, multiscale sample entropy, per-channel maps, the directional <code>H(1/φ)</code> endpoint, covariate-adjusted and partial-data sensitivity models, and any subgroup or descriptive analyses.</li>
+<li>The result — <strong>including a null</strong> — is committed to publication in advance (see Other). A disconfirming outcome is reported as a falsification of the framework's follicular-photonic-source claim at the powered effect size, not narrated around; a confirming outcome is reported with the explicit caveat that a single blinded crossover is a first test requiring independent replication before any mechanistic or clinical claim.</li>
+</ul>
+<hr>
+<h2>Other</h2>
+<h3>Ethics / IRB</h3>
+<p>The study requires prospective approval from an Institutional Review Board / Research Ethics Committee before recruitment. Key features:</p>
+<ul>
+<li><strong>Population:</strong> autistic adults. Informed consent uses accessible, plain-language materials, with capacity assessment where relevant. Participants may withdraw at any time without penalty.</li>
+<li><strong>Intervention risk:</strong> a benign topical scalp procedure using only <strong>non-photoactive, non-sensitising</strong> products, with pre-screening dermatological assessment to exclude active scalp conditions. No photoactive or sensitising agents are used in either arm.</li>
+<li><strong>EEG:</strong> non-invasive, standard-risk resting-state recording.</li>
+<li><strong>Deception:</strong> none beyond the sham procedure itself, which is <strong>disclosed at consent</strong> ("you will receive two scalp procedures, one active and one inactive, and will not be told which is which until the study ends") — an acceptable single-blind-to-arm design with <strong>full debrief</strong> at study end, including disclosure of each participant's arm assignment on request.</li>
+<li><strong>Data:</strong> de-identified and arm-coded; the active/sham key is held by an independent custodian and broken only once, after the pipeline is frozen and the positive-control gate is evaluated.</li>
+<li><strong>Publication commitment:</strong> the outcome, <strong>including a null result</strong>, is committed to publication in advance so a disconfirming finding cannot be buried. This commitment is itself part of what makes the study a genuine test rather than a narratable exercise.</li>
+<li><strong>Framing safeguard:</strong> the study is a mechanism-falsification study of an EEG entropy measure. It does not test, claim, or imply that follicular clearance treats autism or alters any autistic trait, and consent and dissemination materials state this explicitly to avoid raising or exploiting therapeutic expectations. The registered prior is the null.</li>
+</ul>
+<h3>Positive control (methods-reviewer hardening — restated as a first-class design element)</h3>
+<p>A null result only falsifies the framework if the measurement pipeline can detect a <em>known</em> entropy shift. Each session therefore includes an <strong>eyes-open vs eyes-closed</strong> resting-EEG block, a robust and well-documented alpha/entropy manipulation. The pipeline's ability to resolve this difference (group-level, in the registered direction, at the registered alpha) is a <strong>gating criterion evaluated before the primary analysis</strong>: if the positive control fails, the study is declared underpowered at the measurement level, any null is deemed uninterpretable as biology, and the primary endpoint is not interpreted as a biological test. This gate is pre-registered precisely so that "the instrument couldn't see anything" and "the biology isn't there" cannot be confused after the fact.</p>
+<h3>Confound-control summary</h3>
+<table>
+<thead>
+<tr>
+<th>Confound</th>
+<th>Threat to Δ</th>
+<th>Control</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arousal/relaxation from being cleansed</td>
+<td>Lowers resting entropy independent of any photonic effect</td>
+<td>Sham arm reproduces the relaxation exactly; primary endpoint is active-minus-sham</td>
+</tr>
+<tr>
+<td>Scalp temperature / hydration change</td>
+<td>Alters skin impedance and EEG signal quality</td>
+<td>Active protocol holds both constant; measured pre/post and entered as covariates</td>
+</tr>
+<tr>
+<td>Electrode-position drift between sessions</td>
+<td>Spurious per-channel entropy differences</td>
+<td>Measured cap, marked fiducials, positions re-verified each session; whole-scalp averaging for the primary</td>
+</tr>
+<tr>
+<td>Expectation / placebo ("I was treated, I feel calmer")</td>
+<td>Belief alone shifts autonomic state and EEG</td>
+<td>Three-way blinding; participant cannot tell active from sham</td>
+</tr>
+<tr>
+<td>Practitioner / analyst bias</td>
+<td>Unblinded scoring nudges the result</td>
+<td>Technician-blind recording; analyst-blind entropy computation on arm-coded data; key broken post-lock</td>
+</tr>
+<tr>
+<td>Time-of-day / caffeine / sleep</td>
+<td>Large day-to-day EEG variance</td>
+<td>Fixed session time, standardised pre-session abstinence, sleep self-report covariate</td>
+</tr>
+<tr>
+<td>Order / practice effect on repeated EEG</td>
+<td>Entropy drifts across sessions regardless of arm</td>
+<td>Counterbalanced order + between-subjects sham-only group + Arm×Order term</td>
+</tr>
+<tr>
+<td>Photoactive product residue</td>
+<td>Would itself stimulate follicular photoreceptors, confounding the mechanism</td>
+<td>Both arms use verified non-photoactive products</td>
+</tr>
+<tr>
+<td>Multiple comparisons across channels/measures</td>
+<td>"Some channel significant" almost guaranteed</td>
+<td>One locked primary endpoint; all else Benjamini–Hochberg FDR-corrected and exploratory</td>
+</tr>
+<tr>
+<td>Pipeline can't resolve entropy at all</td>
+<td>Uninterpretable null</td>
+<td>Eyes-open/eyes-closed positive-control gate before primary analysis</td>
+</tr>
+<tr>
+<td>Free-floating "toward H(1/φ)" target</td>
+<td>Post-hoc curve-fitting</td>
+<td><code>H(1/φ)</code> fixed as a concrete number pre-registration; secondary/directional only</td>
+</tr>
+</tbody>
+</table>
+<h3>Anchor citation</h3>
+<p>Higher Rényi and Tsallis entropy in ASD, attributed to increased neural noise (Lempel–Ziv complexity lower in ASD, reconciled as repetitive sharp oscillations): <strong>Frontiers in Psychiatry (2025), PMC11832502</strong> — https://pmc.ncbi.nlm.nih.gov/articles/PMC11832502/. This is the source of the entropy family used here (Rényi/Tsallis primary/secondary, LZ and MSE secondary/tertiary) so that results are directly comparable to the established ASD-entropy finding.</p>
+<h3>Analytic-software note</h3>
+<p>At protocol lock, the exact power routine call (paired-<em>t</em>, two-tailed, α = 0.05, power = 0.80, <em>d</em> = 0.5 → N = 34) and its output, and the frozen preprocessing + entropy-parameter block (montage, reference, filter, artefact/epoch rules, Rényi α and estimator, Tsallis q, LZ binarization, MSE m/r/scales, and the computed numeric value of <code>H(1/φ)</code>), are written into the version-controlled analysis repository and time-stamped before any data are collected. The primary-analysis script is executed on arm-coded data to produce blind outputs; the active/sham key is applied only after those outputs and the positive-control gate result are locked.</p>
+</div>
+</section>
+<section>
+<div class="doc col">
+<h2>02 &mdash; Geomagnetic activity and HRV coherence</h2>
+<h1>OSF Pre-Registration</h1>
+<h2>Study Information</h2>
+<h3>Title</h3>
+<p>Does human heart-rate-variability coherence differ between geomagnetically quiet and storm days? A prospective intensive-longitudinal test of the Regulus "Bus D" claim, with a phase-shuffled negative control and an inter-participant synchronisation test.</p>
+<h3>Description</h3>
+<p>The Regulus / ASS-OS framework (§5.4, "Bus D — Magnetic") proposes that the human autonomic nervous system couples to the Earth's geomagnetic and Schumann-resonance environment — that the Earth-ionosphere cavity (7.83 Hz fundamental, sustained by global lightning) is a genuine "communication bus" to which human physiology entrains. Its cited empirical anchor is McCraty et al. 2017 (<em>IJERPH</em> 14(7):770), which reported significant correlations of group heart-rate-variability (HRV) with the planetary Kp/Ap indices, solar-wind variables, and Schumann-resonance power, plus multi-day inter-participant HRV synchronisation. That study is <strong>correlational, HeartMath-funded, and used a small convenience sample</strong>; the geomagnetic-biology literature more broadly is notorious for positive findings that do not replicate once shared seasonality and temporal autocorrelation are controlled.</p>
+<p>This study is the falsification test the "quiet day vs storm day" contrast sets up directly: it asks whether an individual's HRV-coherence measurably differs between geomagnetically <strong>quiet</strong> days (planetary Kp ≤ 2) and <strong>storm</strong> days (Kp ≥ 5), by a margin that a <strong>phase-shuffled negative-control exposure cannot reproduce</strong>. Because geomagnetic exposure cannot be manipulated, the design is observational/quasi-experimental and the entire evidential weight rests on the controls: objective third-party exposure data locked before analysis, analyst blinding to day classification, explicit modelling of seasonality/behaviour, a permutation-based negative control, and a second, harder-to-confound signature — synchronisation of HRV between participants who never meet.</p>
+<p><strong>Honest prior.</strong> We expect the null or a very small effect. A quiet-vs-storm HRV difference that survives the negative control would be a genuinely surprising, publishable positive result; a difference that does <em>not</em> exceed the phase-shuffled null is the expected outcome and would indicate that any raw correlation is driven by seasonality/autocorrelation/behaviour rather than a geomagnetic "bus". The study is designed to be able to return that null cleanly.</p>
+<h3>Hypotheses</h3>
+<ul>
+<li><strong>H1 (Regulus / Bus D, directional).</strong> Within participants, mean HRV-coherence on storm days (Kp ≥ 5) differs from quiet days (Kp ≤ 2) in a pre-registered direction (Regulus predicts geomagnetic activity perturbs autonomic balance; we register the directional prediction that coherence is <strong>lower</strong> on storm days, consistent with the framing that storm activity moves κ away from its optimum), and the magnitude of the storm-minus-quiet contrast <strong>exceeds the 95th percentile of the phase-shuffled negative-control null distribution</strong>.</li>
+<li><strong>H1b (inter-participant synchronisation).</strong> Day-to-day HRV of geographically co-exposed but socially unrelated participants correlates above the level expected under day-permutation — i.e. strangers' autonomic states co-vary with the shared geomagnetic day, a signature local weather and individual behaviour cannot easily manufacture.</li>
+<li><strong>H0 (null / standard chronobiology).</strong> The storm-minus-quiet HRV contrast does not exceed the phase-shuffled negative-control null, and inter-participant HRV correlation does not exceed the day-permutation null. Any apparent raw association is attributable to shared seasonality, temporal autocorrelation, weather, and behaviour.</li>
+<li><strong>Falsifier (stated up front).</strong> If the observed storm-minus-quiet effect is ≤ the negative-control null (primary) <strong>and</strong> inter-participant synchronisation is ≤ the permutation null (secondary), the Bus D claim is not supported by this test — the "bus" is a metaphor rather than a measured channel.</li>
+</ul>
+<h2>Design Plan</h2>
+<h3>Study type</h3>
+<p>Observational, prospective, intensive-longitudinal (daily-sampled) cohort. The independent variable (geomagnetic activity) is a natural exposure, not manipulated; causal-inference safeguards (blinding, negative control, pre-registered covariates and lag structure) substitute for randomisation.</p>
+<h3>Blinding</h3>
+<ul>
+<li><strong>Exposure classification is external and locked.</strong> Daily Kp comes from NOAA/SWPC (planetary Kp, 3-hourly → daily aggregate); Schumann-power from a public feed (e.g. Tomsk State University / GCI magnetometer network). The quiet/storm classification rule is fixed in this registration and applied by a data manager who does not touch the HRV data.</li>
+<li><strong>Analyst-blind.</strong> HRV recordings are computed into daily coherence values under arm-neutral date codes; the analyst who fits the models does not know which coded days are quiet vs storm until the analysis pipeline is locked and the code is broken by a third party.</li>
+<li><strong>Participant-blind to hypothesis-of-record.</strong> Participants are told the study concerns "daily heart-rhythm patterns and the environment" and are <strong>not</strong> told the geomagnetic hypothesis or which days are geomagnetically active, to prevent expectancy-driven self-regulation (note: the Regulus addendum's "vagal counter-sequences" are exactly the kind of deliberate self-regulation that would confound this — participants must not be cued to deploy them on storm days).</li>
+</ul>
+<h3>Is there a control / comparison condition?</h3>
+<p>Yes — three layers. (1) The <strong>within-subject</strong> quiet-vs-storm contrast (each participant is their own control across the exposure range). (2) A <strong>phase-shuffled negative-control exposure</strong>: the Kp time series is circularly time-shifted / phase-randomised (≥ 1000 permutations) and the entire analysis re-run to build the null distribution of the storm-minus-quiet effect under "no real coupling"; the real effect must beat this null. (3) A <strong>day-permutation null</strong> for the inter-participant synchronisation test.</p>
+<h3>Study design</h3>
+<p>Each participant records a standardised morning resting HRV session daily for a fixed window of 60 consecutive days, timed (opportunistically or during solar-maximum months) to capture both quiet and storm days. The primary analytic unit is the participant-day. The exposure contrast is quiet (Kp ≤ 2) vs storm (Kp ≥ 5); intermediate days (2 &lt; Kp &lt; 5) are retained for the continuous dose-response secondary analysis but excluded from the primary categorical contrast. A pre-registered <strong>lag structure</strong> is tested (same-day, +1 day, and −1 day relative to the geomagnetic day, reflecting that autonomic effects reported in the literature are not strictly same-day); the same-day lag is primary, others exploratory.</p>
+<h3>Randomization</h3>
+<p>Not applicable to the exposure (natural). Randomisation is used only for the negative control (random circular shifts / phase-randomisation seeds, pre-specified count ≥ 1000) and for the day-permutation null.</p>
+<h2>Sampling Plan</h2>
+<h3>Existing data</h3>
+<p>No. Registration precedes data collection. Public geomagnetic/Schumann archives exist but the paired HRV data do not; the exposure series will be downloaded only after HRV collection windows are fixed, and classification is locked here.</p>
+<h3>Data collection procedures</h3>
+<p>N = 40 healthy adults recruited from ≥ 2 geographically separated sites (to dissociate a genuinely global geomagnetic exposure from any single-site weather/behaviour artefact). Each records a 5-minute seated, paced-breathing-free resting HRV session every morning within a fixed 90-minute clock window, using a <strong>research-validated chest-strap single-lead ECG</strong> (e.g. Polar H10 with beat-to-beat RR export, or an ambulatory ECG) — <strong>not</strong> wrist PPG, whose high-frequency HRV fidelity is inadequate. Participants log wake time, prior-night sleep (device or diary), caffeine/alcohol, illness, exercise, and menstrual-cycle day where applicable; a wrist accelerometer captures pre-session activity. Local temperature, barometric pressure, and daylight length are pulled per site-day from public weather archives.</p>
+<h3>Sample size</h3>
+<p>40 participants × 60 days = up to 2,400 participant-days. Inclusion of a participant-window requires ≥ 6 valid quiet days and ≥ 6 valid storm days within the window; windows are scheduled during elevated-activity months so that Kp ≥ 5 days (which occur several times per month near solar maximum) are captured. Target ≥ 30 participants meeting the quiet/storm minimums after attrition and data-quality exclusions.</p>
+<h3>Sample-size rationale (power calculation)</h3>
+<p>The effect is expected to be small (published geomagnetic-HRV associations are r ≈ 0.1–0.2). Power derives from the intensive within-subject sampling, not from N alone. A linear mixed-effects model with ~12+ exposure-classified days per participant across ~30 participants yields &gt; 0.8 power to detect a standardised within-subject storm-minus-quiet difference of d ≈ 0.25 at α = 0.05 (two-tailed), under a conservative intraclass correlation of 0.4 for repeated within-person HRV (estimated via simulation, script deposited with the registration). Critically, the <strong>operative bar is not the nominal p-value but exceeding the phase-shuffled negative-control null</strong> — the real storm-minus-quiet contrast must sit above the 95th percentile of the ≥ 1000-permutation null, which automatically absorbs autocorrelation-inflated false positives that a naive mixed model would pass.</p>
+<h3>Stopping rule</h3>
+<p>Collection stops at the fixed 60-day window per participant; no interim analyses of the exposure-outcome association are performed (data-quality monitoring only). Analysis begins after all windows close and the pipeline is locked.</p>
+<h2>Variables</h2>
+<h3>Manipulated / independent variables</h3>
+<p>None manipulated. <strong>Exposure (natural):</strong> daily geomagnetic activity, classified quiet (Kp ≤ 2) vs storm (Kp ≥ 5) from NOAA/SWPC planetary Kp; continuous daily Kp and daily Schumann-resonance power (μV²/Hz at the 7.83 Hz mode) as secondary continuous exposures.</p>
+<h3>Measured / dependent variables</h3>
+<p><strong>Primary:</strong> daily HRV-coherence, defined operationally below. <strong>Secondary HRV:</strong> RMSSD, HF power (0.15–0.40 Hz), LF power (0.04–0.15 Hz), and the peak frequency of the LF band — reported FDR-corrected and labelled exploratory. <strong>Covariates:</strong> sleep duration, prior-day activity (accelerometer counts), caffeine/alcohol, illness flag, site, weekday/weekend, calendar season, local temperature, barometric pressure, daylight length, menstrual-cycle phase where applicable.</p>
+<h3>Indices — operational definitions of every metric</h3>
+<ul>
+<li><strong>HRV-coherence (primary).</strong> Following the HeartMath operationalisation cited by Regulus: from the 5-minute RR series (artefact-corrected, cubic-spline resampled to 4 Hz), compute the power spectral density; identify the peak in the 0.04–0.26 Hz band; <strong>coherence ratio = peak-band power / (total power in 0.0033–0.40 Hz − peak-band power)</strong>, with the peak band defined as peak ± 0.015 Hz. Higher = more coherent (a sharp ~0.1 Hz oscillation).</li>
+<li><strong>Quiet / storm day.</strong> Quiet = daily max Kp ≤ 2; storm = daily max Kp ≥ 5 (NOAA G1+). Locked; not analyst-adjustable.</li>
+<li><strong>Negative-control statistic.</strong> The storm-minus-quiet coherence contrast recomputed on ≥ 1000 circularly-shifted/phase-randomised Kp series; the null is this distribution; the real effect's percentile within it is the inferential quantity.</li>
+<li><strong>Inter-participant synchronisation.</strong> Mean pairwise Spearman correlation of participants' daily coherence series across socially unrelated participants, compared to a distribution generated by independently permuting each participant's day labels (≥ 1000 permutations).</li>
+</ul>
+<h2>Analysis Plan</h2>
+<h3>Statistical models</h3>
+<p><strong>Primary (confirmatory):</strong> linear mixed-effects model — <code>coherence ~ storm_vs_quiet + sleep + activity + caffeine + temperature + daylight + weekday + season + site + (1 + storm_vs_quiet | participant)</code> — same-day lag. The confirmatory test is <strong>not</strong> the model's Wald p on <code>storm_vs_quiet</code>; it is whether the fitted <code>storm_vs_quiet</code> coefficient exceeds the 95th percentile of the identical model refit on ≥ 1000 phase-shuffled Kp series. <strong>Secondary (H1b):</strong> the observed mean inter-participant coherence correlation vs the ≥ 1000-permutation day-label null. <strong>Secondary (dose-response):</strong> continuous daily Kp and Schumann power as predictors (mixed model, same covariates), FDR-corrected. <strong>Lag:</strong> +1/−1 day models are exploratory.</p>
+<h3>Transformations</h3>
+<p>Spectral powers log-transformed; coherence ratio logit-adjusted if bounded; predictors standardised. All transformations fixed here, applied before unblinding.</p>
+<h3>Inference criteria</h3>
+<p>Primary: real effect &gt; 95th percentile of the phase-shuffled negative-control null (one-sided on the pre-registered direction; a two-sided |effect| &gt; 97.5th percentile reported alongside). Secondary/exploratory endpoints: α = 0.05 with Benjamini–Hochberg FDR across the secondary family, explicitly labelled exploratory. A nominally "significant" mixed-model coefficient that does <strong>not</strong> exceed the negative-control null is reported as <strong>null</strong> for the confirmatory question.</p>
+<h3>Data exclusion</h3>
+<p>Sessions with &gt; 10% ectopic/artefact beats or &lt; 4 minutes of usable RR are excluded (rule fixed here). Participant-windows with &lt; 6 quiet or &lt; 6 storm valid days are excluded from the primary contrast but retained for dose-response. Illness-flagged days excluded from primary, retained in a sensitivity analysis.</p>
+<h3>Missing data</h3>
+<p>Missing days are left missing (mixed models use all available participant-days under MAR); no imputation of the primary outcome. Missing covariates handled by multiple imputation for the covariate set only, sensitivity-checked against complete-case.</p>
+<h3>Exploratory vs confirmatory</h3>
+<p>Confirmatory: H1 (same-day storm-minus-quiet vs negative control) and H1b (inter-participant sync vs permutation). Everything else — dose-response, lag ±1, per-band HRV, Schumann-specific effects, sub-group and seasonal interactions — is exploratory and FDR-corrected.</p>
+<h2>Other</h2>
+<h3>Ethics / IRB</h3>
+<p>Non-invasive wearable ECG in healthy adults; standard human-subjects review (IRB/REC), informed consent, right to withdraw. No deception beyond withholding the specific geomagnetic hypothesis (disclosed at debrief). De-identified, date-coded data; results — including a null — committed to publication in advance so a disconfirming outcome cannot be buried.</p>
+<h3>Negative control (the load-bearing element)</h3>
+<p>The phase-shuffled Kp negative control is what separates this from the many geomagnetic-biology studies that report raw correlations inflated by shared seasonality and temporal autocorrelation. Because a real ~27-day solar-rotation and seasonal structure lives in both Kp and human physiology, <em>any</em> naive correlation is suspect. Circularly shifting/phase-randomising Kp preserves its autocorrelation structure while destroying its true temporal alignment to the HRV series; if the "real" alignment produces no larger an effect than a random alignment, there is no coupling to detect. This control is pre-specified as the primary inferential yardstick precisely so the result cannot be narrated around.</p>
+<h3>Inter-participant synchronisation (the hard-to-confound signature)</h3>
+<p>Local weather, sleep, and behaviour are participant- and site-specific; they cannot easily produce correlated day-to-day HRV among strangers at <em>different</em> sites. A genuine global geomagnetic driver can. Multi-site recruitment plus the day-permutation null makes this the most diagnostic test in the design: a positive H1b that survives permutation would be difficult to explain by any local confound, and its absence alongside a raw H1 correlation would strongly implicate seasonality/autocorrelation.</p>
+<h3>Confound-control summary</h3>
+<table>
+<thead>
+<tr>
+<th>Confound</th>
+<th>Why it threatens the result</th>
+<th>Control</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shared seasonality / 27-day solar rotation</td>
+<td>Both Kp and HRV carry slow periodic structure → spurious correlation</td>
+<td>Phase-shuffled negative control (preserves autocorrelation); season covariate</td>
+</tr>
+<tr>
+<td>Temporal autocorrelation of daily HRV</td>
+<td>Inflates naive significance</td>
+<td>Negative-control null is the inferential yardstick; mixed model with per-subject slopes</td>
+</tr>
+<tr>
+<td>Local weather (temperature, pressure, daylight)</td>
+<td>Co-varies with mood/HRV and with slow geomagnetic trends</td>
+<td>Per-site covariates; multi-site design; inter-site synchronisation test</td>
+</tr>
+<tr>
+<td>Behaviour (sleep, caffeine, activity)</td>
+<td>Direct large HRV drivers</td>
+<td>Daily logs + accelerometer as covariates</td>
+</tr>
+<tr>
+<td>Expectancy / deliberate self-regulation</td>
+<td>Participant vagal "counters" on perceived-active days</td>
+<td>Hypothesis withheld; participants uncued to geomagnetic state</td>
+</tr>
+<tr>
+<td>Device/measurement drift, time-of-day</td>
+<td>Systematic HRV variance</td>
+<td>Fixed morning window; same device; artefact QC thresholds</td>
+</tr>
+<tr>
+<td>Analyst degrees of freedom</td>
+<td>Post-hoc fitting to a free target</td>
+<td>Full pre-registration; date-coded blinded analysis; locked pipeline</td>
+</tr>
+</tbody>
+</table>
+<h3>Anchor citation</h3>
+<p>McCraty, Atkinson, Stolc, Alabdulgader, Vainoras &amp; Ragulskis (2017), "Synchronization of Human Autonomic Nervous System Rhythms with Geomagnetic Activity in Human Subjects," <em>IJERPH</em> 14(7):770 — the correlational, HeartMath-funded source this study is designed to test under proper negative-control and multi-site conditions.</p>
+<h3>Analytic-software note</h3>
+<p>All analysis code (mixed-effects models, spectral/coherence pipeline, permutation and phase-shuffle routines, power simulation) is deposited with this registration and version-pinned; the blind is broken only after the code is frozen.</p>
+</div>
+</section>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <p class="cred">
+      REGULUS / ASS-OS &mdash; Thomas (@ThomasTheTankEngineer), Konomi Systems<br>
+      Explainer, appraisal and pre-registrations &mdash; V&gt;&gt;<br>
+      With assistance of Claude Opus 5 &middot; <a href="https://github.com/teslasolar/eth">github.com/teslasolar/eth</a>
+    </p>
+    <p style="max-width:60ch">
+      Written to be checked, not believed. This page is generated directly from its source
+      file by <code>docs/build.py</code>, so it cannot drift from the document it presents.
+    </p>
+  </div>
+</footer>
+</body>
+</html>

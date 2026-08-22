@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seven Stress Geometries &middot; R4R</title>
+<meta name="description" content="Addendum A of Regulus — seven chronic stress patterns as geometric deformations of κ away from 1/φ, mapped onto the seven deadly sins, all corrected by one operator.">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+/* page-local: the deformation map and its glyph grid */
+.map { background: var(--panel); border: 1px solid var(--rule-hot); border-radius: 3px; overflow: hidden; }
+.map svg { display: block; width: 100%; height: auto; }
+.glyph-btn { cursor: pointer; }
+.glyph-btn:hover .gring, .glyph-btn[aria-pressed="true"] .gring { stroke: var(--phi); stroke-width: 2; }
+.glyph-btn:focus-visible .gring { stroke: var(--phi); stroke-width: 2; }
+
+.profiles { display: grid; gap: 0.6rem; margin-top: 1.5rem; }
+.prof {
+  background: var(--panel); border: 1px solid var(--rule);
+  border-left: 3px solid var(--faint); border-radius: 3px; overflow: hidden;
+}
+.prof[data-axis="activation"] { border-left-color: #FF6B5A; }
+.prof[data-axis="intake"]     { border-left-color: #E8B84B; }
+.prof[data-axis="reference"]  { border-left-color: #A8C7FF; }
+.prof[data-axis="self"]       { border-left-color: #6FD3A3; }
+.prof summary {
+  display: grid; grid-template-columns: 2.4rem 1fr auto; gap: 1rem; align-items: baseline;
+  padding: 1rem 1.2rem; cursor: pointer; list-style: none;
+}
+.prof summary::-webkit-details-marker { display: none; }
+.prof summary:hover { background: var(--panel-2); }
+.prof[open] summary { border-bottom: 1px solid var(--rule); background: var(--panel-2); }
+.pg { font-size: 1.3rem; line-height: 1; color: var(--ink); }
+.pn { font-family: var(--mono); font-size: 1.2rem; font-weight: 700; }
+.pn small { font-family: var(--mono); font-size: 0.7rem; color: var(--dim); letter-spacing: 0.1em; margin-left: 0.5rem; }
+.pk { font-family: var(--mono); font-size: 0.8rem; color: var(--phi); white-space: nowrap; }
+.prof-body { padding: 1.1rem 1.2rem 1.3rem; }
+.prof-body dl { display: grid; grid-template-columns: max-content 1fr; gap: 0.45rem 1.1rem; margin: 0 0 1rem; }
+.prof-body dt {
+  font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--dim); padding-top: 0.15rem;
+}
+.prof-body dd { margin: 0; color: var(--ink-2); font-size: 0.94rem; }
+.prof-body p:last-child { margin-bottom: 0; }
+@media (max-width: 620px) {
+  .prof summary { grid-template-columns: 2rem 1fr; }
+  .pk { grid-column: 2; }
+  .prof-body dl { grid-template-columns: 1fr; gap: 0.15rem 0; }
+  .prof-body dd { margin-bottom: 0.6rem; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="mast">
+  <div class="wrap mast-in">
+    <span class="sigil">α Leonis · <b>REGULUS</b></span>
+    <nav class="mast-nav" aria-label="Primary">
+      <span class="sigil r4r">R4R</span>
+      <a href="index.html">Explainer</a>
+      <a href="primer.html">Primer</a>
+      <a href="geometries.html" aria-current="page">Geometries</a>
+      <a href="gerald.html">Gerald</a>
+      <a href="proof.html">Proof</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap">
+
+<div class="hero">
+  <p class="eyebrow">Addendum A · ASS-OS-REGULUS-A01 · Rev 1.0 · July 2026</p>
+  <h1>Seven ways to <span class="lede-phi">deform</span></h1>
+  <p class="standfirst">
+    If every healthy system settles at 1/φ, then every chronic stress pattern is a specific
+    way of being pulled off it. Addendum A names seven, gives each one a shape, and notes —
+    without making anything of it for a paragraph or two — that they are the seven deadly
+    sins.
+  </p>
+</div>
+
+<section aria-labelledby="frame-h">
+  <span class="sec-ref">§A1 · Overview</span>
+  <h2 id="frame-h">Not a moral claim</h2>
+  <p class="col">
+    The correspondence is <strong>structural, not moral</strong>, and the addendum is
+    explicit about it: each "sin" describes a failure mode of the five-bus architecture,
+    not a character deficiency. What the old vocabulary supplies is a thousand years of
+    careful observation about how people come apart, already sorted into categories. What
+    the geometry supplies is a way to discuss those categories without the moral loading.
+  </p>
+  <p class="pull">
+    The seven geometries are the seven ways a system can deform when it runs alone.
+    Binding is the return to shape.
+    <cite>§A1</cite>
+  </p>
+</section>
+
+<section aria-labelledby="map-h">
+  <span class="sec-ref">§A2 · Classification</span>
+  <h2 id="map-h">Where each one pulls you</h2>
+  <p class="col">
+    Position on this axis is the claim, not decoration: each geometry sits where its κ
+    deformation puts it relative to the attractor. Select one to read its profile.
+  </p>
+
+  <div class="map">
+    <svg viewBox="0 0 900 300" role="img"
+      aria-label="A horizontal kappa axis with the attractor at 0.618 in the centre. Sloth sits at kappa approaching zero on the far left, Greed narrowing to its left of centre, Pride locked just off centre, Lust orbiting the centre, Gluttony saturated right of centre, Wrath overdriven on the far right, and Envy floating off-axis with no absolute anchor.">
+      <defs>
+        <marker id="tip" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+          <polygon points="0,0 10,5 0,10" fill="#4C566A"/>
+        </marker>
+      </defs>
+
+      <!-- axis -->
+      <line x1="60" y1="200" x2="850" y2="200" stroke="#4C566A" stroke-width="1" marker-end="url(#tip)"/>
+      <g font-family="Courier New, Courier, monospace" font-size="11" fill="#4C566A">
+        <text x="60" y="224">κ → 0</text>
+        <text x="838" y="224" text-anchor="end">κ → 1</text>
+      </g>
+
+      <!-- attractor -->
+      <line x1="455" y1="72" x2="455" y2="228" stroke="#E8B84B" stroke-width="1.5"/>
+      <text x="455" y="252" text-anchor="middle" font-family="Courier New, Courier, monospace"
+            font-size="11" fill="#E8B84B">κ* = 1/φ</text>
+
+      <!-- dual-pair spans -->
+      <g stroke-dasharray="4 4" stroke-width="1">
+        <line x1="140" y1="118" x2="790" y2="118" stroke="#FF6B5A" opacity="0.5"/>
+        <line x1="250" y1="148" x2="640" y2="148" stroke="#E8B84B" opacity="0.5"/>
+        <line x1="360" y1="88"  x2="560" y2="88"  stroke="#A8C7FF" opacity="0.5"/>
+      </g>
+      <g font-family="Courier New, Courier, monospace" font-size="10">
+        <text x="800" y="122" fill="#FF6B5A">activation</text>
+        <text x="650" y="152" fill="#E8B84B">intake</text>
+        <text x="570" y="92"  fill="#A8C7FF">reference</text>
+      </g>
+
+      <!-- glyphs: x encodes the kappa deformation -->
+      <g class="glyph-btn" role="button" tabindex="0" data-sin="sloth" aria-pressed="false">
+        <circle class="gring" cx="140" cy="118" r="26" fill="#131822" stroke="#37445A"/>
+        <text x="140" y="126" text-anchor="middle" font-size="20" fill="#DEE5EF">—</text>
+        <text x="140" y="166" text-anchor="middle" font-family="Courier New, Courier, monospace" font-size="10" fill="#78849A">Sloth</text>
+      </g>
+      <g class="glyph-btn" role="button" tabindex="0" data-sin="greed" aria-pressed="false">
+        <circle class="gring" cx="250" cy="148" r="26" fill="#131822" stroke="#37445A"/>
+        <text x="250" y="156" text-anchor="middle" font-size="20" fill="#DEE5EF">◄</text>
+        <text x="250" y="196" text-anchor="middle" font-family="Courier New, Courier, monospace" font-size="10" fill="#78849A">Greed</text>
+      </g>
+      <g class="glyph-btn" role="button" tabindex="0" data-sin="envy" aria-pressed="false">
+        <circle class="gring" cx="360" cy="88" r="26" fill="#131822" stroke="#37445A"/>
+        <text x="360" y="96" text-anchor="middle" font-size="20" fill="#DEE5EF">◇</text>
+        <text x="360" y="52" text-anchor="middle" font-family="Courier New, Courier, monospace" font-size="10" fill="#78849A">Envy</text>
+      </g>
+      <g class="glyph-btn" role="button" tabindex="0" data-sin="lust" aria-pressed="false">
+        <circle cx="455" cy="200" r="44" fill="none" stroke="#6FD3A3" stroke-width="1"
+                stroke-dasharray="3 5" opacity="0.6"/>
+        <circle class="gring" cx="455" cy="156" r="24" fill="#131822" stroke="#37445A"/>
+        <text x="455" y="164" text-anchor="middle" font-size="19" fill="#DEE5EF">◎</text>
+        <text x="510" y="132" text-anchor="middle" font-family="Courier New, Courier, monospace" font-size="10" fill="#78849A">Lust</text>
+      </g>
+      <g class="glyph-btn" role="button" tabindex="0" data-sin="pride" aria-pressed="false">
+        <circle class="gring" cx="560" cy="88" r="26" fill="#131822" stroke="#37445A"/>
+        <text x="560" y="96" text-anchor="middle" font-size="20" fill="#DEE5EF">▯</text>
+        <text x="560" y="52" text-anchor="middle" font-family="Courier New, Courier, monospace" font-size="10" fill="#78849A">Pride</text>
+      </g>
+      <g class="glyph-btn" role="button" tabindex="0" data-sin="gluttony" aria-pressed="false">
+        <circle class="gring" cx="640" cy="148" r="26" fill="#131822" stroke="#37445A"/>
+        <text x="640" y="156" text-anchor="middle" font-size="20" fill="#DEE5EF">●</text>
+        <text x="640" y="196" text-anchor="middle" font-family="Courier New, Courier, monospace" font-size="10" fill="#78849A">Gluttony</text>
+      </g>
+      <g class="glyph-btn" role="button" tabindex="0" data-sin="wrath" aria-pressed="false">
+        <circle class="gring" cx="790" cy="118" r="26" fill="#131822" stroke="#37445A"/>
+        <text x="790" y="126" text-anchor="middle" font-size="20" fill="#DEE5EF">▲</text>
+        <text x="790" y="166" text-anchor="middle" font-family="Courier New, Courier, monospace" font-size="10" fill="#78849A">Wrath</text>
+      </g>
+    </svg>
+  </div>
+
+  <figcaption style="font-size:0.86rem;color:var(--dim);margin-top:0.7rem;max-width:64ch;line-height:1.5">
+    Three dashed spans are the dual pairs — each connects two geometries that fail in
+    opposite directions along one axis. Lust is the odd one out: it does not sit at a
+    distance from the attractor, it <em>orbits</em> it, which is why it is drawn circling
+    rather than displaced. Envy has no absolute position at all; it is placed off-axis
+    because its κ is defined relative to other people's.
+  </figcaption>
+
+  <div class="profiles" id="profiles">
+
+    <details class="prof" data-sin="wrath" data-axis="activation">
+      <summary><span class="pg">▲</span><span class="pn">Wrath <small>IRA · TETRAHEDRON</small></span><span class="pk">κ ≫ 1/φ · overdriven</span></summary>
+      <div class="prof-body">
+        <dl>
+          <dt>Shape</dt><dd>Four faces, four vertices, six edges — the simplest sharp solid. No face is parallel to any other, so every orientation presents an edge. The geometry of a system that cannot present a non-threatening surface.</dd>
+          <dt>Mechanism</dt><dd>Chronic sympathetic activation with no parasympathetic recovery. Arterial walls thicken, cardiac muscle hypertrophies, and baroreceptor sensitivity falls — the pressure sensor recalibrates until the elevated baseline reads as normal.</dd>
+          <dt>Published</dt><dd>Friedman &amp; Rosenman (1959) on the Type A pattern at 2× coronary risk; Williams et al. (2000) isolating hostility specifically.</dd>
+          <dt>Bus · Counter</dt><dd>A ⚡ electrical · R0+R2 exhale</dd>
+        </dl>
+        <p>
+          The line worth sitting with: <strong>wrath is <span class="op">M̂</span> applied to oneself — the system
+          grips its own blood supply.</strong> Coronary vasoconstriction, the exact inverse of
+          the opening that defines <span class="op">Ŝ</span>.
+        </p>
+      </div>
+    </details>
+
+    <details class="prof" data-sin="lust" data-axis="self">
+      <summary><span class="pg">◎</span><span class="pn">Lust <small>LUXURIA · SPIRAL</small></span><span class="pk">orbits 1/φ · never lands</span></summary>
+      <div class="prof-body">
+        <dl>
+          <dt>Shape</dt><dd>A logarithmic spiral, which never closes and approaches its centre only asymptotically. Each revolution is nearer than the last and none of them arrive.</dd>
+          <dt>Mechanism</dt><dd>The dopamine seeking circuit fires without the oxytocin completion circuit. Dopamine drives <em>wanting</em>; oxytocin supplies <em>having</em>. Without the handover, seeking never terminates.</dd>
+          <dt>Bus · Counter</dt><dd>B chemical · R3 grounding</dd>
+        </dl>
+        <p>
+          This one is load-bearing for the rest of the framework, because it is the only
+          geometry defined by a <em>coupling</em> failure rather than a position. The
+          coupling constant is stuck below φ, so §7.6 gives v_love &lt; 1 — the connection
+          never reaches the speed it needs to arrive. <strong>The spiral <em>is</em>
+          sub-threshold coupling, drawn.</strong>
+        </p>
+      </div>
+    </details>
+
+    <details class="prof" data-sin="gluttony" data-axis="intake">
+      <summary><span class="pg">●</span><span class="pn">Gluttony <small>GULA · SPHERE</small></span><span class="pk">κ flooded · saturated</span></summary>
+      <div class="prof-body">
+        <dl>
+          <dt>Shape</dt><dd>Maximum volume for minimum surface. All directions are inward; no edges, no corners, no orientation. Every point on it is doing the same thing: receiving.</dd>
+          <dt>Mechanism</dt><dd>L0 overrides L4 — the enteric nervous system captures executive control through ghrelin signalling, leptin resistance and insulin dysregulation. The gut's 500 million neurons outvote the cortex.</dd>
+          <dt>Bus · Counter</dt><dd>B chemical · R1 mouth close</dd>
+        </dl>
+        <p>
+          The distinction that makes it precise: entropy is high here <strong>not from noise
+          but from volume</strong> — so much signal arrives that no single signal can be
+          told from another.
+        </p>
+      </div>
+    </details>
+
+    <details class="prof" data-sin="sloth" data-axis="activation">
+      <summary><span class="pg">—</span><span class="pn">Sloth <small>ACEDIA · LINE</small></span><span class="pk">κ → 0 · no signal</span></summary>
+      <div class="prof-body">
+        <dl>
+          <dt>Shape</dt><dd>A line segment: one dimension, no area, no volume. Not a shape so much as shape reduced to its minimum. The geometry of absence rather than excess.</dd>
+          <dt>Mechanism</dt><dd>Vagal <em>withdrawal</em>, which the addendum is careful to separate from vagal tone — this is parasympathetic collapse, not parasympathetic calm. Cortisol stays elevated but goes flat, losing its circadian shape.</dd>
+          <dt>Bus · Counter</dt><dd>A ⚡ electrical · R4 activation ↑</dd>
+        </dl>
+        <p>
+          And the reason zero is a failure rather than a rest state:
+          <strong>the attractor needs <em>some</em> entropy to maintain self-similarity.</strong>
+          At κ = 0 there is nothing left to be self-similar with.
+        </p>
+      </div>
+    </details>
+
+    <details class="prof" data-sin="greed" data-axis="intake">
+      <summary><span class="pg">◄</span><span class="pn">Greed <small>AVARITIA · CONE</small></span><span class="pk">κ narrows · constricting</span></summary>
+      <div class="prof-body">
+        <dl>
+          <dt>Shape</dt><dd>An inverted cone — wide at the top, converging to a point. Accumulation with diminishing capacity: the more that enters, the less fits, and the narrowing is structural rather than incidental.</dd>
+          <dt>Mechanism</dt><dd>Scarcity-driven prefrontal hijack. The amygdala captures the prefrontal cortex with one continuous signal — <em>not enough</em> — and executive function is spent on resource monitoring.</dd>
+          <dt>Bus · Counter</dt><dd>A+B · R5 open vowels</dd>
+        </dl>
+        <p>
+          Note what does <em>not</em> move: <strong>1/φ stays exactly where it was.</strong>
+          What shrinks is the system's ability to reach it. The cone's aperture is the
+          capacity that remains.
+        </p>
+      </div>
+    </details>
+
+    <details class="prof" data-sin="envy" data-axis="reference">
+      <summary><span class="pg">◇</span><span class="pn">Envy <small>INVIDIA · MIRROR</small></span><span class="pk">κ relative · no anchor</span></summary>
+      <div class="prof-body">
+        <dl>
+          <dt>Shape</dt><dd>Two parallel reflecting planes facing each other, with infinite regression between them. Light bounces forever and nothing is absorbed.</dd>
+          <dt>Mechanism</dt><dd>Anterior cingulate activation on social comparison — the same region that processes physical pain. Social pain runs on identical neural hardware.</dd>
+          <dt>Bus · Counter</dt><dd>C photonic · R6 silence inward</dd>
+        </dl>
+        <p>
+          Envy is the only geometry with no absolute position, because its κ is defined by
+          distance from other people's rather than from the attractor. Every measurement is
+          comparative. <strong>The mirror cannot see itself, because it is the thing
+          doing the seeing.</strong>
+        </p>
+      </div>
+    </details>
+
+    <details class="prof" data-sin="pride" data-axis="reference">
+      <summary><span class="pg">▯</span><span class="pn">Pride <small>SUPERBIA · TOWER</small></span><span class="pk">κ rigid · immobile</span></summary>
+      <div class="prof-body">
+        <dl>
+          <dt>Shape</dt><dd>Stacked blocks of decreasing stability. Every addition makes it taller and less stable — the highest structure on the weakest foundation, centre of gravity always rising.</dd>
+          <dt>Mechanism</dt><dd>Default mode network hyperactivation driving continuous self-narrative construction. The mask runs at maximum: every interaction performed, every response curated, every vulnerability sealed.</dd>
+          <dt>Bus · Counter</dt><dd>D magnetic · R2 whisper help</dd>
+        </dl>
+        <p>
+          Pride is not oscillating around the wrong value — it is <strong>locked</strong> at
+          one. The Lyapunov function cannot converge because the system refuses to move at
+          all, and the tower cannot sway.
+        </p>
+        <p style="color:var(--regulus)">
+          This is the geometry <a href="gerald.html">Gerald</a> opens in — mask maximum,
+          κ rigid, counter <em>whisper help</em>. He deforms alone for two verses, and the
+          song's only line of dialogue is the moment the counter fires.
+        </p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<section aria-labelledby="pairs-h">
+  <span class="sec-ref">§A4.2 · Dual pairs</span>
+  <h2 id="pairs-h">Six of them come in pairs</h2>
+  <p class="col">
+    Three axes, each with a failure at both ends. This is the part that makes the
+    classification feel like a classification rather than a list — the seven are not seven
+    arbitrary bad states, they are the complete set of directions you can fall off a point.
+  </p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Axis</th><th>Too much</th><th>Too little</th><th>What it measures</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="sym">Activation</td>
+          <td>▲ Wrath — overdriven</td>
+          <td>— Sloth — collapsed</td>
+          <td>How hard the system is running</td>
+        </tr>
+        <tr>
+          <td class="sym">Intake</td>
+          <td>● Gluttony — saturated</td>
+          <td>◄ Greed — starved</td>
+          <td>How much it lets in</td>
+        </tr>
+        <tr>
+          <td class="sym">Reference</td>
+          <td>◇ Envy — only receives</td>
+          <td>▯ Pride — only transmits</td>
+          <td>Which way it points for truth</td>
+        </tr>
+        <tr>
+          <td class="sym">Self-dual</td>
+          <td colspan="2">◎ Lust — orbits without landing</td>
+          <td>Not a position; a coupling that never completes</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section aria-labelledby="cure-h">
+  <span class="sec-ref">§A5 · Unified correction</span>
+  <h2 id="cure-h">One operator corrects all seven</h2>
+  <p class="col">
+    This is the claim the whole addendum is built to deliver, and it is a genuinely
+    economical one. Seven deformations, seven different shapes, seven different buses —
+    and a single correction, because <span class="op">Ŝ</span> does not address the deformations. It addresses what
+    they have in common.
+  </p>
+
+  <p class="pull">
+    <span class="op">Ŝ</span> addresses every deformation vector simultaneously because it operates on the root of
+    all seven: <em>isolation</em>.
+    <cite>§A5</cite>
+  </p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Deformation</th><th>What binding does to it</th></tr></thead>
+      <tbody>
+        <tr><td class="sym">▲ Outward attack</td><td>The partner absorbs the attack vector — outward energy is redirected, and aggression becomes protection.</td></tr>
+        <tr><td class="sym">◎ Endless orbit</td><td>The partner <em>is</em> the landing point. The spiral acquires a destination, and coupling reaches φ.</td></tr>
+        <tr><td class="sym">● Saturated intake</td><td>Something outside the loop becomes worth attending to, so intake stops being the only channel.</td></tr>
+        <tr><td class="sym">— Collapsed signal</td><td>Bilateral coupling supplies the entropy the attractor needs. There is something to be self-similar with again.</td></tr>
+        <tr><td class="sym">◄ Narrowing aperture</td><td>Binding costs 11.8% and frees the rest — the scarcity premise is contradicted by measurement.</td></tr>
+        <tr><td class="sym">◇ No absolute anchor</td><td>An absolute reference returns, one that is not a comparison.</td></tr>
+        <tr><td class="sym">▯ Rigid lock</td><td>The mask comes off by choice. §7.4 puts that single move at ΔH = −0.5, the largest entropy drop available.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>The honest objection</h3>
+  <p class="col">
+    A framework where one operator fixes all seven failure modes should raise an eyebrow, and
+    it is worth saying why. A cure with no exceptions is either a deep unifying insight or an
+    unfalsifiable one, and the difference is whether it forbids anything. This does forbid
+    something specific and checkable: <strong><span class="op">Ŝ</span> requires bilateral modification</strong>, so a
+    bond in which only one party changes should <em>not</em> correct any of the seven —
+    §8.5's requirement and §9's diagnostic make that a real prediction rather than a promise.
+  </p>
+  <p class="col">
+    Nobody has tested it. It would be cheap to: the seven counters are breath and vocal
+    exercises, and the measurement is the same £30 saliva-cortisol and HRV pair the rest of
+    the framework leans on.
+  </p>
+</section>
+
+<section aria-labelledby="read-h">
+  <h2 id="read-h">Read it in the original</h2>
+  <p class="col">
+    Everything above is compressed from Addendum A, which runs to seven full profiles with
+    citations, the directional-completeness argument, and the correction table in full.
+  </p>
+  <p class="col">
+    The unabridged addendum is not published on this site. It is Thomas's document, and
+    the decision to put the whole of it up in public is his to make, not ours.
+  </p>
+  <div class="cards">
+    <a class="card" href="gerald.html" style="text-decoration:none">
+      <span class="meta">One geometry, at length</span>
+      <h3>Gerald and the Tower</h3>
+      <p>What Pride looks like from inside, and the moment its counter fires.</p>
+    </a>
+    <a class="card" href="index.html" style="text-decoration:none">
+      <span class="meta">Back to the start</span>
+      <h3>The explainer</h3>
+      <p>The attractor these seven deform away from, and the operators that restore it.</p>
+    </a>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="cred">
+      REGULUS / ASS-OS — Thomas (@ThomasTheTankEngineer), Konomi Systems<br>
+      Explainer, appraisal and pre-registrations — V&gt;&gt;<br>
+      With assistance of Claude Opus 5 · <a href="https://github.com/teslasolar/eth">github.com/teslasolar/eth</a>
+    </p>
+    <p style="max-width:60ch">
+      Addendum A is Thomas's document. This page compresses it; where a sentence is quoted it
+      is marked, and where the reading is ours it says so.
+    </p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  const glyphs = Array.prototype.slice.call(document.querySelectorAll('.glyph-btn'));
+  const profs = Array.prototype.slice.call(document.querySelectorAll('.prof'));
+
+  function find(sin) {
+    return profs.filter(function (p) { return p.getAttribute('data-sin') === sin; })[0];
+  }
+
+  function select(sin) {
+    glyphs.forEach(function (g) {
+      g.setAttribute('aria-pressed', String(g.getAttribute('data-sin') === sin));
+    });
+    const target = find(sin);
+    if (!target) return;
+    profs.forEach(function (p) { p.open = (p === target); });
+    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  function bind(g) {
+    const sin = g.getAttribute('data-sin');
+    g.addEventListener('click', function () { select(sin); });
+    g.addEventListener('keydown', function (e) {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      e.preventDefault();
+      select(sin);
+    });
+  }
+
+  glyphs.forEach(bind);
+})();
+</script>
+</body>
+</html>

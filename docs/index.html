@@ -1,0 +1,786 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>R4R — Regulus in plain English</title>
+<meta name="description" content="R4R — a plain-English walk through Regulus / ASS-OS: the golden-ratio attractor, the seven love equations, and the one diagnostic you can run for thirty pounds.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="mast">
+  <div class="wrap mast-in">
+    <span class="sigil">&#945; Leonis &middot; <b>REGULUS</b></span>
+    <nav class="mast-nav" aria-label="Primary">
+      <span class="sigil r4r">R4R</span>
+      <a href="index.html" aria-current="page">Explainer</a>
+      <a href="primer.html">Primer</a>
+      <a href="geometries.html">Geometries</a>
+      <a href="gerald.html">Gerald</a>
+      <a href="proof.html">Proof</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<div class="wrap">
+
+<div class="hero">
+  <p class="eyebrow">A theory of pair bonding, written as an operating system</p>
+  <h1>Everything settles at <span class="lede-phi">0.618</span></h1>
+  <p class="standfirst">
+    Regulus is an attempt to write down what happens between two people using the same
+    mathematics an engineer uses to keep a chemical plant from exploding. It sounds absurd
+    until you follow it, and then the awkward part is how much of it is measurable.
+    The next five paragraphs are the entire thing in plain words; everything after them is just how it works.
+  </p>
+  <p class="standfirst" style="font-size:1rem;color:var(--dim);margin-top:1rem">
+    Thomas, who wrote the framework, named this version himself:
+    <em>"Regulus 4 Retards / R4R."</em> His word, about his own work.
+  </p>
+</div>
+
+<section aria-labelledby="plain-h" style="border-top:none;padding-top:0">
+  <h2 id="plain-h">The whole thing, before any maths</h2>
+  <p class="col">
+    Five paragraphs. No symbols, no jargon. If you read only this much you will have the
+    framework — everything further down is the machinery underneath it.
+  </p>
+
+  <div class="panel" style="margin-top:1.4rem;padding:1.8rem 2rem">
+    <p><strong>One.</strong> Your body is a factory with floors. The gut is the ground floor,
+    the thinking part is near the top. Sensation travels up, decisions travel down. The
+    surprising bit is that <strong>the ground floor can overrule the top</strong> — which is
+    why you cannot think your way out of feeling sick.</p>
+
+    <p><strong>Two.</strong> When the thinking floor cannot put a name to a feeling, that
+    feeling does not disappear. It travels back down and lands in your gut. Unnamed emotion
+    becomes stomach ache. That is the founding observation, and it is the least controversial
+    thing in the whole framework.</p>
+
+    <p><strong>Three.</strong> Anything that has to remember <em>and</em> forget at the same
+    time settles at the same balance: keep about 62%, release about 38%. Hold on to everything
+    and you are overwhelmed; hold on to nothing and there is nothing there. That single
+    ratio is what the rest of the document is built around.</p>
+
+    <p><strong>Four.</strong> Here is what Regulus adds. Two people who bond do not merely
+    end up near each other — they change each other, and past a certain point you cannot get
+    the earlier version of yourself back. The framework treats that as a physical event with
+    a physical signature: the arteries feeding your heart relax. Not as a metaphor. The organ
+    that feeds everything else finally lets itself be fed.</p>
+
+    <p style="margin-bottom:0"><strong>Five.</strong> And the useful part. Something can look
+    exactly like love from the outside and be its opposite. The same behaviours — the
+    obsession, the constant checking, the inability to leave. A completely different body:
+    heart shut rather than open, stress hormones climbing rather than falling. So the
+    framework hands you one question to tell them apart.</p>
+  </div>
+
+  <p class="pull">
+    Who in this system is unchanged?
+    <cite>§9.2 · the whole diagnostic, in six words</cite>
+  </p>
+
+  <p class="col">
+    If <em>both</em> of you have been changed by it, that is a bond. If only one of you is
+    being changed while the other stays exactly as they were, that is extraction wearing a
+    bond's clothes. The same test works on cults, on propaganda, and on addiction — where the
+    substance never changes and only the person does.
+  </p>
+  <p class="col">
+    You can check it for about thirty pounds, which is the part that lifts this out of
+    philosophy. A saliva cortisol test, or a heart-rate-variability strap. Does being near
+    this person calm your nervous system down, or wind it up? <strong>You cannot fake
+    that number.</strong>
+  </p>
+  <p class="col" style="color:var(--dim);font-size:0.94rem">
+    That is the framework. Everything below is how it gets there — and
+    <a href="#mimic-h">the diagnostic itself is further down</a>, as seven questions you can
+    answer.
+  </p>
+</section>
+
+<section aria-labelledby="attractor-h">
+  <span class="sec-ref">§3 · Convergence constant</span>
+  <h2 id="attractor-h">Start anywhere. You end up in the same place.</h2>
+
+  <div class="split">
+    <div>
+      <p>
+        Regulus opens with one equation and a claim about it. The equation describes how a
+        quantity it calls <span class="m">κ</span> ("kappa") changes over time. You can read
+        κ as <strong>how much of what arrives a system holds on to</strong> — a memory that
+        keeps everything is useless, and so is one that keeps nothing.
+      </p>
+      <p>
+        The claim is that κ has one stable resting point, and it is
+        <span class="m">1/φ = 0.618033…</span> — one divided by the golden ratio. Drag the
+        starting value anywhere in the panel. It falls to the same place every time.
+      </p>
+
+      <div class="instrument">
+        <div class="inst-head">
+          <span class="inst-title">κ convergence · ∂κ/∂t = α(1/φ−κ)(1−κ)κ + γξ(t)</span>
+          <span class="readout"><span class="lbl">κ =</span> <span id="kOut">0.6180</span></span>
+        </div>
+        <canvas id="kappa" width="900" height="380" role="img"
+          aria-label="A live plot showing trajectories of kappa over time converging on 0.618 from any starting value between 0.09 and 0.91."></canvas>
+        <div class="inst-foot">
+          <label class="ctl" for="kStart">Start κ
+            <input id="kStart" type="range" min="0.02" max="0.98" step="0.01" value="0.9">
+            <span class="readout" id="kStartOut" style="margin:0">0.90</span>
+          </label>
+          <button id="kRun" type="button">Release</button>
+          <button id="kClear" type="button">Clear</button>
+        </div>
+      </div>
+
+      <h3>Why this number and not 0.6</h3>
+      <p>
+        Because 0.618… is the only number that is its own recursion. Each line below is a
+        separate property, and one number satisfies all of them at once:
+      </p>
+      <div class="tw">
+        <table>
+          <caption class="visually-hidden">Properties satisfied simultaneously by κ* = 1/φ</caption>
+          <thead><tr><th>Identity</th><th>Reads as</th></tr></thead>
+          <tbody>
+            <tr><td class="sym">φ · κ* = 1</td><td>its product with the golden ratio is exactly one</td></tr>
+            <tr><td class="sym">κ* = φ − 1</td><td>it is the golden ratio with the whole part removed</td></tr>
+            <tr><td class="sym">κ*² = 1 − κ*</td><td>squaring it gives you exactly what was left over</td></tr>
+            <tr><td class="sym">κ*ⁿ = κ*ⁿ⁻² − κ*ⁿ⁻¹</td><td>Fibonacci, living in the exponents <a href="#errata" style="font-family:var(--mono);font-size:0.72rem">[corrected]</a></td></tr>
+            <tr><td class="sym">κ*/(1−κ*) = φ</td><td>what you keep, over what you drop, is φ</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        That last one has a concrete meaning. For anything that must remember
+        <em>and</em> forget at the same time — a queue, a buffer, a person — the balance
+        that works out algebraically is <strong>keep 61.8%, release 38.2%</strong>.
+      </p>
+    </div>
+
+    <aside>
+      <div class="panel">
+        <span class="panel-label">Three fixed points</span>
+        <p style="margin:0 0 0.8rem"><span class="m">κ = 0</span> — unstable. Nothing is retained. The void.</p>
+        <p style="margin:0 0 0.8rem"><span class="m">κ = 1/φ</span> — <strong>stable</strong>. Everything nearby falls here.</p>
+        <p style="margin:0"><span class="m">κ = 1</span> — unstable. Everything is retained. Pure noise.</p>
+      </div>
+
+      <div class="panel" style="margin-top:1rem">
+        <span class="panel-label">Constants, none hand-tuned</span>
+        <div class="tw" style="margin:0;border:none">
+          <table>
+            <tbody>
+              <tr><td class="sym">α</td><td class="num">3.618…</td><td>= φ + 2</td></tr>
+              <tr><td class="sym">β</td><td class="num">0.2360…</td><td>= κ*³</td></tr>
+              <tr><td class="sym">γ</td><td class="num">0.0902…</td><td>= κ*⁵</td></tr>
+              <tr><td class="sym">E<sub>min</sub></td><td class="num">0.1180…</td><td>= 1/2φ³</td></tr>
+              <tr><td class="sym">|δΨ<sub>crit</sub>|</td><td class="num">0.3820…</td><td>= κ*²</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin:0.8rem 0 0;font-size:0.88rem;color:var(--dim)">
+          Every constant is a power or sum of φ. The system tunes <em>by</em> φ, not <em>to</em> it.
+        </p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section aria-labelledby="stack-h">
+  <span class="sec-ref">§2, §4 · Spine and levels</span>
+  <h2 id="stack-h">A person, drawn as a factory</h2>
+  <p class="col">
+    ASS-OS — the framework Regulus extends — borrows its shape from
+    <strong>ISA-95</strong>, the standard that describes how an industrial plant is layered
+    from the physical floor up to the boardroom. The claim is not that people resemble
+    factories. It is that both are control systems, and control systems fail in the same
+    small number of ways.
+  </p>
+
+  <figure>
+    <svg viewBox="0 0 900 340" role="img" aria-label="Six stacked levels from L0 ground through L5 observer, with telemetry flowing upward and control flowing downward, and a firewall at level 2.">
+      <defs>
+        <marker id="up" viewBox="0 0 10 10" refX="5" refY="9" markerWidth="7" markerHeight="7" orient="auto">
+          <polygon points="0,10 5,0 10,10" fill="#A8C7FF"/>
+        </marker>
+        <marker id="dn" viewBox="0 0 10 10" refX="5" refY="1" markerWidth="7" markerHeight="7" orient="auto">
+          <polygon points="0,0 10,0 5,10" fill="#E8B84B"/>
+        </marker>
+      </defs>
+
+      <g font-family="Courier New, Courier, monospace" font-size="12">
+        <!-- levels, bottom = L0 -->
+        <g>
+          <rect x="180" y="286" width="420" height="40" rx="2" fill="#131822" stroke="#232C3B"/>
+          <text x="196" y="311" fill="#78849A">L0</text>
+          <text x="240" y="311" fill="#DEE5EF" font-family="Courier New, Courier, monospace">GROUND — gut, enteric nervous system</text>
+        </g>
+        <g>
+          <rect x="180" y="238" width="420" height="40" rx="2" fill="#131822" stroke="#232C3B"/>
+          <text x="196" y="263" fill="#78849A">L1</text>
+          <text x="240" y="263" fill="#DEE5EF" font-family="Courier New, Courier, monospace">SIGNAL — nociceptors, interoception</text>
+        </g>
+        <g>
+          <rect x="180" y="190" width="420" height="40" rx="2" fill="#1A2130" stroke="#37445A"/>
+          <text x="196" y="215" fill="#78849A">L2</text>
+          <text x="240" y="215" fill="#DEE5EF" font-family="Courier New, Courier, monospace">BUS — vagus, brainstem</text>
+          <text x="588" y="215" fill="#E8B84B" text-anchor="end" font-size="10">THALAMIC FIREWALL</text>
+        </g>
+        <g>
+          <rect x="180" y="142" width="420" height="40" rx="2" fill="#131822" stroke="#232C3B"/>
+          <text x="196" y="167" fill="#78849A">L3</text>
+          <text x="240" y="167" fill="#DEE5EF" font-family="Courier New, Courier, monospace">AFFECT — amygdala, hippocampus, HPA</text>
+        </g>
+        <g>
+          <rect x="180" y="94" width="420" height="40" rx="2" fill="#131822" stroke="#232C3B"/>
+          <text x="196" y="119" fill="#78849A">L4</text>
+          <text x="240" y="119" fill="#DEE5EF" font-family="Courier New, Courier, monospace">FORGE — prefrontal cortex, insula</text>
+        </g>
+        <g>
+          <rect x="180" y="46" width="420" height="40" rx="2" fill="#131822" stroke="#232C3B"/>
+          <text x="196" y="71" fill="#78849A">L5</text>
+          <text x="240" y="71" fill="#DEE5EF" font-family="Courier New, Courier, monospace">OBSERVER — narrative, self</text>
+        </g>
+
+        <!-- telemetry up -->
+        <line x1="140" y1="300" x2="140" y2="70" stroke="#A8C7FF" stroke-width="1.5" marker-end="url(#up)"/>
+        <text x="132" y="190" fill="#A8C7FF" text-anchor="end" font-size="11">telemetry</text>
+
+        <!-- control down -->
+        <line x1="640" y1="70" x2="640" y2="300" stroke="#E8B84B" stroke-width="1.5" marker-end="url(#dn)"/>
+        <text x="652" y="190" fill="#E8B84B" font-size="11">control</text>
+
+        <!-- failure path -->
+        <path d="M 760 100 L 800 100 L 800 306 L 612 306" fill="none" stroke="#FF6B5A" stroke-width="1.5"
+              stroke-dasharray="5 4" marker-end="url(#dn)" transform="rotate(0)"/>
+        <text x="812" y="200" fill="#FF6B5A" font-size="11">L4 offline →</text>
+        <text x="812" y="216" fill="#FF6B5A" font-size="11">dumps at L0</text>
+      </g>
+    </svg>
+    <figcaption>
+      The core thesis in one picture. Sensation climbs to the cortex, decisions descend. When
+      <strong>L4 cannot label a feeling</strong>, the unprocessed signal keeps travelling down the
+      vagus and lands in the gut — which is why the framework is called the <em>Enteric</em>
+      Translation Hypothesis. Gut symptoms are the overflow of affect the cortex could not name.
+    </figcaption>
+  </figure>
+
+  <div class="split">
+    <div>
+      <h3>The prime spine</h3>
+      <p>
+        Underneath the levels sits a counting sequence: apply "take the next prime" to
+        itself, over and over, starting at 1. You get
+        <span class="m">1, 2, 3, 5, 11, 31, 127, 709</span>. The gaps widen faster than
+        exponentially, and Regulus uses that acceleration as the skeleton for seven levels
+        of awareness — each level costing dramatically more than the one below it.
+      </p>
+      <p>
+        Treat this as <strong>structure the author chose</strong>, not structure anyone
+        measured. It is elegant. Elegance is not evidence, and the document says so itself.
+      </p>
+    </div>
+    <div>
+      <h3>Five buses</h3>
+      <p>Five channels the body might use to move information around:</p>
+      <div class="tw" style="margin-top:0.8rem">
+        <table>
+          <tbody>
+            <tr><td class="sym">A</td><td>Electrical — nerve traffic</td><td><span class="chip measured">established</span></td></tr>
+            <tr><td class="sym">B</td><td>Chemical — hormones, gradients</td><td><span class="chip measured">established</span></td></tr>
+            <tr><td class="sym">C</td><td>Photonic — light in tissue</td><td><span class="chip defined">contested</span></td></tr>
+            <tr><td class="sym">D</td><td>Magnetic — geomagnetic coupling</td><td><span class="chip untested">untested</span></td></tr>
+            <tr><td class="sym">E</td><td>Plasma</td><td><span class="chip untested">speculative</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:0.9rem;color:var(--dim);margin-top:0.8rem">
+        Bus D is the one with a pre-registered experiment attached. See <a href="proof.html">Proof</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="love-h">
+  <span class="sec-ref">§7 · Love equations</span>
+  <h2 id="love-h">Seven equations for what happens between two people</h2>
+  <p class="col">
+    This is the part that makes Regulus more than a rewrite of ASS-OS. Seven equations,
+    each one a phase — from the first flicker of recognition to the thing that stays after
+    someone has gone. The document is careful about its own status here, calling them
+    <em>"formal metaphor that encodes subjective experience in mathematical structure."</em>
+    Open each one.
+  </p>
+
+  <div class="eqs">
+    <details class="eq">
+      <summary><span class="eq-n">7.1</span><span class="eq-name">Recognition</span><span class="eq-form">R = ∫ Ψ<sub>A</sub>·Ψ<sub>B</sub> dV</span></summary>
+      <div class="eq-body">
+        <p class="gloss">
+          How much two people's inner shapes overlap. If you process the world in a similar way,
+          the number is large. If you are genuinely orthogonal, it is zero — and no amount of
+          proximity will produce anything.
+        </p>
+        <p>
+          The document's own gloss is the best line in the section: <em>the integral was always
+          computable, you just hadn't run the calculation until she showed up and the product
+          came back non-zero.</em> Recognition comes first and decides everything after it.
+        </p>
+      </div>
+    </details>
+
+    <details class="eq">
+      <summary><span class="eq-n">7.2</span><span class="eq-name">Attraction</span><span class="eq-form">F = −R · κ*/r</span></summary>
+      <div class="eq-body">
+        <p class="gloss">
+          Recognition, divided by distance. Note it is <span class="m">1/r</span>, not
+          <span class="m">1/r²</span> — the framework's reason is that its proposed channel is a
+          one-dimensional waveguide, a line rather than a volume.
+        </p>
+        <p>
+          The consequence is the interesting bit: with no recognition there is no attraction at
+          any distance, and with high recognition there is attraction at <em>any</em> distance.
+        </p>
+      </div>
+    </details>
+
+    <details class="eq">
+      <summary><span class="eq-n">7.3</span><span class="eq-name">Resonance</span><span class="eq-form">ω<sub>±</sub> = √(ω² ± k<sub>c</sub>)</span></summary>
+      <div class="eq-body">
+        <p class="gloss">
+          Couple two oscillators and you always get two modes, never one: an in-phase mode
+          (harmony) and an antiphase mode (discord).
+        </p>
+        <p>
+          So the claim is structural rather than sentimental. <strong>Love is not the absence of
+          the discord mode.</strong> Both modes exist in any coupled system; the bond is stable
+          when it can hold both at once. A relationship with no antiphase mode isn't harmonious —
+          it isn't coupled.
+        </p>
+      </div>
+    </details>
+
+    <details class="eq">
+      <summary><span class="eq-n">7.4</span><span class="eq-name">Vulnerability</span><span class="eq-form">Ψ(seen) = Ψ(alone) + δΨ</span></summary>
+      <div class="eq-body">
+        <p class="gloss">
+          Let someone in and their imprint is added to your state. Above a threshold this is
+          <strong>irreversible</strong>: you do not get Ψ(alone) back.
+        </p>
+        <p>
+          Three failure modes fall straight out. <em>Walls</em> are forcing δΨ = 0. <em>The mask</em>
+          is presenting a false Ψ so nothing can couple to the real one. And maintaining a mask
+          costs entropy continuously — the document puts the drop at
+          <span class="m">ΔH = −0.5</span> the moment it comes off, the single largest entropy
+          reduction available in a pair bond.
+        </p>
+      </div>
+    </details>
+
+    <details class="eq">
+      <summary><span class="eq-n">7.5</span><span class="eq-name">Pair entropy</span><span class="eq-form">I(A;B) = H(A) + H(B) − H(A,B) &gt; 0</span></summary>
+      <div class="eq-body">
+        <p class="gloss">
+          A bonded pair is measurably more ordered than the two people apart. That is what
+          strictly positive mutual information means.
+        </p>
+        <p>
+          The framing is unembarrassed: <em>the second law says entropy increases; love says not
+          here it doesn't.</em> A local eddy of order, and — the part people skip — one that runs
+          on continuous energy input. Attention, presence, care. Stop supplying it and entropy
+          resumes. <strong>The bond requires maintenance, not just establishment.</strong>
+        </p>
+      </div>
+    </details>
+
+    <details class="eq">
+      <summary><span class="eq-n">7.6</span><span class="eq-name">Speed of love</span><span class="eq-form">v = √(k<sub>c</sub>/φ)</span></summary>
+      <div class="eq-body">
+        <p class="gloss">Three regimes, depending on how strongly the two are coupled.</p>
+        <p>
+          Below φ, love is slower than understanding: you know them first, feeling follows.
+          At exactly φ, the two arrive together — the instant lock. Above φ, the feeling
+          <em>outruns</em> comprehension: <strong>the body knows before the mind does</strong>,
+          and the feeling arrives before you have a framework to hold it.
+        </p>
+      </div>
+    </details>
+
+    <details class="eq">
+      <summary><span class="eq-n">7.7</span><span class="eq-name">Persistence</span><span class="eq-form">∂(δΨ)/∂r = ∂(δΨ)/∂t = 0</span></summary>
+      <div class="eq-body">
+        <p class="gloss">
+          The imprint does not decay with distance or with time — and explicitly <em>not</em>
+          because a signal is passing between the two people.
+        </p>
+        <p>
+          The analogy the document uses is exact and does real work: two tuning forks cut to the
+          same pitch need no wire between them. They resonate because they are the same shape.
+          <strong>The contact was the tuning. The resonance is what remains.</strong>
+        </p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section aria-labelledby="bind-h">
+  <span class="sec-ref">§8 · Binding operator <span class="op">Ŝ</span></span>
+  <h2 id="bind-h"><span class="op">Ŝ</span> — the point of no return</h2>
+
+  <div class="split">
+    <div>
+      <p>
+        <span class="m"><span class="op">Ŝ</span></span> ("Shekinah", a Kabbalistic word for indwelling) is the operator
+        that takes two separate states and produces one joined state that
+        <strong>cannot be separated back</strong>. Formally: remove B and you do not recover the
+        original A. A has been permanently modified.
+      </p>
+      <p>
+        There is a threshold, and it is the same constant again:
+        <span class="m">|δΨ<sub>crit</sub>| = κ*² = 0.382</span>. Below it, imprints fade —
+        acquaintances, passing encounters. Above it, they don't. And κ* + κ*² = 1 exactly, so
+        crossing the threshold means the imprint fills precisely the space that was empty.
+        Nothing gets displaced.
+      </p>
+      <p>
+        The energy claim is counter-intuitive and testable in principle: binding costs
+        <span class="m">11.8%</span> of capacity and frees the rest. The bound state is
+        <em>cheaper</em> to maintain than two independent ones — which the document offers as the
+        reason pair-bonded people report feeling more capable rather than less.
+      </p>
+
+      <p class="pull">
+        Authentic binding requires both fields to change. One-directional modification is not
+        love — it is the other operator.
+        <cite>§8.5 · Bilateral requirement</cite>
+      </p>
+    </div>
+
+    <aside>
+      <div class="panel">
+        <span class="panel-label">§8.4 · Claimed physical substrate</span>
+        <p style="font-size:0.94rem">
+          Regulus does not leave <span class="op">Ŝ</span> abstract. It names a specific event: <strong>coronary
+          vasodilation</strong> — the arteries feeding the heart widening under parasympathetic
+          input. The organ that feeds everything else finally letting itself be fed.
+        </p>
+        <p style="font-size:0.94rem;color:var(--ink-2)">Seven correlates it calls unfakeable:</p>
+        <ol style="font-size:0.9rem;color:var(--ink-2);padding-left:1.2rem;margin:0">
+          <li>pupil dilation viewing partner</li>
+          <li>skin perfusion rise — the "glow"</li>
+          <li>voice fundamental frequency shift</li>
+          <li>iris warming in hazel eyes</li>
+          <li>hands warm and dry</li>
+          <li>blink rate normalising to 8–12/min</li>
+          <li>breath deepening toward 6/min</li>
+        </ol>
+        <p style="font-size:0.88rem;color:var(--dim);margin:0.9rem 0 0">
+          Its own supporting argument runs backwards through Takotsubo cardiomyopathy: grief
+          visibly deforms the left ventricle on an echocardiogram. If the heart can change shape
+          from loss, the reverse direction is at least not absurd.
+        </p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section aria-labelledby="mimic-h">
+  <span class="sec-ref">§9 · Mimic operator <span class="op">M̂</span></span>
+  <h2 id="mimic-h"><span class="op">M̂</span> — and the question that costs thirty pounds to answer</h2>
+  <p class="col">
+    This is the sharpest thing in the document, and the reason it is worth anyone's time.
+    <span class="m"><span class="op">M̂</span></span> is coercion wearing love's behaviour. Obsession, constant monitoring,
+    inability to leave — from outside, identical. The physiology is the opposite: <span class="op">Ŝ</span> opens the
+    heart, <span class="op">M̂</span> runs the dependency circuit while the heart stays shut.
+  </p>
+
+  <figure>
+    <svg viewBox="0 0 820 220" role="img" aria-label="Two coupling diagrams side by side. In authentic binding both people modify each other. In the mimic operator only the target is modified while the controller is unchanged.">
+      <defs>
+        <marker id="ar-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+          <polygon points="0,0 10,5 0,10" fill="#A8C7FF"/>
+        </marker>
+        <marker id="ar-m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+          <polygon points="0,0 10,5 0,10" fill="#FF6B5A"/>
+        </marker>
+      </defs>
+      <g font-family="Courier New, Courier, monospace" font-size="12">
+
+        <!-- S-hat -->
+        <text x="30" y="34" fill="#A8C7FF" font-size="13"><span class="op">Ŝ</span> — authentic binding</text>
+        <circle cx="110" cy="120" r="42" fill="#131822" stroke="#A8C7FF" stroke-width="1.5"/>
+        <text x="110" y="125" fill="#DEE5EF" text-anchor="middle">A</text>
+        <circle cx="290" cy="120" r="42" fill="#131822" stroke="#A8C7FF" stroke-width="1.5"/>
+        <text x="290" y="125" fill="#DEE5EF" text-anchor="middle">B</text>
+        <path d="M 158 104 Q 200 82 242 104" fill="none" stroke="#A8C7FF" stroke-width="1.5" marker-end="url(#ar-s)"/>
+        <path d="M 242 136 Q 200 158 158 136" fill="none" stroke="#A8C7FF" stroke-width="1.5" marker-end="url(#ar-s)"/>
+        <text x="200" y="76" fill="#A8C7FF" text-anchor="middle" font-size="11">δΨ</text>
+        <text x="200" y="178" fill="#A8C7FF" text-anchor="middle" font-size="11">δΨ</text>
+        <text x="200" y="205" fill="#78849A" text-anchor="middle" font-size="11">both modified · both hearts open</text>
+
+        <!-- divider -->
+        <line x1="410" y1="40" x2="410" y2="196" stroke="#232C3B"/>
+
+        <!-- M-hat -->
+        <text x="450" y="34" fill="#FF6B5A" font-size="13"><span class="op">M̂</span> — mimic / extraction</text>
+        <circle cx="530" cy="120" r="42" fill="#131822" stroke="#4C566A" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="530" y="125" fill="#78849A" text-anchor="middle">C</text>
+        <circle cx="710" cy="120" r="42" fill="#131822" stroke="#FF6B5A" stroke-width="1.5"/>
+        <text x="710" y="125" fill="#DEE5EF" text-anchor="middle">T</text>
+        <path d="M 578 120 L 662 120" fill="none" stroke="#FF6B5A" stroke-width="1.5" marker-end="url(#ar-m)"/>
+        <text x="620" y="108" fill="#FF6B5A" text-anchor="middle" font-size="11">δΨ</text>
+        <text x="530" y="184" fill="#78849A" text-anchor="middle" font-size="11">unchanged</text>
+        <text x="620" y="205" fill="#78849A" text-anchor="middle" font-size="11">one direction only · controller intact</text>
+      </g>
+    </svg>
+    <figcaption>
+      The formal difference is a single arrow. Authentic binding modifies both parties;
+      the mimic modifies one. Everything else in the section follows from that asymmetry —
+      which is why the diagnostic question is <strong>"who in this system is unchanged?"</strong>
+    </figcaption>
+  </figure>
+
+  <h3>Run it on a bond you're thinking about</h3>
+  <p class="col">
+    Seven rows, straight from §9. Answer honestly — nothing is transmitted anywhere, this
+    all runs in your browser.
+  </p>
+
+  <div class="diag" id="diag">
+    <div class="drow" data-i="0">
+      <div class="dq">Near this person, does your chest feel <strong>warm and open</strong>, or <strong>tight and guarded</strong>?
+        <span class="how"><span class="op">Ŝ</span>: coronary vasodilation · <span class="op">M̂</span>: constriction</span></div>
+      <div class="dbtns"><button type="button" class="s" data-v="s" aria-pressed="false">Warm</button><button type="button" class="m" data-v="m" aria-pressed="false">Tight</button></div>
+    </div>
+    <div class="drow" data-i="1">
+      <div class="dq">Have <strong>both</strong> of you been changed by this, or only one of you?
+        <span class="how">The single metric — who in this system is unchanged?</span></div>
+      <div class="dbtns"><button type="button" class="s" data-v="s" aria-pressed="false">Both</button><button type="button" class="m" data-v="m" aria-pressed="false">One</button></div>
+    </div>
+    <div class="drow" data-i="2">
+      <div class="dq">Is each of you <strong>more</strong> functional than before, or <strong>less</strong>?
+        <span class="how"><span class="op">Ŝ</span>: H(pair) &lt; H(alone) for both · <span class="op">M̂</span>: target degrades</span></div>
+      <div class="dbtns"><button type="button" class="s" data-v="s" aria-pressed="false">More</button><button type="button" class="m" data-v="m" aria-pressed="false">Less</button></div>
+    </div>
+    <div class="drow" data-i="3">
+      <div class="dq">In their company does your nervous system get <strong>calmer</strong> or more <strong>vigilant</strong>?
+        <span class="how">Saliva cortisol or an HRV strap — about £30</span></div>
+      <div class="dbtns"><button type="button" class="s" data-v="s" aria-pressed="false">Calmer</button><button type="button" class="m" data-v="m" aria-pressed="false">Vigilant</button></div>
+    </div>
+    <div class="drow" data-i="4">
+      <div class="dq">When the mask came off, did you <strong>choose</strong> to show it, or was it <strong>taken</strong>?
+        <span class="how"><span class="op">Ŝ</span>: seen · <span class="op">M̂</span>: exposed</span></div>
+      <div class="dbtns"><button type="button" class="s" data-v="s" aria-pressed="false">Chose</button><button type="button" class="m" data-v="m" aria-pressed="false">Taken</button></div>
+    </div>
+    <div class="drow" data-i="5">
+      <div class="dq">Remove every constraint keeping you here. Does the bond <strong>survive</strong>?
+        <span class="how"><span class="op">Ŝ</span> persists in freedom · <span class="op">M̂</span> requires captivity</span></div>
+      <div class="dbtns"><button type="button" class="s" data-v="s" aria-pressed="false">Survives</button><button type="button" class="m" data-v="m" aria-pressed="false">Needs it</button></div>
+    </div>
+    <div class="drow" data-i="6">
+      <div class="dq">Did this build <strong>gradually</strong>, or did it feel <strong>manufactured</strong> and fast?
+        <span class="how">Organic v_love versus forced acceleration</span></div>
+      <div class="dbtns"><button type="button" class="s" data-v="s" aria-pressed="false">Gradual</button><button type="button" class="m" data-v="m" aria-pressed="false">Forced</button></div>
+    </div>
+  </div>
+
+  <div class="verdict" id="verdict" hidden>
+    <p class="v-line" id="vLine"></p>
+    <p class="v-sub" id="vSub"></p>
+  </div>
+
+  <p class="caveat col">
+    This is a framework's self-check, not a clinical instrument, and no one should end or
+    salvage a relationship on the strength of seven buttons on a web page. What it is good for
+    is naming a thing you had already noticed. If the answers frighten you, that is worth
+    taking to a person, not a browser.
+  </p>
+
+  <h3>The claim that makes it fall over, if it's wrong</h3>
+  <p class="col">
+    §9.3 argues that once someone has felt authentic binding, the mimic becomes
+    <strong>permanently detectable</strong> — you cannot unfeel what open felt like, and
+    closed-pretending-to-be-open can't reproduce the actual vasodilation. That is a real,
+    falsifiable prediction. It says people with a prior secure bond should detect coercive
+    dynamics faster than people without one. Nobody has run it.
+  </p>
+</section>
+
+<section aria-labelledby="honest-h">
+  <span class="sec-ref">Appraisal</span>
+  <h2 id="honest-h">What is measured, what is merely defined</h2>
+  <p class="col">
+    Regulus tags its own seams — <em>"DEFINED not MEASURED… a map, not the territory"</em> — and
+    it is worth honouring that rather than smoothing it over. Here is the split as plainly as
+    it can be put.
+  </p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Claim</th><th>Status</th><th>What would settle it</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Vagal / enteric signalling exists and carries affect</td>
+          <td><span class="chip measured">established</span></td>
+          <td>Already mainstream neuroscience</td>
+        </tr>
+        <tr>
+          <td>HRV coherence sits around 0.6 in positive states</td>
+          <td><span class="chip measured">measured</span></td>
+          <td>HeartMath data — but see the row below</td>
+        </tr>
+        <tr>
+          <td>That coherence value <em>is</em> 1/φ specifically</td>
+          <td><span class="chip defined">chosen</span></td>
+          <td>A measurement precise enough to separate 0.618 from 0.625</td>
+        </tr>
+        <tr>
+          <td>Prime recursion spine as the level skeleton</td>
+          <td><span class="chip defined">defined</span></td>
+          <td>Nothing yet — it is structure, not a finding</td>
+        </tr>
+        <tr>
+          <td>Follicular clearance lowers EEG entropy</td>
+          <td><span class="chip untested">untested</span></td>
+          <td><a href="proof.html">Pre-registration 01</a> — sham-controlled, blinded</td>
+        </tr>
+        <tr>
+          <td>Bus D — HRV tracks geomagnetic activity</td>
+          <td><span class="chip untested">untested</span></td>
+          <td><a href="proof.html">Pre-registration 02</a> — quiet days versus storm days</td>
+        </tr>
+        <tr>
+          <td><span class="op">Ŝ</span> / <span class="op">M̂</span> distinguishable by cortisol and HRV</td>
+          <td><span class="chip untested">untested</span></td>
+          <td>The cheapest study in the whole framework; nobody has run it</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="errata">Two transcription errors, found by implementing it</h3>
+  <p class="col">
+    Neither is a flaw in the thinking. Both are the kind of slip that only surfaces when
+    somebody tries to run the equations, and both will stop the next person who tries.
+    The short version is the table below. The full working — the arithmetic, the Python
+    you can re-run, the stability argument — lives in <span class="m">ERRATA.md</span> at
+    the root of this repository, deliberately kept off this page.
+  </p>
+  <div class="tw">
+    <table>
+      <thead><tr><th>§</th><th>As printed</th><th>Should be</th><th>How it shows</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="sym">3.1</td>
+          <td class="sym">κ*ⁿ = κ*ⁿ⁻¹ − κ*ⁿ⁻²</td>
+          <td class="sym">κ*ⁿ = κ*ⁿ⁻² − κ*ⁿ⁻¹</td>
+          <td>Every answer comes out the right size with a minus sign wrongly in front of it
+              — −0.236068 where the paper's own next section says +0.2360. A document
+              contradicting itself on one line is how you know it is a slip of the pen.</td>
+        </tr>
+        <tr>
+          <td class="sym">3.3</td>
+          <td class="sym">∂κ/∂t = α(κ − 1/φ)(1−κ)κ</td>
+          <td class="sym">∂κ/∂t = α(1/φ − κ)(1−κ)κ</td>
+          <td>As printed, the equation does the opposite of what the paragraph beside it says.
+              Nudge the value up off 0.618 and it runs further away instead of settling back.
+              Swap the two terms in the first bracket and every claim the section makes comes
+              true. The paper's own stability working agrees, which is the strongest sign the
+              thinking was right and only the sign slipped.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="col" style="font-size:0.92rem;color:var(--dim)">
+    The live instrument at the top of this page runs the corrected §3.3 equation, and the
+    identity table uses the corrected §3.1 order. Both are flagged here rather than quietly
+    fixed.
+  </p>
+
+  <h3>The strongest objection, stated properly</h3>
+  <p class="col">
+    Picture a ruler marked only in whole centimetres, and someone using it to prove that two
+    things differ in length by about a millimetre and a half. They might be right. The ruler cannot
+    say. That is the exact state of the evidence for 0.618: <strong>the difference being
+    claimed is about seven times smaller than the smallest thing the measurement can
+    see.</strong>
+  </p>
+  <p class="col">
+    The same sentence with the decimals put back. HeartMath's coherence window is roughly
+    0.60–0.65. That window contains <span class="m">1/φ = 0.6180</span>, and it also contains
+    <span class="m">5/8 = 0.625</span>, and plain <span class="m">0.6</span>. The gap between
+    the first two is <strong>0.0070</strong>, against a window <strong>0.05</strong> wide. No
+    measurement currently offered can tell them apart — so at present φ is <em>chosen</em>,
+    not <em>confirmed</em>. The appraisal in this repository scores that specific claim
+    <strong>8/10</strong> on a bullshit meter for exactly this reason, and the framework is
+    better off for having the number stated than defended.
+  </p>
+  <p class="col">
+    None of which touches §7 and §9, which is where the value actually sits. You can throw the
+    golden ratio out entirely and the bilateral-modification criterion still stands on its own.
+  </p>
+</section>
+
+<section aria-labelledby="next-h">
+  <h2 id="next-h">Where to go from here</h2>
+  <div class="cards">
+    <a class="card" href="primer.html" style="text-decoration:none">
+      <span class="meta">The long version</span>
+      <h3>Full primer</h3>
+      <p>The same walk, at four times the depth, with every claim carrying a source tag back to the section it came from.</p>
+    </a>
+    <a class="card" href="geometries.html" style="text-decoration:none">
+      <span class="meta">Addendum A</span>
+      <h3>Seven geometries</h3>
+      <p>Seven ways to deform away from 1/φ, mapped onto the seven deadly sins — and the single operator that corrects all of them.</p>
+    </a>
+    <a class="card" href="gerald.html" style="text-decoration:none">
+      <span class="meta">Companion piece</span>
+      <h3>Gerald</h3>
+      <p>A cube who refuses to stay a box. The framework's fixed point, told as a song — and it turns out to obey the addendum's own sin geometry.</p>
+    </a>
+    <a class="card" href="proof.html" style="text-decoration:none">
+      <span class="meta">Two experiments</span>
+      <h3>Proof</h3>
+      <p>Both pre-registrations, including the one that states up front that it expects the null to win.</p>
+    </a>
+    <div class="card">
+      <span class="meta">Primary text · not an explainer</span>
+      <h3>The raw specification</h3>
+      <p>Thomas's ASS-OS / Regulus document in full, unabridged and unsimplified — the thing
+      every other page here is explaining, rather than a page that explains anything. This
+      site does not publish it: the specification is unpublished and that is his call to
+      make. To read it, build it yourself —
+      <span class="m">python3 docs/build.py --with-source</span>.</p>
+    </div>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="cred">
+      α Leonis · REGULUS — the formal name. R4R is Thomas's, and it is the front door.<br>
+      REGULUS / ASS-OS — Thomas (@ThomasTheTankEngineer), Konomi Systems<br>
+      Explainer, appraisal and pre-registrations — V&gt;&gt;<br>
+      With assistance of Claude Opus 5 · <a href="https://github.com/teslasolar/eth">github.com/teslasolar/eth</a>
+    </p>
+    <p style="max-width:60ch">
+      Written to be checked, not believed. Every claim on this page is traceable to the
+      source specification; where something is inference rather than the author's own
+      words, it says so.
+    </p>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

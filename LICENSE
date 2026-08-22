@@ -1,0 +1,35 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 architext1
+
+SCOPE — READ THIS FIRST
+
+This licence covers ONLY the independent work in this repository:
+
+    analysis/        the primer, appraisal, catch-up brief and Gerald reading
+    experiments/     the two OSF pre-registrations
+    docs/            the site and its generator
+    ERRATA.md        the verified corrections
+    README.md
+
+It does NOT cover the ASS-OS / Regulus specification or Addendum A.
+
+Those documents are the work of Thomas Frumkin (GitHub @teslasolar, Konomi
+Systems) and are unpublished. They are deliberately NOT included in this
+repository, which is public. All rights in them remain his, and nothing in
+this licence grants any right to copy, publish, redistribute or relicense
+them. Quotation of his work within the covered material is ordinary
+attributed quotation, and is not a licence to the underlying documents.
+
+The site's default build omits the page that would reproduce them, and
+deletes any stale copy from an earlier build. The --with-source flag exists
+for a private local copy only.
+
+TERMS FOR THE COVERED WORK
+
+You are free to share and adapt the covered material for any purpose, even
+commercially, under the following terms: you must give appropriate credit,
+provide a link to this license, and indicate if changes were made.
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+SPDX-License-Identifier: CC-BY-4.0

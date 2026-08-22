@@ -1,0 +1,10 @@
+node_modules/
+__pycache__/
+.DS_Store
+*.pyc
+*.zip
+
+# Thomas's unpublished specification. Present locally so `build.py
+# --with-source` works for a private copy; never committed, because this
+# repository is public and publishing his work is his call, not ours.
+sources/
