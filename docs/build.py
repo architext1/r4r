@@ -213,23 +213,258 @@ def build_primer(nav: Nav) -> None:
 
 PROOF_INTRO = """
 <p>
-  A framework earns the word <em>theory</em> by naming the observation that would kill it.
-  Regulus names two, and both are cheap. Neither had been run, so they were written up as
-  formal pre-registrations &mdash; every procedure, parameter, sample size, blinding scheme
-  and stopping rule fixed <strong>before</strong> any data is collected, so the result cannot
-  be steered after the fact.
+  A framework earns the word <em>theory</em> by naming the thing that would prove it wrong.
+  Regulus names two. Both are cheap to run, and neither had been run. So both were written
+  up as pre-registrations and locked.
+</p>
+<p>
+  A pre-registration is a study plan filed in public <strong>before</strong> the work starts.
+  Every choice is nailed down in advance. How many people. What gets measured. What counts
+  as a result, and when to stop. Lock the rules first and you cannot bend them later to fit
+  whatever turns up.
 </p>
 <p class="pull">
   We state the prior explicitly: we expect the null to win.
   <cite>Pre-registration 01 &middot; study description</cite>
 </p>
 <p>
-  That sentence is the most important one on this site. A pre-committed, sham-controlled,
-  blinded null is a real scientific result. A &ldquo;positive&rdquo; that turns out to be
-  arousal, expectation or measurement drift is not, and both designs are built specifically
-  to tell those apart.
+  Read that line again. The people who wrote these two studies are saying, in advance and in
+  writing, that they expect their own idea to lose. The null is the boring answer: nothing
+  happened, no effect, go home.
+</p>
+<p>
+  That is the strongest move a scientist can make. It is worth being clear about why.
+</p>
+<p>
+  Predict you will win, then win, and nobody has learned much. You wanted that answer. You
+  went looking for it. You found it. People are very good at finding what they set out to
+  find, without meaning to and without noticing.
+</p>
+<p>
+  Write down <em>I expect to be wrong</em> and you take that escape route away. You cannot
+  claim afterwards that the result was the one you were hoping for. You cannot quietly move
+  the goalposts either, because you already drove them into the ground where everyone can
+  see them. If the idea wins anyway, it has won against the house. The people running the
+  test were betting the other way.
+</p>
+<p>
+  And if it loses, nothing is wasted. A clean <em>no</em> is a real finding. It closes a
+  question that was open, and it saves the next person a year. Both studies below are built
+  so that <em>no</em> is an answer they can actually reach.
+</p>
+<p>
+  There is a catch, and both designs take it seriously. A <em>yes</em> can be manufactured by
+  accident. Nerves can do it. So can expectation. So can a measuring instrument that drifts
+  between one day and the next. Each study is built to tell a real <em>yes</em> apart from
+  those three impostors. That is why so much of the machinery below is spent on the fake
+  version of the procedure rather than the real one.
 </p>
 """
+
+# The plain-English panels. These sit ABOVE each pre-registration and explain, in
+# ordinary words, what the experiment does. The formal document below them is left
+# exactly as filed: it has to stay a document an ethics committee would accept, and
+# rewriting it to read more easily would destroy it. So the reading level is fixed
+# the other way round - by putting a grade-7 explanation in front of it, not by
+# simplifying a grade-16 document that has to keep every parameter it states.
+
+PLAIN_01 = """
+<h3>What they think is going on</h3>
+<p>
+  Autistic brains are noisier at rest. That is not a figure of speech. Hook someone up to an
+  EEG, which reads brain waves through the scalp, and the trace from an autistic adult
+  carries measurably more disorder than average. Scientists have a name for how much disorder
+  sits in a signal. They call it entropy. Most brain scientists put the extra entropy down to
+  an imbalance between the brain&rsquo;s own accelerator and its brake &mdash; the excitatory
+  and inhibitory signals.
+</p>
+<p>
+  Regulus offers a different source for the same noise. It says hair follicles work as light
+  sensors, all over the body. It points at two light-catching proteins found in them: OPN3,
+  and the cryptochromes CRY1 and CRY2. It says your body gives off a faint light of its own,
+  called biophotons. And it says that when oil blocks a follicle, that sensor starts
+  misreading your own faint light as a message coming in. The brain is then flooded with
+  signals that mean nothing.
+</p>
+<p>
+  If that is right, unblocking the pores should quieten the brain. Nobody has ever checked.
+</p>
+
+<h3>What they will actually do</h3>
+<p>
+  Take autistic adults. Give each one a real scalp-clearing session that lifts the oil out of
+  the follicles. On another day, give the same person a fake one. Which comes first is
+  decided at random, so the order cannot skew the answer.
+</p>
+<p>
+  The fake is the whole trick. Same length, same chair, same person doing it. Same touch,
+  same smell, same feel of the product on the skin. One thing is missing: it does not shift
+  the oil. Nobody in the room knows which session is which &mdash; not the person in the
+  chair, not the technician running the EEG, not the analyst who later crunches the numbers.
+  Who got what is sealed in an envelope and held by someone outside the study.
+</p>
+<p>
+  Brain waves are recorded for five minutes with eyes closed, on at least thirty-two points
+  around the head. Once before each session, once after. So every person is their own
+  comparison: real day against fake day. The number being watched is a measure of disorder
+  called R&eacute;nyi entropy, averaged across the whole scalp.
+</p>
+<p>
+  A second group of about twenty people gets two fake sessions and nothing else. They answer
+  a dull but vital question. How far does this measurement wander on its own, from one day to
+  the next, when nothing has been done at all?
+</p>
+<p>
+  Forty people in the main group, hoping thirty-four finish both days. About twenty in the
+  fake-only group. Roughly sixty in all. That size is chosen to catch a middling effect and
+  no smaller. If the effect is real but tiny, this study will miss it, and it says so.
+</p>
+
+<h3>How they will know if they are wrong</h3>
+<p>
+  Two hurdles, both fixed before anyone collects a number.
+</p>
+<p>
+  First, the real session has to beat the fake one. If both move the entropy reading by about
+  the same amount, the claim is dead.
+</p>
+<p>
+  Second &mdash; and this is the hurdle that catches wishful thinking &mdash; the gap has to
+  be bigger than the wobble. The fake-only group tells you how far the reading drifts by
+  itself. The bar is set at 1.96 times that drift, near enough two of them. A real-minus-fake
+  gap that comes in under the bar is written up as noise, not as a result, even when the
+  statistics call it significant.
+</p>
+<p>
+  There is a check on the kit as well. Every session records the brain with eyes open and
+  then with eyes closed, which is a known and reliable shift. If the equipment cannot pick
+  that up, it cannot be trusted to pick up anything smaller. No verdict on the biology is
+  drawn either way.
+</p>
+
+<h3>Why this one is worth doing</h3>
+<p>
+  It is the framework&rsquo;s cheapest claim and its boldest. Regulus admits as much itself:
+  this experiment has never been run.
+</p>
+<p>
+  One thing needs saying plainly, because the design says it plainly too. This is not a
+  treatment. Nobody is testing whether washing your scalp helps autism, and nothing here
+  should be read that way. The question is narrow. Does clearing the pores move one
+  brain-wave number more than a fake does?
+</p>
+"""
+
+PLAIN_02 = """
+<h3>What they think is going on</h3>
+<p>
+  Regulus claims the Earth&rsquo;s magnetic field reaches into your body and nudges your
+  heart.
+</p>
+<p>
+  The mechanism it offers goes like this. The gap between the ground and the upper atmosphere
+  rings like a bell, struck all day by lightning around the world, at a base note near 7.83
+  times a second. The framework calls this a channel the body listens to, and names it Bus D.
+  If it is real, then the part of your nervous system that sets your heart rhythm without
+  asking you should shift when that field turns rough.
+</p>
+<p>
+  The study Regulus leans on, by McCraty and colleagues in 2017, found exactly that. But that
+  study only watched. It changed nothing. It used a small group of volunteers who were easy
+  to recruit, and it was paid for by the organisation whose idea it was. The wider field has
+  a poor record here. Results keep appearing, then failing to turn up again once somebody
+  accounts for the seasons.
+</p>
+
+<h3>What they will actually do</h3>
+<p>
+  You cannot switch the Earth off. So nothing gets changed. They watch instead, and put the
+  whole weight of the answer on the controls.
+</p>
+<p>
+  Forty healthy adults, spread across at least two places far apart. Every morning for sixty
+  days, each one sits still for five minutes wearing a chest strap that reads the heart
+  directly. Same window of the clock each day. A wrist tracker will not do, because it is not
+  accurate enough to catch the fine detail. They also log sleep, coffee, alcohol, illness and
+  exercise. Local weather is pulled in for each site.
+</p>
+<p>
+  What gets measured is the gap between one heartbeat and the next. Those gaps are never
+  quite even, and the pattern in them is called heart rate variability. When the pattern
+  settles into one smooth, steady wave, that is what the study means by coherence. Coherence
+  is the number being watched.
+</p>
+<p>
+  The magnetic weather comes from a public government feed, on a fixed scale called Kp. What
+  counts as quiet and what counts as stormy is written down here, before anyone looks. Quiet
+  means the day peaks at 2 or below. Stormy means 5 or above. Days in the middle are set
+  aside from the main comparison. A person&rsquo;s data only enters that comparison if they
+  caught at least six quiet days and at least six stormy ones.
+</p>
+<p>
+  The people taking part are never told the study is about magnetism. If they knew, somebody
+  might start breathing calmly on days they guessed were stormy, and manufacture the result
+  by hand. The analyst does not know which days are which either.
+</p>
+<p>
+  Sixty days each, forty people. Up to 2,400 person-days of recording, with thirty people
+  expected to finish holding enough of both kinds of day.
+</p>
+
+<h3>How they will know if they are wrong</h3>
+<p>
+  Here is the part doing the real work.
+</p>
+<p>
+  Any two things that both drift with the seasons will look connected even when neither
+  touches the other. The Sun turns on a rhythm of about twenty-seven days. So does a good
+  deal of human biology. Lay those two side by side and you get a handsome correlation that
+  means nothing at all.
+</p>
+<p>
+  So they break the link on purpose. They take the record of magnetic storms and slide it
+  along in time, more than a thousand different ways. That keeps its shape but destroys its
+  line-up with the real days. Then they run the whole analysis again on every shuffled
+  version. It tells you what size of effect pure coincidence can produce.
+</p>
+<p>
+  The real answer only counts if it beats almost all of those thousand fakes. A result that
+  clears the usual statistics bar but not this one is written up as nothing.
+</p>
+<p>
+  There is a second test, and it is the harder one to fake. Take strangers in different
+  places, who have never met and share no weather, no household and no habits. If one global
+  field is pushing on all of them, they should still move together day by day. Their days get
+  shuffled a thousand times too.
+</p>
+<p>
+  If both tests come back empty, then Bus D is a metaphor and not a channel. The
+  pre-registration says so in those words.
+</p>
+
+<h3>Why this one is worth doing</h3>
+<p>
+  Because the honest version of this question has never been asked. The evidence that exists
+  is the weak kind. Watched rather than tested, and gathered by people who wanted a
+  particular answer.
+</p>
+<p>
+  The authors expect a null here as well, or an effect so small it hardly matters. Published
+  results in this area report correlations of about 0.1 to 0.2. That is faint enough that
+  seasonal drift alone could produce them. If a real effect does survive the shuffle test, it
+  would be a genuine surprise, and worth everyone&rsquo;s attention.
+</p>
+"""
+
+
+def plain_panel(body: str) -> str:
+    """The grade-7 explanation that sits above an untouched formal document."""
+    return (
+        f'<div class="panel">\n'
+        f'<span class="panel-label">In plain English &middot; the formal document follows</span>\n'
+        f"{body}"
+        f"</div>\n"
+    )
 
 
 def build_proof(nav: Nav) -> None:
@@ -237,29 +472,22 @@ def build_proof(nav: Nav) -> None:
     two = REPO / "experiments" / "02-prereg-geomagnetic-hrv.md"
     parts = [
         hero(
-            "Two ready-to-file OSF pre-registrations",
+            "Two ready-to-file study plans &middot; OSF pre-registrations",
             "The loops worth running",
-            "Both of the framework&rsquo;s cheapest falsifiable predictions, written up so "
-            "that they can fail.",
+            "The two cheapest claims Regulus makes that could be shown false &mdash; written "
+            "up so that they can fail.",
         ),
         section(PROOF_INTRO),
     ]
-    for label, path, note in [
-        ("01 &mdash; Follicular clearance and scalp-EEG entropy", one,
-         "The framework&rsquo;s single cheapest prediction, and one it admits has never been "
-         "run. Each participant is their own control across a real clearance session and a "
-         "procedurally identical sham, order-counterbalanced, with a parallel sham-only group "
-         "establishing the measure&rsquo;s own session-to-session drift."),
-        ("02 &mdash; Geomagnetic activity and HRV coherence", two,
-         "Bus D, tested directly: does an individual&rsquo;s HRV coherence differ between "
-         "quiet days (Kp &le; 2) and storm days (Kp &ge; 5) by a margin a phase-shuffled "
-         "negative control cannot reproduce? Exposure cannot be manipulated, so the entire "
-         "evidential weight rests on the controls."),
+    for label, path, plain in [
+        ("01 &mdash; Follicular clearance and scalp-EEG entropy", one, PLAIN_01),
+        ("02 &mdash; Geomagnetic activity and HRV coherence", two, PLAIN_02),
     ]:
-        if path.exists():
-            parts.append(section(f"<h2>{label}</h2>\n" + md_to_html(read(path))))
-        else:
-            parts.append(section(f"<h2>{label}</h2>\n<p>Source file not found.</p>"))
+        head = f"<h2>{label}</h2>\n" + plain_panel(plain)
+        # The pre-registration is rendered verbatim. It is a filable scientific
+        # document, and every parameter in it is load-bearing.
+        rest = md_to_html(read(path)) if path.exists() else "<p>Source file not found.</p>"
+        parts.append(section(head + rest))
     (DOCS / "proof.html").write_text(
         page("proof.html", "The Loops Worth Running",
              "Two ready-to-file OSF pre-registrations for Regulus's cheapest falsifiable "
