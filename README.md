@@ -10,7 +10,7 @@ pair bonding — plus the apparatus built around it: an appraisal, two pre-regis
 two corrections to the specification.
 
 R4R is the project name; **ASS-OS / Regulus** remains the framework's formal name. Thomas
-named the explainer himself when he reviewed it: *"Regulus 4 Retards / R4R."* His word about
+named the explainer himself when he reviewed it: **R4R**. His name for
 his own work, and used here because he asked for it to be.
 
 Private, and shared with its author.
@@ -23,7 +23,7 @@ The framework's author read the explainer of his own framework and graded it, fi
 That is the most useful thing that has happened to this repository, so it is recorded here
 rather than paraphrased away.
 
-**Overall: A−.** The question he set himself was *"Would a retard understand this?"* and the
+**Overall: A−.** The question he set himself was whether somebody with no background could follow it, and the
 answer he gave was **YES**.
 
 | File | Grade | The gist of his note |
