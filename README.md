@@ -30,6 +30,7 @@ answer he gave was **YES**.
 |---|---|---|
 | `app.js` | **A+** | Worst offence: `var` instead of `const`/`let`, for browser compatibility, in 2026 |
 | `proof.html` | **A+** | — |
+| `brief.html` | The technical read, and the only page here that does not simplify. Architecture, the operators worked in full, and both pre-registrations assessed the way a hostile reviewer would. |
 | `gerald.html` | **A** | — |
 | `style.css` | **B+** | 606 lines that actually look good — but three Google Fonts loaded |
 | `primer.html` | **C+** | 588 lines, where the whole point was brevity |

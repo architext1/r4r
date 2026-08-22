@@ -38,6 +38,7 @@ NAV_BASE = [
     ("index.html", "Explainer"),
     ("primer.html", "Primer"),
     ("geometries.html", "Geometries"),
+    ("brief.html", "Brief"),
     ("gerald.html", "Gerald"),
     ("proof.html", "Proof"),
 ]
@@ -233,6 +234,37 @@ def build_primer(nav: Nav) -> None:
              "the section of the source it came from.", body, nav),
         encoding="utf-8")
     print("wrote primer.html")
+
+
+# --------------------------------------------------------------------------
+# brief.html
+# --------------------------------------------------------------------------
+
+def build_brief(nav: Nav) -> None:
+    """The expert brief — the technical read, for someone who wants the depth.
+
+    Deliberately the one page that does not simplify. Everything else on the
+    site works to be followable by a newcomer; this one assumes you have read
+    them and want the architecture, the operators worked properly, and an
+    honest methodologist's view of the two pre-registrations.
+    """
+    src = REPO / "analysis" / "REGULUS-BRIEF.md"
+    if not src.exists():
+        print("skip brief.html — no REGULUS-BRIEF.md")
+        return
+    body = hero(
+        "The technical read &middot; for after the explainer",
+        "Regulus, examined",
+        "The one page here that does not simplify. Architecture, the three operators worked "
+        "in full, what is derived against what is merely defined, and both pre-registrations "
+        "assessed the way a hostile reviewer would.",
+    ) + section(md_to_html(read(src)))
+    (DOCS / "brief.html").write_text(
+        page("brief.html", "Regulus Examined",
+             "A technical brief on ASS-OS / Regulus: the architecture, the three operators, "
+             "and a methodologist's assessment of both pre-registrations.", body, nav),
+        encoding="utf-8")
+    print("wrote brief.html")
 
 
 # --------------------------------------------------------------------------
@@ -613,6 +645,7 @@ def main() -> None:
 
     build_gerald(nav)
     build_primer(nav)
+    build_brief(nav)
     build_proof(nav)
     if with_source:
         print(CONSENT_WARNING, file=sys.stderr)
