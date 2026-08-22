@@ -268,6 +268,36 @@ def build_brief(nav: Nav) -> None:
 
 
 # --------------------------------------------------------------------------
+# finding.html
+# --------------------------------------------------------------------------
+
+def build_finding(nav: Nav) -> None:
+    """The §3.4 scale finding — deliberately not in the nav.
+
+    It belongs at the bottom of the depth ladder with the brief, not spread
+    across the explainer, so it is reached from there rather than from the
+    masthead. See the layering note in .claude/CLAUDE.md.
+    """
+    src = REPO / "analysis" / "FINDING-ODDS-VS-FRACTION.md"
+    if not src.exists():
+        print("skip finding.html — no FINDING-ODDS-VS-FRACTION.md")
+        return
+    body = hero(
+        "A correction to &sect;3.4 &middot; companion to the brief",
+        "The right number, the wrong scale",
+        "The specification&rsquo;s one piece of empirical confirmation compares a measured "
+        "<em>odds</em> against a constant defined as a <em>fraction</em> &mdash; and the "
+        "framework&rsquo;s own &sect;3.5 gets the distinction right three lines later.",
+    ) + section(md_to_html(read(src)))
+    (DOCS / "finding.html").write_text(
+        page("finding.html", "The Right Number, The Wrong Scale",
+             "Regulus §3.4 compares a coherence odds against a retention fraction. The scale "
+             "error is confirmed; what it points at instead is not.", body, nav),
+        encoding="utf-8")
+    print("wrote finding.html")
+
+
+# --------------------------------------------------------------------------
 # proof.html
 # --------------------------------------------------------------------------
 
@@ -646,6 +676,7 @@ def main() -> None:
     build_gerald(nav)
     build_primer(nav)
     build_brief(nav)
+    build_finding(nav)
     build_proof(nav)
     if with_source:
         print(CONSENT_WARNING, file=sys.stderr)

@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Right Number, The Wrong Scale &middot; R4R</title>
+<meta name="description" content="Regulus §3.4 compares a coherence odds against a retention fraction. The scale error is confirmed; what it points at instead is not.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0B0E14">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="R4R">
+<meta property="og:title" content="The Right Number, The Wrong Scale">
+<meta property="og:description" content="Regulus §3.4 compares a coherence odds against a retention fraction. The scale error is confirmed; what it points at instead is not.">
+<meta property="og:image" content="https://architext1.github.io/r4r/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Right Number, The Wrong Scale">
+<meta name="twitter:description" content="Regulus §3.4 compares a coherence odds against a retention fraction. The scale error is confirmed; what it points at instead is not.">
+<meta name="twitter:image" content="https://architext1.github.io/r4r/assets/og.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap mast-in">
+    <span class="sigil">&#945; Leonis &middot; <b>REGULUS</b></span>
+    <nav class="mast-nav" aria-label="Primary">
+      <span class="sigil r4r">R4R</span>
+      <a href="index.html">Explainer</a>
+      <a href="primer.html">Primer</a>
+      <a href="geometries.html">Geometries</a>
+      <a href="brief.html">Brief</a>
+      <a href="gerald.html">Gerald</a>
+      <a href="proof.html">Proof</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap">
+<div class="hero">
+  <p class="eyebrow">A correction to &sect;3.4 &middot; companion to the brief</p>
+  <h1>The right number, the wrong scale</h1>
+  <p class="standfirst">The specification&rsquo;s one piece of empirical confirmation compares a measured <em>odds</em> against a constant defined as a <em>fraction</em> &mdash; and the framework&rsquo;s own &sect;3.5 gets the distinction right three lines later.</p>
+</div>
+<section>
+<div class="doc col">
+<h1>§3.4 measures the right number on the wrong scale</h1>
+<p><strong>Verdict: the scale error is confirmed. What it points at instead is not.</strong></p>
+<p>§3.4 is the specification's single piece of empirical confirmation — the place where a
+measured quantity is claimed to match κ* = 1/φ. This note tests that claim and finds it
+does not hold, using only definitions already present in this corpus. It then tests the
+follow-on suggestion — that the data actually lands on κ*² — and finds that one
+<strong>under-determined</strong>, for the same reason the appraisal already gives about κ* itself.</p>
+<p>Both halves matter. The first is a correction. The second is a caution against replacing
+one over-claim with another.</p>
+<hr>
+<h2>1. What §3.4 claims</h2>
+<blockquote>
+<p><em>"HeartMath Institute measured HRV coherence ratio at κ ≈ 0.6–0.65 in the coherent
+(positive emotion) state. This equals 1/φ within measurement error."</em> — §3.4</p>
+</blockquote>
+<p>The claim needs the measured coherence ratio to be the same <em>kind of quantity</em> as κ. κ is a
+retention <strong>fraction</strong> — §3.5 is explicit that it means <em>"keep 61.8%, release 38.2%"</em>.</p>
+<h2>2. What the coherence ratio actually is</h2>
+<p>From <code>experiments/02-prereg-geomagnetic-hrv.md</code>, defining the primary outcome <em>"following
+the HeartMath operationalisation cited by Regulus"</em>:</p>
+<blockquote>
+<p><strong>coherence ratio = peak-band power / (total power in 0.0033–0.40 Hz − peak-band power)</strong></p>
+</blockquote>
+<p>The denominator is <strong>total minus peak</strong>, not total. That is an <strong>odds</strong>, not a fraction.</p>
+<p>This is the crux, and it is settled inside the corpus rather than by appeal to outside
+literature. The pre-registration and the specification are describing the same measurement,
+and the pre-registration writes the formula out.</p>
+<h2>3. The specification already knows the difference</h2>
+<p>§3.5 handles both scales correctly, in one line:</p>
+<blockquote>
+<p><em>"optimal retention rate κ satisfies κ/(1−κ) = φ. Solving: κ = φ/(1+φ) = 1/φ = κ*"</em></p>
+</blockquote>
+<p>Read that carefully. <code>κ/(1−κ)</code> is the keep-to-drop <strong>odds</strong>, and §3.5 sets it to <strong>φ =
+1.618</strong>. The <strong>fraction</strong> that produces is <strong>1/φ = 0.618</strong>.</p>
+<p>So the framework's own algebra says:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Scale</th>
+<th>Golden value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>odds — keep divided by drop</td>
+<td><strong>φ = 1.618034</strong></td>
+</tr>
+<tr>
+<td>fraction — keep divided by total</td>
+<td><strong>1/φ = 0.618034</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>§3.4 then takes a measurement that is an <em>odds</em> and compares it to the <em>fraction</em>. The two
+sections are three lines apart and use opposite conventions.</p>
+<h2>4. What follows, arithmetically</h2>
+<p>For §3.4 to hold on its own terms, HeartMath would have to be measuring a coherence <strong>odds</strong>
+of <strong>1.618</strong>. The cited window is 0.60–0.65 — about <strong>2.6× lower</strong>.</p>
+<p>Converting the cited window to the scale κ actually lives on, with
+<code>fraction = odds / (1 + odds)</code>:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>odds</th>
+<th>fraction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.60</td>
+<td>0.375000</td>
+</tr>
+<tr>
+<td>0.65</td>
+<td>0.393939</td>
+</tr>
+</tbody>
+</table></div>
+<pre><code class="language-python">phi = (1 + 5**0.5) / 2
+f = lambda o: o / (1 + o)
+print(f(0.60), f(0.65))        # 0.375 0.3939393939393939
+print(f(phi))                  # 0.6180339887498949  == 1/phi
+</code></pre>
+<p>The converted window is <strong>[0.3750, 0.3939]</strong>, and <strong>κ* = 0.618034 is not in it.</strong></p>
+<p>Note the identity in the third line: <strong>φ as an odds is exactly κ* as a fraction.</strong> That is
+the whole trap. φ and 1/φ are reciprocals, so a fraction-versus-odds confusion produces two
+numbers that look like the same golden constant wearing different hats. Nothing in the
+printed numerals flags the error, which is presumably why it has stood.</p>
+<h2>5. Where this leaves κ*</h2>
+<p>The honest statement is narrow and it is not "the framework is wrong":</p>
+<p><strong>§3.4 does not confirm κ* = 1/φ, because the quantity it cites is not on the same scale
+as κ.</strong> It is a scale mismatch, not a refutation of the constant. κ* may still be the right
+attractor; §3.4 simply is not evidence for it.</p>
+<p>This matters because §3.4 is the <em>only</em> place in the specification where the constant meets
+data. <code>analysis/00-catch-up-and-appraisal.md</code> already scores the κ* = 1/φ identification
+8/10 on the bullshit meter for being under-determined by its measurement window. This
+finding is worse than that: it is not that the measurement is too coarse to distinguish
+0.618 from 0.625, it is that the measurement is not of that quantity at all.</p>
+<h2>6. And the part that does NOT hold</h2>
+<p>The obvious next thought is that the converted window contains <strong>κ*² = 0.381966</strong>, which is
+not an arbitrary number here — §8.2 makes it the binding threshold <code>|δΨ_crit|</code>. That would be
+a striking result: the cardiac data pointing at the framework's <em>binding</em> constant rather
+than its <em>attractor</em>.</p>
+<p><strong>It does not survive the same scrutiny that killed the original claim.</strong> The converted
+window is [0.3750, 0.3939], only 0.0189 wide, and it contains more than one candidate:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>candidate</th>
+<th>value</th>
+<th>in window</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1/e</td>
+<td>0.367879</td>
+<td>no</td>
+</tr>
+<tr>
+<td><strong>3/8</strong></td>
+<td><strong>0.375000</strong></td>
+<td><strong>yes — sitting exactly on the lower edge</strong></td>
+</tr>
+<tr>
+<td><strong>κ*² = 1 − κ*</strong></td>
+<td><strong>0.381966</strong></td>
+<td><strong>yes</strong></td>
+</tr>
+<tr>
+<td>2/5</td>
+<td>0.400000</td>
+<td>no</td>
+</tr>
+</tbody>
+</table></div>
+<p>κ*² sits 0.0025 from the window's midpoint, which is a good fit. But 3/8 is a plain
+eighth landing precisely on the boundary, and nothing in the cited data distinguishes them.</p>
+<p>This is the <em>same</em> objection the appraisal makes about κ* — a window wider than the gaps
+between its candidates — reappearing one constant down. Replacing "the data confirms κ*"
+with "the data confirms κ*²" would repeat the original error with a different number.</p>
+<p><strong>The correct statement is that the converted window is consistent with κ*² and does not
+select it.</strong></p>
+<h2>7. What would settle it</h2>
+<p>One measurement, and it is cheap because the machinery is already specified in
+<code>experiments/02-prereg-geomagnetic-hrv.md</code>:</p>
+<p><strong>Report the coherence measure as a fraction — peak-band power over total power — rather
+than as an odds, with enough resolution to separate 0.375 from 0.382.</strong> That is a gap of
+0.007 against candidates in a 0.019 window, so it needs a precision the current
+operationalisation does not claim, but it is a resolution question rather than a new
+instrument.</p>
+<p>Two secondary asks that cost nothing:</p>
+<ol>
+<li><strong>Cite the specific HeartMath measurement</strong> behind "0.6–0.65". §3.4 gives no reference,
+   and the scale question cannot be closed against an uncited range.</li>
+<li><strong>State which scale each κ-valued claim in the specification is on.</strong> §3.5 does this
+   correctly and §3.4 does not; a single convention line at the top of §3 would prevent the
+   whole class of error.</li>
+</ol>
+<h2>8. Limits of this note</h2>
+<ul>
+<li>The operational definition used here is the corpus's own, in <code>02-prereg-geomagnetic-hrv.md</code>.
+  I have not independently checked McCraty's published papers. <strong>If HeartMath's actual
+  published definition is a fraction rather than an odds, section 2 fails and the finding
+  collapses</strong> — that is the single load-bearing dependency, and it should be checked against
+  the source before anything is changed in the specification.</li>
+<li>The [0.60, 0.65] window is quoted in §3.4 without attribution, so its own precision is
+  unknown. Every interval above inherits that.</li>
+<li>Sections 4 and 6 are arithmetic and reproduce from the code shown. Sections 5 and 7 are
+  interpretation, and are marked as such.</li>
+</ul>
+<h2>9. What this does not touch</h2>
+<p>§7 (the love equations), §8 (<span class="op">Ŝ</span>) and §9 (<span class="op">M̂</span>) do not depend on the constant being 1/φ
+specifically, and none of them depend on §3.4. The bilateral-modification criterion — <em>who in
+this system is unchanged?</em> — stands whatever the cardiac number turns out to be. This finding
+is confined to the one section that claims empirical confirmation.</p>
+<hr>
+<p><em>Framework: Thomas Frumkin (@teslasolar), Konomi Systems. This note: V&gt;&gt;, with Claude Opus 5.
+Every figure above reproduces from the code shown; re-run it rather than trusting it.</em></p>
+</div>
+</section>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <p class="cred">
+      REGULUS / ASS-OS &mdash; Thomas (@ThomasTheTankEngineer), Konomi Systems<br>
+      Explainer, appraisal and pre-registrations &mdash; V&gt;&gt;<br>
+      With assistance of Claude Opus 5 &middot; <a href="https://github.com/teslasolar/eth">github.com/teslasolar/eth</a>
+    </p>
+    <p style="max-width:60ch">
+      Written to be checked, not believed. This page is generated directly from its source
+      file by <code>docs/build.py</code>, so it cannot drift from the document it presents.
+    </p>
+  </div>
+</footer>
+</body>
+</html>
