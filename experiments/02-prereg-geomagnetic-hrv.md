@@ -1,5 +1,24 @@
 # OSF Pre-Registration
 
+> ### ⚠ Reviewer note — read before filing
+>
+> An independent methodological review of this protocol (`analysis/REGULUS-BRIEF.md`,
+> finding **E1**) reports that the **H1b** null is too narrow and over-rejects.
+>
+> The day-shuffle used for H1b destroys the temporal autocorrelation the data actually
+> has, so the resulting null distribution is narrower than the truth and the test
+> **false-positives at 11.2% against a nominal 5%** — it is more than twice as likely to
+> declare inter-participant synchronisation as the registered α implies.
+>
+> The correct null is **already registered in this same document**, for the other test:
+> a per-participant circular shift, which preserves autocorrelation while destroying the
+> alignment being tested. Applying it to H1b as well would close the gap.
+>
+> The H1b test is otherwise the harder-to-confound of the two signatures here and worth
+> keeping. Only its null needs changing.
+>
+> *Note added by review; the protocol below is unchanged.*
+
 ## Study Information
 
 ### Title

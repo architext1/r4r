@@ -1,5 +1,28 @@
 # OSF Pre-Registration
 
+> ### ⚠ Reviewer note — read before filing
+>
+> An independent methodological review of this protocol (`analysis/REGULUS-BRIEF.md`,
+> finding **D1**) reports that the registered magnitude bar and the power calculation are
+> expressed on different scales.
+>
+> The bar as registered sits **8.1 standard errors from zero** — `1.96 × √2 σ / √34 =
+> 0.2425σ` — which is an effect size of `d = 1.386`, against a study powered for
+> `d = 0.5`. That is a factor of 2.77.
+>
+> The consequence is the opposite of conservative: as written, this protocol is
+> **pre-committed to reporting a large true effect as a null**. A real effect of the size
+> the study was designed to detect would fail the registered bar and be published as a
+> refutation.
+>
+> This is a scale error, not a design flaw — the design is otherwise sound and the
+> sham-controlled, three-way-blinded structure is the strongest part of the corpus. But
+> the bar needs reconciling with the power calculation before this is filed, and the
+> choice of the corrected threshold is a scientific judgement for the author, not a
+> mechanical fix.
+>
+> *Note added by review; the protocol below is unchanged.*
+
 ## Study Information
 
 ### Title
