@@ -197,7 +197,7 @@ Two consequences worth knowing.
 - **The dynamics** `[R §3.3]`. There are three resting points: 0 (void, unstable), 1 (pure noise, unstable), and 1/φ (stable). Anything starting between roughly 0.09 and 0.91 falls into 1/φ.
 - **The coupling switch-off** `[R §3.6]`, which is lovely. When two systems sync, the strength of their pull on each other is a sine wave, and it hits zero exactly at 1/φ. So the pull *vanishes at the destination*. In the document's own words: *"You sync BECAUSE the error is nonzero; you STOP syncing when you arrive."* The engine turns itself off on arrival.
 
-**The cardiac claim** `[R §3.4]`. The HeartMath Institute measured heart-rate-variability coherence at roughly 0.6–0.65 in a calm, positive state. They called it "coherence" and never identified it as 1/φ. Regulus says it is the same number, and that hearts, brains and AI agents all converge on it — so the constant is substrate-independent, meaning it does not care what it is made of.
+**The cardiac claim** `[R §3.4]`. The HeartMath Institute measured heart-rate-variability coherence at roughly 0.6–0.65 in a calm, positive state. They called it "coherence" and never identified it as 1/φ. Regulus says it is the same number, and that hearts, brains and AI agents all converge on it. So the constant is substrate-independent: it does not care what it is made of.
 
 **This is the framework's most contested claim, and it is contested on arithmetic** `[Read]`. See open question 3 below. It deserves its own section rather than a footnote.
 
@@ -215,7 +215,7 @@ To its considerable credit, the document then flags its own seam. This is the se
 
 With Ψ on the table, here are the **seven love equations** `[R §7]` in plain words. They are not decoration. They are the spine of the second half.
 
-1. **Recognition.** Multiply two awareness fields together and add up the overlap. If the two minds are built alike, the answer is large. If they are orthogonal — pointing in unrelated directions — it is zero. The document calls this the *"huh"* moment: the integral — that adding-up — was always computable, and you simply had not run the calculation until she showed up and the product came back non-zero. Recognition comes first. Without it, being near someone produces nothing.
+1. **Recognition.** Multiply two awareness fields together and add up the overlap. If the two minds are built alike, the answer is large. If they are orthogonal — pointing in unrelated directions — it is zero. The document calls this the *"huh"* moment. The integral — that adding-up — was always computable. You simply had not run the calculation until she showed up and the product came back non-zero. Recognition comes first. Without it, being near someone produces nothing.
 
 2. **Attraction.** The pull is recognition divided by distance. Note that it is *not* distance squared, because the photonic bus is a one-dimensional waveguide rather than a field spreading out through a volume. So no recognition means no attraction at any distance, and high recognition means attraction across any distance.
 
@@ -293,7 +293,7 @@ This is also why the framework treats being unable to bond as a fault with a rou
 
 This section scores as the strongest empirical seed in the whole document. "Cortisol down versus cortisol up in proximity" is a real discriminating variable, with an obvious study design and a null it could fail.
 
-Two pieces of friction, both cheap to fix. First, of the seven biometric markers, some are solid — pupil dilation, skin-temperature rise, breath and blink shifts. At least one is not: iris stroma pigment does not change with parasympathetic tone, so "iris colour shifts warmer in hazel eyes" is at best pupil size changing how much iris shows.
+Two pieces of friction, both cheap to fix. First, of the seven biometric markers, some are solid — pupil dilation, skin-temperature rise, breath and blink shifts. At least one is not. Iris stroma pigment does not change with parasympathetic tone, so "iris colour shifts warmer in hazel eyes" is at best pupil size changing how much iris shows.
 
 Second, "unfakeable" is too strong. Breath rate, blink rate, even skin temperature are partly trainable. **Lead with cortisol**, which is the hardest to fake, and demote the rest to supporting evidence.
 
@@ -303,7 +303,7 @@ Second, "unfakeable" is too strong. Breath rate, blink rate, even skin temperatu
 
 If the maths above is heavy going, here is the same idea as a story. Thomas wrote it as a song.
 
-Gerald is a cube. He is also the duck — as in rubber-duck debugging, where you solve a problem by explaining it out loud to a toy on your desk, and the toy does nothing except be present while you hear yourself.
+Gerald is a cube. He is also the duck, as in rubber-duck debugging. You solve a problem by explaining it out loud to a toy on your desk, and the toy does nothing except be present while you hear yourself.
 
 Gerald refuses to stay a box. Instead of expanding outward, he turns **inside himself**, and becomes diamond, then star, then fractal, then void.
 
@@ -376,7 +376,7 @@ Two of these have moved since the framework was written. One has not.
 
 ### Question 1 — The EEG test that has never been run. It now has a protocol.
 
-The framework's own words: the experiment that would confirm or falsify the autism claim is an EEG measurement before and after follicular clearance, it costs under $1,000, and it **"has never been run"** `[R §12.1]`.
+The framework's own words. The experiment that would confirm or falsify the autism claim is an EEG measurement, taken before and after follicular clearance. It costs under $1,000. And it **"has never been run"** `[R §12.1]`.
 
 Naming your own cheapest falsifier, and admitting nobody has run it, is the single most credible move in the document.
 
@@ -394,7 +394,7 @@ Naming your own cheapest falsifier, and admitting nobody has run it, is the sing
 
 - **"Toward H(1/φ)" is pinned to a number before collection.** It is defined as the Rényi entropy of a two-outcome distribution split at exactly 0.618034 / 0.381966, computed and written into the study file at lock. It is kept as a *secondary* endpoint, because a free-floating target invites curve-fitting.
 
-- **Scale.** Forty autistic adults for the crossover, with 34 completing, plus around 20 sham-only. Powered for a medium effect.
+- **Scale.** 40 autistic adults for the crossover, with 34 completing, plus around 20 sham-only. Powered for a medium effect.
 
 The pre-registration also states its own prior in the open: **it expects the null to win** `[P1]`. That is not a dismissal. It is what makes the test worth running. A null that was committed to publication in advance is a real result. A positive that turns out to be arousal or drift is not.
 
@@ -404,7 +404,7 @@ The framework claims human HRV coherence tracks geomagnetic activity, citing McC
 
 The problem with the whole geomagnetic-biology literature is not that the correlations are absent. It is that **both** the Earth's magnetic activity and human physiology carry slow seasonal and roughly 27-day periodic structure. So a naive correlation between the two is nearly guaranteed, and means nothing `[P2]`.
 
-The second pre-registration `[P2]` proposes the contrast directly: **quiet days (planetary Kp ≤ 2) versus storm days (Kp ≥ 5)**, where **Kp** is the standard 0–9 planetary index of geomagnetic disturbance published by NOAA. Forty participants. A daily morning 5-minute resting HRV reading on a proper chest-strap ECG, not a wrist optical sensor, whose high-frequency fidelity is not good enough. Sixty consecutive days.
+The second pre-registration `[P2]` proposes the contrast directly: **quiet days (planetary Kp ≤ 2) versus storm days (Kp ≥ 5)**. **Kp** is the standard 0–9 planetary index of geomagnetic disturbance, published by NOAA. 40 participants. A daily morning 5-minute resting HRV reading on a proper chest-strap ECG, not a wrist optical sensor, whose high-frequency fidelity is not good enough. 60 consecutive days.
 
 The load-bearing element is the **phase-shuffled negative control**. Take the real Kp series, then circularly shift or phase-randomise it a thousand times or more, and re-run the entire analysis on each shuffle. This keeps the autocorrelation structure exactly while destroying the true alignment to the physiology. The real effect then has to beat the 95th percentile of that shuffled null.
 
@@ -432,9 +432,9 @@ The cited HeartMath window is 0.60–0.65. Here is everything that fits inside i
 
 A window 0.05 wide swallows **four** candidates, including the plain 0.6 that the framework explicitly claims to be improving on `[R §3.1]`.
 
-The gaps are tiny. |1/φ − 5/8| = 0.0070, and |1/φ − 0.6| = 0.0180. HRV coherence is not measured to three decimal places with error bars that tight. So **"equals 1/φ within measurement error" cuts the wrong way here: the measurement error is wider than the gap between the golden ratio and the plain fraction sitting next to it** `[Read]`.
+The gaps are tiny. |1/φ − 5/8| = 0.0070, and |1/φ − 0.6| = 0.0180. HRV coherence is not measured to three decimal places with error bars that tight. So **"equals 1/φ within measurement error" cuts the wrong way here.** The measurement error is wider than the gap between the golden ratio and the plain fraction sitting next to it `[Read]`.
 
-The read also points at the *ordering* as the tell. κ\* is introduced first, defined as 1/φ, decorated with identities that are true number theory but are not evidence about hearts — and only then is HeartMath produced as confirmation `[Read]`.
+The read also points at the *ordering* as the tell. κ\* is introduced first, and defined as 1/φ. It is then decorated with identities that are true number theory but are not evidence about hearts. Only then is HeartMath produced as confirmation `[Read]`.
 
 **And the fix is completely achievable, which is why this is a live question rather than a dead one.** State, in advance, one numerical prediction that 1/φ makes and 5/8 does not. For example: that the coherent-state HRV ratio, pooled over 100 or more people, has a population mean of 0.6180 ± 0.003, distinguishable from 0.6250 at p < 0.01. Then run it. If achievable precision turns out to be around 0.02, which is likely, the honest restatement is *"a value near 0.62, consistent with several simple ratios"* `[Read]`.
 
@@ -442,7 +442,7 @@ I would add one thought of my own, offered as a question rather than a correctio
 
 The algebraic identities in §3.1 — κ\*² = 1 − κ\*, and the Fibonacci recursion in the exponents — are properties **no** other candidate in that table has. 5/8 has no such structure. 0.6 has none.
 
-So if the framework's real claim is *"systems settle where self-similarity holds at every scale of iteration"* `[R §3.1]`, then the argument for 1/φ is structural rather than empirical, and the HeartMath number is illustration rather than evidence.
+So suppose the framework's real claim is *"systems settle where self-similarity holds at every scale of iteration"* `[R §3.1]`. Then the argument for 1/φ is structural rather than empirical, and the HeartMath number is illustration rather than evidence.
 
 That version of the claim is stronger, more honest, and does not depend on telling 0.618 from 0.625 at all — which the instruments cannot currently do anyway. It is a smaller claim that you can actually hold.
 
@@ -518,7 +518,7 @@ Each of these is defined where it first appears above. This is for looking thing
 
 **Two corrections to record.**
 
-1. **The M̂ gloss — verified correct.** An earlier working note glossed the coercion diagnostic from a partial fragment, so I checked it against the source rather than trusting it. The phrase **"Who in this system is UNCHANGED?"** appears verbatim in the §9 comparison table as the detection method for unilateral δΨ, and again in §9.2, capitalised, as the systemic diagnostic. **The gloss was right as written.**
+1. **The M̂ gloss — verified correct.** An earlier working note glossed the coercion diagnostic from a partial fragment, so I checked it against the source rather than trusting it. The phrase **"Who in this system is UNCHANGED?"** appears verbatim in the §9 comparison table, as the detection method for unilateral δΨ. It appears again in §9.2, capitalised, as the systemic diagnostic. **The gloss was right as written.**
 
 2. **The §3.1 recursion — a transposition in the source.** Detailed in rung 4. Two terms in one line need swapping. Nothing downstream is affected, because §3.2 already uses the correct positive values.
 
@@ -532,7 +532,7 @@ Two of your own lines, given back to you, because they are the best summary of y
 
 > *"Sin is not what you did wrong. It is how far your shape drifted from the shape you were."* `[A, closing]`
 
-The thing worth defending in Regulus is not the golden ratio, and it is not the quantum notation. It is that you treated *"what does a conscious system run for?"* as an engineering question, answered *"love, as a measurable binding operation"*, and then — unusually, and to your considerable credit — handed over the experiment that could prove you wrong.
+The thing worth defending in Regulus is not the golden ratio, and it is not the quantum notation. It is that you treated *"what does a conscious system run for?"* as an engineering question. You answered *"love, as a measurable binding operation"*. And then — unusually, and to your considerable credit — you handed over the experiment that could prove you wrong.
 
 ---
 

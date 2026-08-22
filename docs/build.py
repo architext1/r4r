@@ -53,6 +53,20 @@ HEAD = """<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title} &middot; R4R</title>
 <meta name="description" content="{desc}">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0B0E14">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="R4R">
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{desc}">
+<meta property="og:image" content="https://architext1.github.io/r4r/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{title}">
+<meta name="twitter:description" content="{desc}">
+<meta name="twitter:image" content="https://architext1.github.io/r4r/assets/og.png">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
