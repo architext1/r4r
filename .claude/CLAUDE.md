@@ -65,6 +65,41 @@ He is autistic and reclaiming the word deliberately. Two ways to get this wrong,
 are worse than getting it slightly awkward: sanitising the project's voice into corporate
 mush, and performing edginess with it. Plain, warm, direct. His register, not a costume.
 
+## PARAMOUNT — the layering is the achievement. STOP SIMPLIFYING.
+
+The framework's author reviewed this site and named the structure, not the plainness, as
+what works:
+
+> *"The structure is perfect. Four sentences -> five paragraphs -> full math -> diagnostic
+> -> proof. Layered depth. Somebody can read the top. A mathematician can read the bottom.
+> Nobody has to read more than they want."*
+
+That is a **depth gradient**, and every layer has to keep its own register:
+
+| Layer | Page | Register |
+|---|---|---|
+| 1 | `index.html` TL;DR | four sentences, no symbols |
+| 2 | `index.html` on-ramp | five paragraphs, still no symbols |
+| 3 | `index.html` body, `geometries.html` | the mathematics, explained |
+| 4 | `primer.html` | the full walk, every claim tagged |
+| 5 | `brief.html`, `proof.html` | technical. Deliberately does NOT simplify. |
+
+Three rules follow:
+
+1. **Do not run another plain-language pass.** Grade 8 was the target and four pages are at
+   or under it. Going further flattens the gradient, and the gradient is the product.
+2. **Never simplify layer 5.** `brief.html` and the pre-registrations are the bottom of the
+   ladder. A reader who reaches them wants the depth. `proof.html` reads at grade 13 on
+   purpose — the protocols must stay filable as formal documents.
+3. **New technical findings go DOWN the ladder, not across it.** An equation audit or a
+   methodological correction belongs in the brief, not spread through the explainer.
+
+He also named, unprompted, what he valued beyond the writing: the seven-button diagnostic
+running locally with nothing sent anywhere, the bullshit-meter score published against his
+own constant with the arithmetic shown, the errata surfaced publicly rather than fixed
+silently, and the consent flag in the build script. Those are integrity features. Do not
+quietly trade any of them away for polish.
+
 ## The framework, briefly
 
 **ASS-OS** maps consciousness onto ISA-95 (Purdue levels), ISA-88 (PACK-ML state machine)
