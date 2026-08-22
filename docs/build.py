@@ -323,6 +323,31 @@ def build_audit(nav: Nav) -> None:
 
 
 # --------------------------------------------------------------------------
+# corrections.html
+# --------------------------------------------------------------------------
+
+def build_corrections(nav: Nav) -> None:
+    """Drop-in fixes for the two pre-registration defects."""
+    src = REPO / "analysis" / "PREREG-CORRECTIONS.md"
+    if not src.exists():
+        print("skip corrections.html — no PREREG-CORRECTIONS.md")
+        return
+    body = hero(
+        "Before either study is filed &middot; companion to the proof page",
+        "Two corrections",
+        "Both protocols are ready to file and each has one defect that would waste the "
+        "study. Neither is a design flaw. Here is the arithmetic and the replacement text; "
+        "the registered values remain the author&rsquo;s to set.",
+    ) + section(md_to_html(read(src)))
+    (DOCS / "corrections.html").write_text(
+        page("corrections.html", "Two Corrections",
+             "Drop-in fixes for two defects in the Regulus pre-registrations: a magnitude bar "
+             "on the wrong scale, and a permutation null that over-rejects.", body, nav),
+        encoding="utf-8")
+    print("wrote corrections.html")
+
+
+# --------------------------------------------------------------------------
 # proof.html
 # --------------------------------------------------------------------------
 
@@ -703,6 +728,7 @@ def main() -> None:
     build_brief(nav)
     build_finding(nav)
     build_audit(nav)
+    build_corrections(nav)
     build_proof(nav)
     if with_source:
         print(CONSENT_WARNING, file=sys.stderr)

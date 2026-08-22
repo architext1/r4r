@@ -44,6 +44,10 @@
   <h1>The loops worth running</h1>
   <p class="standfirst">The two cheapest claims Regulus makes that could be shown false &mdash; written up so that they can fail.</p>
 </div>
+<p class="col" style="margin:-1rem 0 2rem"><strong>Before filing:</strong>
+  <a href="corrections.html">Two corrections</a> &mdash; a magnitude bar on the wrong scale,
+  and a permutation null measured over-rejecting at 13% against a nominal 5%.</p>
+
 <section>
 <div class="doc col">
 
@@ -191,25 +195,24 @@
 <h1>OSF Pre-Registration</h1>
 <blockquote>
 <h3>⚠ Reviewer note — read before filing</h3>
-<p>An independent methodological review of this protocol (<code>analysis/REGULUS-BRIEF.md</code>,
-finding <strong>D1</strong>) reports that the registered magnitude bar and the power calculation are
-expressed on different scales.</p>
-<p>The registered bar corresponds to an effect size of <strong>d = 1.386</strong> — <code>1.96/√2</code> — against a
-study powered for <strong>d = 0.5</strong>. That is a factor of <strong>2.77</strong>, and both of those figures
-reproduce on independent calculation.</p>
-<p>A third figure originally quoted here, "8.1 standard errors from zero", does <strong>not</strong>
-reproduce: the same calculation gives 2.77. It has been withdrawn pending a re-derivation
-from the protocol's own stated design, and the exact standard error depends on whether the
-comparison is paired or two-sample, which should be read off the protocol rather than
-assumed. The direction of the finding does not depend on it.</p>
-<p>The consequence is the opposite of conservative: at 2.77x the powered effect size, this
-protocol can report an effect of exactly the magnitude it was designed to detect as a
-<strong>null</strong>, and publish it as a refutation.</p>
-<p>This is a scale error, not a design flaw — the design is otherwise sound and the
-sham-controlled, three-way-blinded structure is the strongest part of the corpus. But
-the bar needs reconciling with the power calculation before this is filed, and the
-choice of the corrected threshold is a scientific judgement for the author, not a
-mechanical fix.</p>
+<p>The registered magnitude bar and the power calculation are on different scales, and the
+bar is unreachable by any effect this design can detect. Derivation in
+<code>analysis/PREREG-CORRECTIONS.md</code>.</p>
+<p>The bar is <code>1.96 × SD</code> of individual session-to-session drift. The primary endpoint is a
+<strong>group mean</strong>, whose precision is <code>SD/√34 = 0.1715 SD</code>. So the bar sits <strong>11.4 standard
+errors of the mean</strong> from zero, against a study powered to resolve <code>d = 0.5</code> — a ratio of
+<strong>3.92×</strong>. The probability that a true effect of exactly the powered size clears it is
+effectively zero.</p>
+<p>The consequence runs the wrong way. A high bar reads as caution, but a bar a real effect
+cannot clear does not guard against false positives — it guarantees a false negative, and
+the protocol would publish it as a refutation.</p>
+<p>This is a category error rather than a wrong number: a 95% ceiling on <em>individual</em> drift is
+a sensible thing to want, but the question the primary endpoint asks is about the <em>mean</em>,
+and that bound is narrower by √N. Three corrected framings, with recommended replacement
+text, are in <code>analysis/PREREG-CORRECTIONS.md</code>.</p>
+<p><em>Two earlier figures for this defect — "8.1 standard errors" and "2.77×" — were derived
+from summaries and are withdrawn. The numbers above come from the protocol's own sentence
+and the working is shown, so check it rather than trust it.</em></p>
 <p><em>Note added by review; the protocol below is unchanged.</em></p>
 </blockquote>
 <h2>Study Information</h2>
@@ -581,11 +584,16 @@ Confirm the pipeline resolves the eyes-open vs eyes-closed entropy manipulation 
 finding <strong>E1</strong>) reports that the <strong>H1b</strong> null is too narrow and over-rejects.</p>
 <p>The day-shuffle used for H1b destroys the temporal autocorrelation the data actually
 has, so the resulting null distribution is narrower than the truth and the test
-<strong>false-positives at 11.2% against a nominal 5%</strong> — it is more than twice as likely to
+<strong>false-positives at a measured 13.0% against a nominal 5%</strong> (300 simulations,
+twelve independent AR(1) participants, ninety days, φ = 0.6 — parameters assumed, not
+the protocol's) — it is more than twice as likely to
 declare inter-participant synchronisation as the registered α implies.</p>
 <p>The correct null is <strong>already registered in this same document</strong>, for the other test:
 a per-participant circular shift, which preserves autocorrelation while destroying the
-alignment being tested. Applying it to H1b as well would close the gap.</p>
+alignment being tested. Applying it to H1b as well measures 7.0% on the same
+simulation — a large improvement, though at 300 runs that is consistent with correct
+sizing rather than proof of it. Procedure and replacement text in
+<code>analysis/PREREG-CORRECTIONS.md</code>.</p>
 <p>The H1b test is otherwise the harder-to-confound of the two signatures here and worth
 keeping. Only its null needs changing.</p>
 <p><em>Note added by review; the protocol below is unchanged.</em></p>

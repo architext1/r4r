@@ -7,12 +7,17 @@
 >
 > The day-shuffle used for H1b destroys the temporal autocorrelation the data actually
 > has, so the resulting null distribution is narrower than the truth and the test
-> **false-positives at 11.2% against a nominal 5%** — it is more than twice as likely to
+> **false-positives at a measured 13.0% against a nominal 5%** (300 simulations,
+> twelve independent AR(1) participants, ninety days, φ = 0.6 — parameters assumed, not
+> the protocol's) — it is more than twice as likely to
 > declare inter-participant synchronisation as the registered α implies.
 >
 > The correct null is **already registered in this same document**, for the other test:
 > a per-participant circular shift, which preserves autocorrelation while destroying the
-> alignment being tested. Applying it to H1b as well would close the gap.
+> alignment being tested. Applying it to H1b as well measures 7.0% on the same
+> simulation — a large improvement, though at 300 runs that is consistent with correct
+> sizing rather than proof of it. Procedure and replacement text in
+> `analysis/PREREG-CORRECTIONS.md`.
 >
 > The H1b test is otherwise the harder-to-confound of the two signatures here and worth
 > keeping. Only its null needs changing.

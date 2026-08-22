@@ -2,29 +2,28 @@
 
 > ### ⚠ Reviewer note — read before filing
 >
-> An independent methodological review of this protocol (`analysis/REGULUS-BRIEF.md`,
-> finding **D1**) reports that the registered magnitude bar and the power calculation are
-> expressed on different scales.
+> The registered magnitude bar and the power calculation are on different scales, and the
+> bar is unreachable by any effect this design can detect. Derivation in
+> `analysis/PREREG-CORRECTIONS.md`.
 >
-> The registered bar corresponds to an effect size of **d = 1.386** — `1.96/√2` — against a
-> study powered for **d = 0.5**. That is a factor of **2.77**, and both of those figures
-> reproduce on independent calculation.
+> The bar is `1.96 × SD` of individual session-to-session drift. The primary endpoint is a
+> **group mean**, whose precision is `SD/√34 = 0.1715 SD`. So the bar sits **11.4 standard
+> errors of the mean** from zero, against a study powered to resolve `d = 0.5` — a ratio of
+> **3.92×**. The probability that a true effect of exactly the powered size clears it is
+> effectively zero.
 >
-> A third figure originally quoted here, "8.1 standard errors from zero", does **not**
-> reproduce: the same calculation gives 2.77. It has been withdrawn pending a re-derivation
-> from the protocol's own stated design, and the exact standard error depends on whether the
-> comparison is paired or two-sample, which should be read off the protocol rather than
-> assumed. The direction of the finding does not depend on it.
+> The consequence runs the wrong way. A high bar reads as caution, but a bar a real effect
+> cannot clear does not guard against false positives — it guarantees a false negative, and
+> the protocol would publish it as a refutation.
 >
-> The consequence is the opposite of conservative: at 2.77x the powered effect size, this
-> protocol can report an effect of exactly the magnitude it was designed to detect as a
-> **null**, and publish it as a refutation.
+> This is a category error rather than a wrong number: a 95% ceiling on *individual* drift is
+> a sensible thing to want, but the question the primary endpoint asks is about the *mean*,
+> and that bound is narrower by √N. Three corrected framings, with recommended replacement
+> text, are in `analysis/PREREG-CORRECTIONS.md`.
 >
-> This is a scale error, not a design flaw — the design is otherwise sound and the
-> sham-controlled, three-way-blinded structure is the strongest part of the corpus. But
-> the bar needs reconciling with the power calculation before this is filed, and the
-> choice of the corrected threshold is a scientific judgement for the author, not a
-> mechanical fix.
+> *Two earlier figures for this defect — "8.1 standard errors" and "2.77×" — were derived
+> from summaries and are withdrawn. The numbers above come from the protocol's own sentence
+> and the working is shown, so check it rather than trust it.*
 >
 > *Note added by review; the protocol below is unchanged.*
 

@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Two Corrections &middot; R4R</title>
+<meta name="description" content="Drop-in fixes for two defects in the Regulus pre-registrations: a magnitude bar on the wrong scale, and a permutation null that over-rejects.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0B0E14">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="R4R">
+<meta property="og:title" content="Two Corrections">
+<meta property="og:description" content="Drop-in fixes for two defects in the Regulus pre-registrations: a magnitude bar on the wrong scale, and a permutation null that over-rejects.">
+<meta property="og:image" content="https://architext1.github.io/r4r/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Two Corrections">
+<meta name="twitter:description" content="Drop-in fixes for two defects in the Regulus pre-registrations: a magnitude bar on the wrong scale, and a permutation null that over-rejects.">
+<meta name="twitter:image" content="https://architext1.github.io/r4r/assets/og.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap mast-in">
+    <span class="sigil">&#945; Leonis &middot; <b>REGULUS</b></span>
+    <nav class="mast-nav" aria-label="Primary">
+      <span class="sigil r4r">R4R</span>
+      <a href="index.html">Explainer</a>
+      <a href="primer.html">Primer</a>
+      <a href="geometries.html">Geometries</a>
+      <a href="brief.html">Brief</a>
+      <a href="gerald.html">Gerald</a>
+      <a href="proof.html">Proof</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap">
+<div class="hero">
+  <p class="eyebrow">Before either study is filed &middot; companion to the proof page</p>
+  <h1>Two corrections</h1>
+  <p class="standfirst">Both protocols are ready to file and each has one defect that would waste the study. Neither is a design flaw. Here is the arithmetic and the replacement text; the registered values remain the author&rsquo;s to set.</p>
+</div>
+<section>
+<div class="doc col">
+<h1>Two corrections, before either pre-registration is filed</h1>
+<p>Both protocols are described as ready to file. Each has one defect that would waste the
+study. Neither is a design flaw — the designs are the strongest methodology in this corpus —
+and neither protocol is edited here. What follows is the arithmetic and the recommended
+replacement text; the registered values are the author's to set.</p>
+<p><strong>A note on trust.</strong> The D1 figure below is the third one produced for this defect tonight.
+An earlier review said "8.1 standard errors"; a first check said 2.77×; this says 3.92× and
+11.4 standard errors. The first two were derived from a summary. This one is derived from the
+protocol's own sentence, and the derivation is shown line by line precisely so you can check
+it rather than take it. If it is wrong, the working is right there to be attacked.</p>
+<hr>
+<h2>D1 — prereg-01: the bar is an individual-level quantity, the test estimates a mean</h2>
+<h3>What is registered</h3>
+<p>Two clauses, and they are on different scales.</p>
+<p><strong>The bar</strong> (§ Analysis Plan):</p>
+<blockquote>
+<p><em>"The registered bar is that the active-minus-sham contrast must </em><em>exceed a pre-registered
+drift ceiling</em><em>, defined as </em><em>1.96 × the within-participant SD of the sham-only group's
+session-to-session ΔH</em><em>."</em></p>
+</blockquote>
+<p><strong>The power calculation</strong> (§ Sample-size rationale):</p>
+<blockquote>
+<p><em>"Alpha: 0.05 (two-tailed). Power: 0.80. Target effect: Cohen's d = 0.5 on the paired
+contrast → N ≈ 34."</em></p>
+</blockquote>
+<h3>The arithmetic</h3>
+<p>Both the sham-only ΔH and the active-minus-sham contrast are differences of two sessions, so
+both carry the same standard deviation. Call it <strong>S</strong>.</p>
+<pre><code>bar as an effect size    = 1.96·S / S            = 1.96
+powered effect size                              = 0.50
+ratio                                            = 3.92x
+</code></pre>
+<p>That understates it, though, because it compares two things that are not comparable. The bar
+is built from <strong>S</strong>, the spread of <em>individual</em> session-to-session drift. The test estimates
+a <strong>mean</strong>, whose precision is the standard error:</p>
+<pre><code>SE(mean) = S / sqrt(34) = 0.1715 S
+bar      = 1.96 S       = 11.4 standard errors of the mean
+</code></pre>
+<p><strong>The bar sits 11.4 standard errors from zero in a study powered to resolve 0.5.</strong></p>
+<h3>What that does</h3>
+<pre><code class="language-python">from statistics import NormalDist
+S_E = 1/34**0.5
+print(1 - NormalDist().cdf((1.96 - 0.5)/S_E))    # 0.0
+</code></pre>
+<p>A true effect of exactly the size the study is designed to detect has, to floating-point
+precision, <strong>no chance of clearing the bar</strong>. The protocol would report it as <em>"within
+measurement drift"</em> and publish it as a refutation.</p>
+<p>This is the reverse of conservative. It reads as caution — a high bar sounds rigorous — but
+a bar that a real effect cannot clear does not protect against false positives, it
+guarantees a false negative.</p>
+<h3>The defect is real, and it is a category error rather than a number</h3>
+<p>A 95% ceiling on <em>individual</em> drift is a perfectly sensible thing to want. It answers "could
+this participant's change be drift?" But the primary endpoint is a <strong>group mean</strong>, and the
+question there is "could this <em>average</em> change be drift?" — which is a bound on the mean,
+narrower by √N.</p>
+<h3>Three ways to fix it</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>Bar</th>
+<th>Rationale</th>
+<th>Consequence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td><strong>0.50 S</strong></td>
+<td>Set at the powered effect size</td>
+<td>Coherent with the power calculation; a detectable effect can clear it</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td><strong>0.336 S</strong></td>
+<td><code>1.96 × SE(mean)</code> = a conventional 95% bound on the mean</td>
+<td>The bar the current sentence was probably reaching for; strictly weaker than A</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td><strong>1.96 S</strong>, unchanged</td>
+<td>Keep the individual-drift ceiling as written</td>
+<td>Requires <strong>N = 523</strong> for 80% power, against the registered 34</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Recommended: A.</strong> It preserves the protocol's stated intent — that significance alone is
+not enough, the effect must also be big enough to matter — while setting "big enough" at
+something the study can actually resolve. B is defensible but is close to the significance
+test it is meant to supplement, so it adds little. C is honest but changes the study from a
+34-participant design to a 523-participant one.</p>
+<h3>Replacement text</h3>
+<blockquote>
+<p><strong>The magnitude bar (noise floor), not just significance.</strong> Statistical significance of the
+paired contrast is necessary but not sufficient. The registered bar is that the
+<strong>mean</strong> active-minus-sham contrast must exceed <strong>0.50 × the within-participant SD of the
+sham-only group's session-to-session ΔH</strong> — the effect size this study is powered to
+detect. A contrast that is "significant" but smaller than this is reported as <strong>within
+measurement drift</strong> and does not count as support for H1. This bar is fixed before
+unblinding.</p>
+<p><em>Note on scale: the bar is a bound on the group mean, not on individual session-to-session
+drift. A 1.96 × SD ceiling would be the latter, and at N = 34 it sits 11.4 standard errors
+from zero — unreachable by any effect this design can detect.</em></p>
+</blockquote>
+<hr>
+<h2>E1 — prereg-02: the H1b null destroys the structure it should preserve</h2>
+<h3>What is registered</h3>
+<p>H1b (§ Hypotheses):</p>
+<blockquote>
+<p><em>"Day-to-day HRV of geographically co-exposed but socially unrelated participants
+</em><em>correlates above the level expected under day-permutation</em><em>."</em></p>
+</blockquote>
+<p>The other confirmatory test, in the same document, registers something different:</p>
+<blockquote>
+<p><em>"the storm-minus-quiet coherence contrast recomputed on ≥ 1000 </em><em>circularly-shifted</em><em>
+/phase-randomised Kp series"</em></p>
+</blockquote>
+<p>So the correct null is already in the protocol. It is simply not applied to H1b.</p>
+<h3>Why day-permutation is the wrong null</h3>
+<p>HRV series are temporally autocorrelated — today resembles yesterday. Shuffling days
+independently destroys that autocorrelation, so the permuted series are <em>less</em> structured
+than real data. The resulting null distribution is too narrow, and the observed statistic —
+computed on data that <em>does</em> have autocorrelation — looks extreme by comparison.</p>
+<p>A circular shift moves each series bodily in time. It destroys the <em>alignment</em> between
+participants, which is what H1b tests, while preserving each participant's own
+autocorrelation, which is not.</p>
+<h3>Measured</h3>
+<p>Simulated under H0 — twelve independent AR(1) participants, ninety days, φ = 0.6, no shared
+driver at all, so every rejection is a false positive. 300 simulations, 400 permutations
+each, α = 0.05, statistic = mean pairwise Spearman correlation.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>null</th>
+<th>false-positive rate</th>
+<th>vs nominal 5%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>day-permutation</strong> (as registered)</td>
+<td><strong>13.0%</strong></td>
+<td>≈ 6 SE above — unambiguous</td>
+</tr>
+<tr>
+<td><strong>circular shift</strong> (proposed)</td>
+<td><strong>7.0%</strong></td>
+<td>≈ 1.6 SE above — much better</td>
+</tr>
+</tbody>
+</table></div>
+<p>The registered null rejects a true null <strong>more than twice as often as it claims to</strong>. On
+these parameters H1b is not a 5% test, it is a 13% test.</p>
+<h3>An honest caveat on the fix</h3>
+<p>The circular shift is a large improvement and it is not provably perfect. At 7.0% over 300
+simulations the standard error is 1.26%, so the result is consistent with correct sizing but
+does not demonstrate it — a residual inflation of one or two points cannot be ruled out from
+this run. Two things would settle it: more simulations, and parameters taken from pilot data
+rather than assumed.</p>
+<p><strong>The parameters here are mine, not the protocol's.</strong> The exact false-positive rate depends
+on the true autocorrelation of daily HRV, which the protocol does not state. The
+<em>direction</em> and rough magnitude are robust — any positive autocorrelation makes
+day-permutation anti-conservative — but the specific 13.0% should not be quoted as a
+property of the study.</p>
+<h3>Replacement text</h3>
+<blockquote>
+<p><strong>H1b (inter-participant synchronisation).</strong> Day-to-day HRV of geographically co-exposed
+but socially unrelated participants correlates above the level expected under a
+<strong>per-participant circular-shift null</strong>, computed as follows: for each of ≥ 1000
+permutations, each participant's daily series is independently circularly shifted by an
+offset drawn uniformly from 1 … (n_days − 1); the test statistic (mean pairwise Spearman
+correlation across participants) is recomputed on the shifted set; the observed
+statistic's percentile within that distribution is the inferential quantity. The shift
+preserves each participant's own temporal autocorrelation while destroying inter-participant
+alignment, which is the structure under test. A day-permutation null is <strong>not</strong> used here:
+it destroys autocorrelation as well as alignment, yielding a null distribution narrower
+than the data and a test that over-rejects.</p>
+</blockquote>
+<h3>What it costs</h3>
+<p>A correctly-sized null is less likely to reject, so some power is given up. That is the
+point — the power the day-permutation null appeared to have was not real, it was the
+over-rejection. Quantifying the loss needs a specified alternative, which the protocol does
+not give for H1b; if you fix an expected synchronisation effect, this can be simulated the
+same way.</p>
+<hr>
+<h2>What neither review caught</h2>
+<p><strong>In prereg-01</strong>, the bar and the power calculation are in different sections — the bar in
+the Analysis Plan, the power in the Sample-size rationale. Nothing in either points at the
+other. Whatever bar is chosen, a single sentence in the Analysis Plan stating its
+relationship to the powered effect size would make a recurrence impossible.</p>
+<p><strong>In prereg-02</strong>, the same document uses two different nulls for two confirmatory tests
+without saying why. Even after the fix, one line explaining that both now use circular
+shifts, and why that is the right choice for autocorrelated series, is worth adding — it is
+the kind of thing an OSF reviewer asks about.</p>
+<hr>
+<p><em>Framework: Thomas Frumkin (@teslasolar), Konomi Systems. These corrections: V&gt;&gt;, with Claude
+Opus 5. Every figure reproduces from the code shown; the simulation seed is 20260822.</em></p>
+</div>
+</section>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <p class="cred">
+      REGULUS / ASS-OS &mdash; Thomas (@ThomasTheTankEngineer), Konomi Systems<br>
+      Explainer, appraisal and pre-registrations &mdash; V&gt;&gt;<br>
+      With assistance of Claude Opus 5 &middot; <a href="https://github.com/teslasolar/eth">github.com/teslasolar/eth</a>
+    </p>
+    <p style="max-width:60ch">
+      Written to be checked, not believed. This page is generated directly from its source
+      file by <code>docs/build.py</code>, so it cannot drift from the document it presents.
+    </p>
+  </div>
+</footer>
+</body>
+</html>
