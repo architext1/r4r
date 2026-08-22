@@ -121,6 +121,20 @@ def page(current: str, title: str, desc: str, body: str, nav: Nav) -> str:
 
 
 
+
+def _wrap_tables(markup: str) -> str:
+    """Put every generated table inside a horizontal scroller.
+
+    A markdown table has no width limit, and on a 390px phone the ones in the
+    pre-registrations render 542px wide and push the whole document sideways.
+    A CSS child-combinator fallback misses any table nested below the section,
+    so the wrap is done structurally here instead — measured on proof.html,
+    which overflowed by 124px before this.
+    """
+    import re as _re
+    return _re.sub(r'<table>', '<div class="tw"><table>', markup).replace('</table>', '</table></div>')
+
+
 def _wrap_operators(markup: str) -> str:
     """Render M̂ and Ŝ in a font that composes the circumflex.
 
@@ -133,7 +147,7 @@ def _wrap_operators(markup: str) -> str:
 
 
 def md_to_html(text: str) -> str:
-    return _wrap_operators(markdown.markdown(text, extensions=MD_EXTENSIONS, output_format="html5"))
+    return _wrap_tables(_wrap_operators(markdown.markdown(text, extensions=MD_EXTENSIONS, output_format="html5")))
 
 
 def read(path: pathlib.Path) -> str:

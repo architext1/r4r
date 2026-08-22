@@ -836,3 +836,19 @@ footer a:hover { color: var(--phi); }
 .op, .verdict .v-line, .verdict .v-sub {
   font-family: Menlo, "DejaVu Sans Mono", monospace;
 }
+
+/* ---------------------------------------------------------------
+   NARROW SCREENS. Most readers arrive from a chat app on a phone.
+   Inline code in the pre-registrations sets white-space: pre and one
+   run measured 537px against a 390px viewport, taking the document
+   sideways with it. Below 620px let those break rather than scroll
+   the whole page; wide block content keeps its own scroller.
+   --------------------------------------------------------------- */
+@media (max-width: 620px) {
+  code, .m {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  .eq-form { white-space: normal; }
+}
