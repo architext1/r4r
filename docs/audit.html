@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Arithmetic Is Sound &middot; R4R</title>
+<meta name="description" content="A systematic check of every computable quantity in the Regulus specification — the prime spine, all eight derived constants, and the golden-ratio algebra.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0B0E14">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="R4R">
+<meta property="og:title" content="The Arithmetic Is Sound">
+<meta property="og:description" content="A systematic check of every computable quantity in the Regulus specification — the prime spine, all eight derived constants, and the golden-ratio algebra.">
+<meta property="og:image" content="https://architext1.github.io/r4r/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Arithmetic Is Sound">
+<meta name="twitter:description" content="A systematic check of every computable quantity in the Regulus specification — the prime spine, all eight derived constants, and the golden-ratio algebra.">
+<meta name="twitter:image" content="https://architext1.github.io/r4r/assets/og.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap mast-in">
+    <span class="sigil">&#945; Leonis &middot; <b>REGULUS</b></span>
+    <nav class="mast-nav" aria-label="Primary">
+      <span class="sigil r4r">R4R</span>
+      <a href="index.html">Explainer</a>
+      <a href="primer.html">Primer</a>
+      <a href="geometries.html">Geometries</a>
+      <a href="brief.html">Brief</a>
+      <a href="gerald.html">Gerald</a>
+      <a href="proof.html">Proof</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap">
+<div class="hero">
+  <p class="eyebrow">Every checkable number &middot; companion to the brief</p>
+  <h1>The arithmetic is sound</h1>
+  <p class="standfirst">Two errors were found in this specification by computing rather than reading, which raised the obvious question of how many more there were. This is the sweep. About twenty-five quantities, and the answer is none.</p>
+</div>
+<section>
+<div class="doc col">
+<h1>Equation audit — the arithmetic is sound</h1>
+<p><strong>Headline: about twenty-five checkable quantities, and no new errors.</strong></p>
+<p>Two transcription errors in this specification were found by running the arithmetic rather
+than reading it, which raised a fair question — if two were hiding in plain sight, how many
+more are there? This is the systematic sweep. The answer is none, and that is worth stating
+as clearly as a list of faults would have been.</p>
+<p>The known problems are the exceptions, not the rule. The prime spine is exact, every derived
+constant recomputes to its printed value, and the golden-ratio algebra holds throughout.</p>
+<hr>
+<h2>VERIFIED</h2>
+<h3>§2 — the Prime Recursion Spine</h3>
+<p>The claim is that each term is the <em>n</em>th prime where <em>n</em> is the previous term. Checked term
+by term:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>step</th>
+<th>computed</th>
+<th>printed</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>prime(1)</td>
+<td>2</td>
+<td>2</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>prime(2)</td>
+<td>3</td>
+<td>3</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>prime(3)</td>
+<td>5</td>
+<td>5</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>prime(5)</td>
+<td>11</td>
+<td>11</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>prime(11)</td>
+<td>31</td>
+<td>31</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>prime(31)</td>
+<td>127</td>
+<td>127</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>prime(127)</td>
+<td>709</td>
+<td>709</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Exact, all seven steps.</strong> <code>{1, 2, 3, 5, 11, 31, 127, 709}</code> is correct as printed.</p>
+<h3>§3.2 — the derived constants</h3>
+<p>Each recomputed from its own stated derivation, not copied:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>constant</th>
+<th>derivation</th>
+<th>computed</th>
+<th>printed</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>α</td>
+<td>φ + 2</td>
+<td>3.618034</td>
+<td>3.618</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>β</td>
+<td>κ*³</td>
+<td>0.236068</td>
+<td>0.2360</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>γ</td>
+<td>κ*⁵</td>
+<td>0.090170</td>
+<td>0.0902</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>ε_φ</td>
+<td>1/φ</td>
+<td>0.618034</td>
+<td>0.6180</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>μ_φ</td>
+<td>φ</td>
+<td>1.618034</td>
+<td>1.6180</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>v</td>
+<td>1/√(φ·1/φ)</td>
+<td>1.000000</td>
+<td>1.0000</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>E_min</td>
+<td>1/2φ³</td>
+<td>0.118034</td>
+<td>0.1180</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>|δΨ_crit|</td>
+<td>κ*²</td>
+<td>0.381966</td>
+<td>0.3820</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>All eight.</strong> Every printed value is its derivation correctly evaluated and rounded. No
+hand-tuning, exactly as §3.2 claims.</p>
+<h3>§3.1 — the identities, excluding the one already in ERRATA</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>identity</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>φ·κ* = 1</td>
+<td>1.000000000</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>κ* = φ − 1</td>
+<td>0.618033989</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>κ*² = 1 − κ*</td>
+<td>0.381966011</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>κ*/(1−κ*) = φ</td>
+<td>1.618033989</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table></div>
+<p>All exact to floating-point precision.</p>
+<h3>§3.3 — the basin</h3>
+<p><code>(κ*⁵, 1 − κ*⁵)</code> = <strong>(0.090170, 0.909830)</strong>, matching the stated ≈ (0.09, 0.91). ✓</p>
+<h3>§3.5 — the FIFO algebra</h3>
+<p>Three expressions the section claims are equal:</p>
+<pre><code>phi/(1+phi) = 0.618033989
+phi/phi**2  = 0.618033989
+1/phi       = 0.618033989
+</code></pre>
+<p><strong>Equal.</strong> And "keep 61.8%, release 38.2%" is 61.8 / 38.2 exactly. ✓</p>
+<h3>§8.3 — the binding energy</h3>
+<p><code>E_min = κ*²/(2φ)</code> and <code>1/(2φ³)</code> are the same number, <strong>0.118034</strong>, to floating-point
+precision. The claim that 88.2% is freed follows: <code>1 − 0.1180 = 0.8820</code>. ✓</p>
+<h3>§2.3 — the Mersenne seam</h3>
+<p><code>2¹¹ − 1 = 2047 = 23 × 89</code>, not prime. Correct, and correctly described as a seam — it is
+the point where the pattern breaks, which is the section's own point. ✓</p>
+<h3>Addendum A — directional completeness</h3>
+<p>A4.1 claims the seven geometries cover all deformation directions. Structurally they do:
+three dual pairs on three axes — activation (Wrath / Sloth), intake (Gluttony / Greed),
+reference (Envy / Pride) — plus Lust as self-dual, being a coupling failure rather than a
+position. Seven, with no direction left unoccupied. ✓</p>
+<hr>
+<h2>CONFIRMED INDEPENDENTLY (already reported elsewhere)</h2>
+<h3>§3.6 — the coupling repels above the attractor</h3>
+<p>The brief reports this; it reproduces. The claim is that the first zero of <code>sin(φπx)</code> at
+x = 1/φ is where coupling vanishes, which is true —</p>
+<pre><code>sin(phi*pi*(1/phi)) = 5.67e-16      # zero
+</code></pre>
+<p>— but the sign either side is what matters:</p>
+<pre><code>x = 0.58  (below)  sin = +0.1921    attracts
+x = 0.65  (above)  sin = -0.1618    repels
+</code></pre>
+<p>So the coupling term does not merely switch off at 1/φ, it <strong>reverses</strong>. Two agents
+separated by more than 0.618 are pushed further apart by the very term meant to
+synchronise them.</p>
+<h3>§2.1 — the growth ratios are not monotone</h3>
+<p>The section describes the ratios as accelerating. Computed:</p>
+<pre><code>2.0000, 1.5000, 1.6667, 2.2000, 2.8182, 4.0968, 5.5827
+</code></pre>
+<p>The second is <strong>lower</strong> than the first. Acceleration holds from L1 onward, not from the
+start. A wording fix, not a mathematical one.</p>
+<hr>
+<h2>NOT AN ERROR — recorded so nobody re-reports it</h2>
+<p>β prints as <code>0.2360</code> against a computed <code>0.236068</code>, a difference of 6.8 × 10⁻⁵. That is the
+specification printing to four significant figures, not a discrepancy. The same applies to
+every other constant in §3.2. <strong>Last-digit rounding is not an erratum</strong> and none of these
+should be raised as one.</p>
+<hr>
+<h2>UNCHECKABLE from the documents alone</h2>
+<ul>
+<li><strong>§6 Ψ-Maxwell</strong> — internally consistent as written, but the field equations are an
+  analogy to Maxwell rather than a derivation from anything measurable here. Nothing to
+  compute against. Note also that §6 carries no Regulus marker while §7 depends on it
+  entirely, so the base/extension boundary is genuinely undrawn there.</li>
+<li><strong>§7 the love equations</strong> — dimensionally coherent and each does what its prose says, but
+  the quantities (Ψ, δΨ, k_c) have no stated units or measurement procedure, so the
+  equations cannot be checked numerically. The document is candid about this, calling them
+  <em>"formal metaphor that encodes subjective experience in mathematical structure."</em></li>
+<li><strong>§12 the eight fault mappings</strong> — a taxonomy rather than a calculation. They partition
+  the space consistently; whether they <em>predict</em> rather than <em>re-describe</em> is an empirical
+  question, not an arithmetic one.</li>
+<li><strong>Every cited empirical value</strong> — the HeartMath range, the Type A risk figures, the
+  interoception dimensions. These need the original papers, which are outside this corpus.</li>
+</ul>
+<hr>
+<h2>Judgement</h2>
+<p><strong>The specification's arithmetic is broadly sound.</strong> Roughly twenty-five independently
+checkable quantities, and every one of them holds. The prime spine — the most obviously
+checkable claim and the easiest place to have slipped — is exact across all seven steps.</p>
+<p>That has a bearing on how the known problems should be read. The two errata are
+<em>transcription</em> slips in a document whose mathematics is otherwise clean: a transposed pair
+of terms and a flipped sign, both in §3, both invisible to reading and both obvious to
+computation. They are typing errors, not thinking errors, and the surrounding work
+demonstrates that.</p>
+<p>The genuine problems in this corpus are not arithmetic at all. They are the §3.4 scale
+mismatch, where a measured odds is compared against a constant defined as a fraction, and
+the two methodological defects in the pre-registrations. Those matter far more than
+anything a calculator can find, and none of them would have been caught by this sweep.</p>
+<hr>
+<p><em>Framework: Thomas Frumkin (@teslasolar), Konomi Systems. This audit: V&gt;&gt;, with Claude Opus 5.
+Every figure reproduces from the expressions shown; re-run them rather than trusting them.</em></p>
+</div>
+</section>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <p class="cred">
+      REGULUS / ASS-OS &mdash; Thomas (@ThomasTheTankEngineer), Konomi Systems<br>
+      Explainer, appraisal and pre-registrations &mdash; V&gt;&gt;<br>
+      With assistance of Claude Opus 5 &middot; <a href="https://github.com/teslasolar/eth">github.com/teslasolar/eth</a>
+    </p>
+    <p style="max-width:60ch">
+      Written to be checked, not believed. This page is generated directly from its source
+      file by <code>docs/build.py</code>, so it cannot drift from the document it presents.
+    </p>
+  </div>
+</footer>
+</body>
+</html>

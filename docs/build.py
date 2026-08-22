@@ -298,6 +298,31 @@ def build_finding(nav: Nav) -> None:
 
 
 # --------------------------------------------------------------------------
+# audit.html
+# --------------------------------------------------------------------------
+
+def build_audit(nav: Nav) -> None:
+    """The equation sweep. Bottom of the ladder, no nav entry."""
+    src = REPO / "analysis" / "EQUATION-AUDIT.md"
+    if not src.exists():
+        print("skip audit.html — no EQUATION-AUDIT.md")
+        return
+    body = hero(
+        "Every checkable number &middot; companion to the brief",
+        "The arithmetic is sound",
+        "Two errors were found in this specification by computing rather than reading, which "
+        "raised the obvious question of how many more there were. This is the sweep. About "
+        "twenty-five quantities, and the answer is none.",
+    ) + section(md_to_html(read(src)))
+    (DOCS / "audit.html").write_text(
+        page("audit.html", "The Arithmetic Is Sound",
+             "A systematic check of every computable quantity in the Regulus specification — "
+             "the prime spine, all eight derived constants, and the golden-ratio algebra.", body, nav),
+        encoding="utf-8")
+    print("wrote audit.html")
+
+
+# --------------------------------------------------------------------------
 # proof.html
 # --------------------------------------------------------------------------
 
@@ -677,6 +702,7 @@ def main() -> None:
     build_primer(nav)
     build_brief(nav)
     build_finding(nav)
+    build_audit(nav)
     build_proof(nav)
     if with_source:
         print(CONSENT_WARNING, file=sys.stderr)
