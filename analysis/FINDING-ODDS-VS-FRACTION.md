@@ -142,13 +142,29 @@ Two secondary asks that cost nothing:
 
 ## 8. Limits of this note
 
-- The operational definition used here is the corpus's own, in `02-prereg-geomagnetic-hrv.md`.
-  I have not independently checked McCraty's published papers. **If HeartMath's actual
-  published definition is a fraction rather than an odds, section 2 fails and the finding
-  collapses** — that is the single load-bearing dependency, and it should be checked against
-  the source before anything is changed in the specification.
-- The [0.60, 0.65] window is quoted in §3.4 without attribution, so its own precision is
-  unknown. Every interval above inherits that.
+- **The load-bearing dependency has been checked against the published source, and it
+  holds.** Section 2 argued from the corpus's own operational definition, in
+  `02-prereg-geomagnetic-hrv.md`, and flagged the obvious way that could go wrong: if
+  HeartMath's published definition were a fraction rather than an odds, section 2 would
+  fail and this finding would collapse. It is not a fraction. McCraty & Zayas (2014),
+  *Frontiers in Psychology* **5**:1090, doi:[10.3389/fpsyg.2014.01090](https://doi.org/10.3389/fpsyg.2014.01090),
+  quoting McCraty & Childre (2010) at p.14:
+
+  > "Coherence is assessed by identifying the maximum peak in the 0.04–0.26 Hz range of the
+  > HRV power spectrum, calculating the integral in a window 0.03 Hz wide centered on the
+  > highest peak in that region, and then calculating the total power of the entire
+  > spectrum. **The coherence ratio is formulated as: [Peak Power/(Total Power − Peak
+  > Power)]**"
+
+  The denominator is total *minus* peak, which is what makes it an odds. The published
+  definition and the pre-registration's operationalisation agree, so the scale mismatch in
+  §3.4 is confirmed against the primary literature and not only against this corpus.
+
+- **What is still open is the window, not the scale.** §3.4 quotes "0.6–0.65" with no
+  attribution, so both which measurement it came from and its own precision are unknown,
+  and every interval derived from it above inherits that. The secondary ask in §7 — cite
+  the specific HeartMath measurement — is now the only thing standing between this note
+  and a closed question.
 - Sections 4 and 6 are arithmetic and reproduce from the code shown. Sections 5 and 7 are
   interpretation, and are marked as such.
 

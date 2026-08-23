@@ -207,13 +207,30 @@ instrument.</p>
 </ol>
 <h2>8. Limits of this note</h2>
 <ul>
-<li>The operational definition used here is the corpus's own, in <code>02-prereg-geomagnetic-hrv.md</code>.
-  I have not independently checked McCraty's published papers. <strong>If HeartMath's actual
-  published definition is a fraction rather than an odds, section 2 fails and the finding
-  collapses</strong> — that is the single load-bearing dependency, and it should be checked against
-  the source before anything is changed in the specification.</li>
-<li>The [0.60, 0.65] window is quoted in §3.4 without attribution, so its own precision is
-  unknown. Every interval above inherits that.</li>
+<li><strong>The load-bearing dependency has been checked against the published source, and it
+  holds.</strong> Section 2 argued from the corpus's own operational definition, in
+  <code>02-prereg-geomagnetic-hrv.md</code>, and flagged the obvious way that could go wrong: if
+  HeartMath's published definition were a fraction rather than an odds, section 2 would
+  fail and this finding would collapse. It is not a fraction. McCraty &amp; Zayas (2014),
+  <em>Frontiers in Psychology</em> <strong>5</strong>:1090, doi:<a href="https://doi.org/10.3389/fpsyg.2014.01090">10.3389/fpsyg.2014.01090</a>,
+  quoting McCraty &amp; Childre (2010) at p.14:</li>
+</ul>
+<blockquote>
+<p>"Coherence is assessed by identifying the maximum peak in the 0.04–0.26 Hz range of the
+HRV power spectrum, calculating the integral in a window 0.03 Hz wide centered on the
+highest peak in that region, and then calculating the total power of the entire
+spectrum. <strong>The coherence ratio is formulated as: [Peak Power/(Total Power − Peak
+Power)]</strong>"</p>
+</blockquote>
+<p>The denominator is total <em>minus</em> peak, which is what makes it an odds. The published
+  definition and the pre-registration's operationalisation agree, so the scale mismatch in
+  §3.4 is confirmed against the primary literature and not only against this corpus.</p>
+<ul>
+<li><strong>What is still open is the window, not the scale.</strong> §3.4 quotes "0.6–0.65" with no
+  attribution, so both which measurement it came from and its own precision are unknown,
+  and every interval derived from it above inherits that. The secondary ask in §7 — cite
+  the specific HeartMath measurement — is now the only thing standing between this note
+  and a closed question.</li>
 <li>Sections 4 and 6 are arithmetic and reproduce from the code shown. Sections 5 and 7 are
   interpretation, and are marked as such.</li>
 </ul>
