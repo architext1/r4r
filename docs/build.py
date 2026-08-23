@@ -423,7 +423,7 @@ PLAIN_01 = """
 <h3>What they think is going on</h3>
 <p>
   Autistic brains are noisier at rest. That is not a figure of speech. Hook someone up to an
-  EEG, which reads brain waves through the scalp, and the trace from an autistic adult
+  EEG &mdash; it reads brain waves through the scalp. The trace from an autistic adult
   carries measurably more disorder than average. Scientists have a name for how much disorder
   sits in a signal. They call it entropy. Most brain scientists put the extra entropy down to
   an imbalance between the brain&rsquo;s own accelerator and its brake &mdash; the excitatory
@@ -483,8 +483,8 @@ PLAIN_01 = """
   Second &mdash; and this is the hurdle that catches wishful thinking &mdash; the gap has to
   be bigger than the wobble. The fake-only group tells you how far the reading drifts by
   itself. The bar is set at 1.96 times that drift, near enough two of them. A real-minus-fake
-  gap that comes in under the bar is written up as noise, not as a result, even when the
-  statistics call it significant.
+  gap that comes in under the bar is written up as noise, not as a result. That holds
+  even when the statistics call it significant.
 </p>
 <p>
   There is a check on the kit as well. Every session records the brain with eyes open and
