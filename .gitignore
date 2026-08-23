@@ -8,3 +8,10 @@ __pycache__/
 # --with-source` works for a private copy; never committed, because this
 # repository is public and publishing his work is his call, not ours.
 sources/
+
+# Working notes never belong in a public repo. Handoff briefs, scratch plans
+# and session state live in GRIP, not here.
+plans/
+notes/
+drafts/
+*.WORKLOG-*.md
