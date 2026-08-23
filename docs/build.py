@@ -137,14 +137,19 @@ def _wrap_tables(markup: str) -> str:
 
 
 def _wrap_operators(markup: str) -> str:
-    """Render M̂ and Ŝ in a font that composes the circumflex.
+    """Render M̂, Ŝ and σ̂ in a font that composes the circumflex.
 
     Courier New carries U+0302 as a spacing glyph, so M̂ renders as "M^"
     and never falls through to a font that would stack it. See the .op
     rule in assets/style.css for the measurement.
+
+    The hazard is the combining mark, not the letter it sits on, so the
+    statistical σ̂ in the brief needs the same treatment as the two
+    Regulus operators. Any further base letter that acquires a U+0302
+    must be added here, or it silently renders as "x^".
     """
     import re as _re
-    return _re.sub(r'(M\u0302|\u015C)', r'<span class="op">\1</span>', markup)
+    return _re.sub(r'(M\u0302|\u015C|\u03C3\u0302)', r'<span class="op">\1</span>', markup)
 
 
 def md_to_html(text: str) -> str:
@@ -350,6 +355,12 @@ def build_corrections(nav: Nav) -> None:
 # --------------------------------------------------------------------------
 # proof.html
 # --------------------------------------------------------------------------
+
+PROOF_CORRECTIONS_NOTE = (
+    '<p class="col" style="margin:-1rem 0 2rem"><strong>Before filing:</strong>\n'
+    '  <a href="corrections.html">Two corrections</a> &mdash; a magnitude bar on the wrong scale,\n'
+    '  and a permutation null measured over-rejecting at 13% against a nominal 5%.</p>\n\n'
+)
 
 PROOF_INTRO = """
 <p>
@@ -617,6 +628,9 @@ def build_proof(nav: Nav) -> None:
             "The two cheapest claims Regulus makes that could be shown false &mdash; written "
             "up so that they can fail.",
         ),
+        # Rendered here rather than hand-added to the built file: a note edited
+        # into proof.html directly is silently deleted by the next rebuild.
+        PROOF_CORRECTIONS_NOTE,
         section(PROOF_INTRO),
     ]
     for label, path, plain in [
