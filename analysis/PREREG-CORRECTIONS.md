@@ -81,13 +81,29 @@ narrower by √N.
 |---|---|---|---|
 | **A** | **0.50 S** | Set at the powered effect size | Coherent with the power calculation; a detectable effect can clear it |
 | **B** | **0.336 S** | `1.96 × SE(mean)` = a conventional 95% bound on the mean | The bar the current sentence was probably reaching for; strictly weaker than A |
-| **C** | **1.96 S**, unchanged | Keep the individual-drift ceiling as written | Requires **N = 523** for 80% power, against the registered 34 |
+| **C** | **1.96 S**, unchanged | Keep the individual-drift ceiling as written | **No N reaches 80% power.** The ceiling is fixed in individual-drift SD and does not shrink as N grows, so power against it *decreases* in N — at most 7.9%, at N = 1 |
 
 **Recommended: A.** It preserves the protocol's stated intent — that significance alone is
 not enough, the effect must also be big enough to matter — while setting "big enough" at
 something the study can actually resolve. B is defensible but is close to the significance
-test it is meant to supplement, so it adds little. C is honest but changes the study from a
-34-participant design to a 523-participant one.
+test it is meant to supplement, so it adds little.
+
+**C is not a bigger study — it is an unpowered one, and the earlier "N = 523" here was
+wrong.** A ceiling fixed at 1.96 × the individual-drift SD does not shrink as N grows, while
+the mean it is compared against stays at the registered 0.50 S. Power against that ceiling is
+therefore *decreasing* in N, reaching at most 7.9% at N = 1, and the true effect required for
+80% power falls only to 1.96 S in the limit — never toward 0.50 S. Option C is reachable only
+by re-designing the study around a target effect above 1.96 S, which is a different study
+rather than a larger one.
+
+The withdrawn figure came from `34 × (1.96/0.50)² = 522.4576`, ceiled to 523. That scaling
+answers a different question, and it multiplies the whole anchor when only one part of it may
+scale: 34 is a composite of 31.395519 (normal) + 1.971610 (Guenther z²/2) + 0.632871
+(ceiling), so the spurious total is 38.0984 — exactly the gap between 522.4576 and the 484.3592
+that the substituted question actually yields. If the intent was to report the cost of detecting
+a much smaller effect, the figure is **485** (exact one-sample t; the normal approximation gives
+483) and it must carry the effect size it belongs to, d = 0.1276 — a quantity with no referent
+anywhere in the registered protocol.
 
 ### Replacement text
 
